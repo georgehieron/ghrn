@@ -1,0 +1,16 @@
+{
+    "name": "GHRN",
+    "url": "https://ghrn.dev",
+    "languages": [
+        {
+          "label": "English",
+          "code": "en"
+        },
+        {
+          "label": "Suomi",
+          "code": "fi"
+        }
+    ],
+    "authorName": "GHRN",
+    "authorEmail": "hi@ghrn.dev"
+}

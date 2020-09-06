@@ -1,0 +1,63 @@
+<a class="skip-link button" href="#main-content">Skip to content</a>
+<header role="banner" class="site-head">
+    <div class="wrapper">
+        <div class="site-head__inner">
+            <a href="/" aria-label="{{ site.name }} - home" class="site-head__brand">
+                {% include "partials/ghrn.svg" %}
+            </a>
+            <nav>
+                <ul class="nav__menu" id="nav-menu">
+                    {% for item in collections["pages_" + locale] | eleventyNavigation %}
+                        {% set isCurrent = (item.url == page.url) %}
+                        {% set isParent = item.url != '/' and item.url in page.url %}
+                        <li class="nav__item{% if isCurrent or isParent %} nav__item--active{% endif %}">
+                            <a
+                                class="nav__link"
+                                href="{% if isCurrent %}#main{% else %}{{ item.url | url }}{% endif %}"
+                                {% if isCurrent %}aria-current="page"{% endif %}
+                            >
+                                {{ item.title }}
+                            </a>
+                        </li>
+                    {% endfor %}
+                </ul>
+            </nav>
+
+            {# Loop though site.languages #}
+            {% for lang in site.languages %}
+            {% if loop.first %}
+                <ul class="lang-nav">
+            {% endif %}
+
+                {# Set translatedUrl to the homepage of that language by default #}
+                {% set translatedUrl = "/" + lang.code + "/" %}
+
+                {# Set current language class #}
+                {% set activeClass = "is-active" if lang.code == locale else "" %}
+
+                {# Loop through all the content of the site #}
+                {% for item in collections.all %}
+
+                {# For each item in the loop, check if...
+                - its translationKey matches the current item translationKey
+                - its locale matches the code of the language we are looping through #}
+                {% if item.data.translationKey == translationKey and item.data.locale == lang.code %}
+                    {% set translatedUrl = item.url %}
+                {% endif %}
+
+                {% endfor %}
+
+                <li class="lang-nav__item">
+                    <a class="lang-nav__link  {{ activeClass }}" href="{{ translatedUrl }}" lang="{{ lang.code }}">
+                    <span class="lang-nav__item__code">{{ lang.code }}</span>
+                    <span class="visually-hidden">{{ lang.label }}</span>
+                    </a>
+                </li>
+
+            {% if loop.last %}
+                </ul>
+            {% endif %}
+            {% endfor %}
+        </div>
+    </div>
+</header>

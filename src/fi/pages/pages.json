@@ -1,0 +1,3 @@
+{
+    "permalink": "/{{ locale }}/{{ title | slug }}/index.html"
+}
