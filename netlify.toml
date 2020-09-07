@@ -3,6 +3,17 @@
     publish = "dist"
 
 [[redirects]]
+    from = "/*"
+    to = "/fi/:splat"
+    status = 302
+    conditions = {Language = ["fi"]}
+
+[[redirects]]
+    from = "/*"
+    to = "/en/:splat"
+    status = 302
+
+[[redirects]]
     from = "*"
     to = "/404"
     status = 404
