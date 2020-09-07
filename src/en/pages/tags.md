@@ -7,4 +7,5 @@ pagination:
     alias: tag
     filter: ["all", "blog", "work", "rss"]
 permalink: "{{ locale }}/tag/{{ tag | slug }}/"
+translationKey: "tags"
 ---
