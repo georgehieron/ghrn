@@ -6,7 +6,7 @@
     from = "/*"
     to = "/fi/:splat"
     status = 302
-    conditions = {Language = "fi"}
+    conditions = {Language = ["fi"]}
 
 [[redirects]]
     from = "/*"
