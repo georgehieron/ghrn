@@ -8,7 +8,7 @@ Frean Scildinga, frinan wille, beaga bryttan, swa þu bena eart, þeoden mærne,
 
 ## Hroðgar maþelode, helm Scyldinga:
 
-"Ic hine cuðe cnihtwesende. Wæs his ealdfæder Ecgþeo haten, ðæm to ham forgeaf Hreþel Geata angan dohtor; is his eafora nu heard her cumen, sohte holdne wine. Ðonne sægdon þæt sæliþende, þa ðe gifsceattas Geata fyredon þyder to þance, þæt he þritiges manna mægencræft on his mundgripe. Heaþorof hæbbe. Hine halig god for arstafum us onsende, to Westdenum, þæs ic wen hæbbe, wið Grendles gryre. Ic þæm *godan sceal* for his modþræce madmas beodan. Beo ðu on ofeste, hat in gan seon sibbegedriht samod ætgædere; gesaga him eac wordum þæt hie sint wilcuman Deniga leodum." 
+"Ic hine cuðe cnihtwesende. Wæs his ealdfæder Ecgþeo haten, ðæm to ham forgeaf Hreþel Geata angan dohtor; is his eafora nu heard her cumen, sohte holdne wine. Ðonne sægdon þæt sæliþende, þa ðe gifsceattas Geata fyredon þyder to þance, þæt he þritiges manna mægencræft on his mundgripe. Heaþorof hæbbe. Hine halig god for arstafum us onsende, to Westdenum, þæs ic wen hæbbe, wið Grendles gryre. Ic þæm **godan sceal** for his modþræce madmas beodan. Beo ðu on ofeste, hat in gan seon sibbegedriht samod ætgædere; gesaga him eac wordum þæt hie sint wilcuman Deniga leodum." 
 
 ## Word inne abead.
 
