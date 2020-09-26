@@ -4,7 +4,7 @@
 
 {# Render post date and any tags that this post has been filed under #}
 {% set pageHeaderSummary %}
-<time datetime="{{ date | w3DateFilter }}">{{ date | dateFilter }}</time>
+<time datetime="{{ date }}">{{ date | dateFilter }}</time>
 {% if tags %}
 <p class="visually-hidden" id="tags-desc">Tags that this post has been filed under.</p>
 <ul aria-describedby="tags-desc">
