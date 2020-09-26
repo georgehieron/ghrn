@@ -13,6 +13,7 @@
         <div>
             <img src="{{ intro.image }}" alt="{{ intro.imageAlt }}" />
         </div>
+        {{ content | safe }}
     </article>
 </div>
 {% endblock %}
