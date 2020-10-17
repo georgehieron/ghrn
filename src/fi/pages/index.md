@@ -15,3 +15,5 @@ intro:
     image: ""
     imageAlt: "Image alt"
 ---
+
+# Moi, olen George.
