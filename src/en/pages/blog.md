@@ -1,5 +1,5 @@
 ---
-title: "The GHRN Blog"
+title: "Blog"
 layout: "layouts/feed.html"
 eleventyNavigation:
   key: Blog
@@ -13,5 +13,3 @@ paginationPrevText: "Newer posts"
 paginationNextText: "Older posts"
 paginationAnchor: "#post-list"
 ---
-
-The latest posts.
