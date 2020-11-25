@@ -1,11 +1,11 @@
 ---
-title: "GHRN"
+title: "George Hieron"
 permalink: '/{{ locale }}/index.html'
 eleventyNavigation:
   key: Home
   order: 1
 translationKey: "homePage"
-metaDesc: 'A made up agency site that you build if you take Learn Eleventy From Scratch, by Piccalilli'
+metaDesc: 'Front-end-focused web developer specialising in accessibility.'
 layout: "layouts/home.html"
 intro:
     main: "Hey, I'm George"
