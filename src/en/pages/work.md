@@ -8,4 +8,4 @@ translationKey: "work"
 itemButtonText: "Read more"
 ---
 
-Welcome to my work! Below are some examples of personal projects from outside of my main job.
+Welcome to my work! Below are some examples of personal projects from outside of my day job.
