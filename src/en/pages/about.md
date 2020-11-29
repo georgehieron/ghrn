@@ -1,5 +1,5 @@
 ---
-title: 'About Me'
+title: 'A bit about me'
 eleventyNavigation:
   key: About
   order: 2
