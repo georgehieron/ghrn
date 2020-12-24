@@ -6,6 +6,13 @@
         <div>
             <h1>{{ intro.main }}</h1>
         </div>
+
+        {% highlight "js" %}
+function myFunction() {
+    return true;
+}
+        {% endhighlight %}
+
         {{ content | safe }}
     </article>
 </div>

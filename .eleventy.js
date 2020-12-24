@@ -1,6 +1,7 @@
 // Plugins
 const pluginNavigation = require("@11ty/eleventy-navigation");
 const rssPlugin = require("@11ty/eleventy-plugin-rss");
+const syntaxHighlight = require("@11ty/eleventy-plugin-syntaxhighlight");
 
 // Filters
 const dateFilter = require("./src/filters/date-filter.js");
@@ -18,6 +19,7 @@ module.exports = (config) => {
     // Add plugins
     config.addPlugin(pluginNavigation);
     config.addPlugin(rssPlugin);
+    config.addPlugin(syntaxHighlight);
 
     // Add filters
     config.addFilter("dateFilter", dateFilter);
