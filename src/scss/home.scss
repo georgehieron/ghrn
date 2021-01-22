@@ -1,1 +1,12 @@
-@import 'duotone-forest';
+@import 'dracula';
+
+@font-face {
+    font-family: "Fraktion Mono";
+    src: url('../fonts/FraktionMono-Regular.otf') format('opentype');
+    font-display: swap;
+}
+
+pre,
+code {
+    font-family: "Fraktion Mono", Monaco, monospace !important;
+}

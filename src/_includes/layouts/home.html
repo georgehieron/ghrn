@@ -9,10 +9,125 @@
             <h1>{{ intro.main }}</h1>
         </div>
 
-        {% highlight "js" %}
-function myFunction() {
-    return true;
+        {% highlight "html" %}
+<!-- A comment -->
+<section class="info wrapper">
+    <table>
+        <tr>
+            <th scope="row">Client:</th>
+            <td>{{ item.client }}</td>
+
+        </tr>
+        <tr>
+            <th scope="row">Agency:</th>
+            <td>{{ item.agency }}</td>
+        </tr>
+        <tr>
+            <th scope="row">Expertise:</th>
+            <td>{{ item.expertise }}</td>
+        </tr>
+        <tr>
+            <th scope="row">Project Outcomes:</th>
+            <td>{{ item.outcomes }}</td>
+        </tr>
+    </table>
+
+    <a href="{{ item.url }}" target="_blank">{{ item.linkText }}</a>
+</section>
+        {% endhighlight %}
+
+        {% highlight "scss" %}
+// A comment
+.site-wrap {
+    position: relative;
+    max-width: $max_width;
+    margin: 0 auto;
+
+    > * {
+        display: block;
+    }
 }
+
+@supports (display: grid) {
+    .site-wrap {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: minmax(0, max-content);
+        grid-template-areas:    "head"
+                                "side"
+                                "main"
+                                "foot";
+    }
+
+    @include media-query('md') {
+        .site-wrap {
+            grid-template-columns: 1fr 1fr minmax(min-content, 1fr);
+            grid-template-areas:    "head head side"
+                                    "main main side"
+                                    "foot foot side";
+        }
+    }
+
+    .home-header {
+        grid-area: head;
+    }
+
+    .main-content {
+        grid-area: main;
+    }
+
+    .sidebar {
+        grid-area: side;
+    }
+
+    .home-footer {
+        grid-area: foot;
+    }
+}
+
+.home-section--narrow {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: flex-start;
+}
+
+        {% endhighlight %}
+
+        {% highlight "js" %}
+document.addEventListener(
+    "DOMContentLoaded",
+    function () {
+        var resizeTimer; // Set resizeTimer to empty so it resets on page load
+
+        function resizeFunction() {
+            if (window.innerWidth > 768) {
+                const target = document.getElementById("site-wrap");
+
+                target.addEventListener('wheel', e => {
+                const toLeft  = e.deltaY < 0 && target.scrollLeft > 0
+                const toRight = e.deltaY > 0 && target.scrollLeft < target.scrollWidth - target.clientWidth
+
+                    if (toLeft || toRight) {
+                        e.preventDefault()
+                        e.stopPropagation()
+                        target.scrollLeft += e.deltaY / 4
+                    }
+                })
+            }
+        }
+
+        // On resize, run the function and reset the timeout
+        // 250 is the delay in milliseconds.
+        window.addEventListener("resize", function () {
+            clearTimeout(resizeTimer);
+            resizeTimer = setTimeout(resizeFunction, 250);
+        });
+
+        resizeFunction();
+    },
+    false
+);
         {% endhighlight %}
 
         {{ content | safe }}

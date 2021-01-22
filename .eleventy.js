@@ -62,6 +62,9 @@ module.exports = (config) => {
         );
     });
 
+    // Copy Static Files to /dist
+    config.addPassthroughCopy('src/fonts');
+
     // Tell 11ty to use the .eleventyignore and ignore our .gitignore file
     config.setUseGitIgnore(false);
 
