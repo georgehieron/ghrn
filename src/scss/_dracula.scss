@@ -60,8 +60,7 @@
  .namespace {
      opacity: .7;
  }
- 
- .token.property,
+
  .token.tag,
  .token.constant,
  .token.symbol,
@@ -74,8 +73,11 @@
      color: #bd93f9;
  }
  
- .token.selector,
- .token.attr-name,
+ .token.property {
+     color: #8be9fd;
+ }
+
+ .token.attr-value,
  .token.string,
  .token.char,
  .token.builtin,
@@ -92,8 +94,9 @@
     color: #ff79c6;
  }
  
+ .token.selector,
+ .token.attr-name,
  .token.atrule,
- .token.attr-value,
  .token.function,
  .token.class-name {
      color: #50fa7b;
