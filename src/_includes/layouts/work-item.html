@@ -12,6 +12,9 @@
         <img src="{{ hero.image }}" alt="{{ hero.imageAlt }}" />
     </header>
     <article>
+        {{content|safe}}
+    </article>
+    {# <article>
         <div class="wrapper">
             <h2>Key facts</h2>
             <div>
@@ -44,7 +47,7 @@
             </figure>
             {% endfor %}
         </article>
-    </div>
+    </div> #}
 </section>
 
 {% endblock %}
