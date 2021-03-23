@@ -1,5 +1,32 @@
 @import 'reset';
 
+$white: #fff;
+$green: #357e69;
+$dark: #3f403f;
+$yellow: #efd244;
+
+body {
+    position: relative;
+    color: $green;
+    background-color: $white;
+
+    &:before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        display: block;
+        width: 100%;
+        height: 100%;
+        background-image: url(/images/textures/cardboard-flat.png);
+        background-image: url(/images/textures/textured-paper.png);
+        background-image: url(/images/textures/rice-paper.png);
+        background-image: url(/images/textures/rice-paper-2.png);
+        opacity: .4;
+        pointer-events: none;
+    }
+}
+
 blockquote {
     padding-left: 2rem;
     font-family: 'Times New Roman', Times, serif;
