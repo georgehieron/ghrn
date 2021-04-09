@@ -1,5 +1,54 @@
-@font-face {
-    font-family: "Fraktion Mono";
-    src: url('../fonts/FraktionMono-Regular.otf') format('opentype');
-    font-display: swap;
+h1,
+.h1,
+h2,
+.h2,
+h3,
+.h3,
+h4,
+.h4,
+h5,
+.h5,
+h6,
+.h6 {
+    font-family: 'Migra Extrabold', Georgia, Times, serif;
+}
+
+a {
+    color: $green;
+}
+
+strong {
+    font-family: 'Archia Medium', Helvetica, Arial, sans-serif;
+}
+
+em {
+    font-style: normal;
+    text-decoration: overline;
+}
+
+mark {
+    color: $light;
+    background-color: $green;
+}
+
+blockquote {
+    padding-left: 2rem;
+    font-family: 'Migra Extralight', Georgia, Times, serif;
+    font-style: italic;
+}
+
+pre,
+code {
+    font-family: "Fraktion Mono", Monaco, monospace !important;
+}
+
+@media (prefers-color-scheme: dark) {
+    a {
+        color: $yellow;
+    }
+
+    mark {
+        color: $dark;
+        background-color: $yellow;
+    }
 }

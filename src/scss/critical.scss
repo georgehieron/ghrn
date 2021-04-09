@@ -1,16 +1,52 @@
-@import 'reset';
-@import 'typography';
+@font-face {
+    font-family: "Archia Light";
+    src: url('../fonts/archia-light-webfont.woff2') format('woff2');
+    font-display: swap;
+}
 
-$white: #f7f7f7;
+@font-face {
+    font-family: "Archia Medium";
+    src: url('../fonts/archia-medium-webfont.woff2') format('woff2');
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Migra Extrabold";
+    src: url('../fonts/Migra-Extrabold.woff2') format('woff2');
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Migra Extrabold Italic";
+    src: url('../fonts/MigraItalic-ExtraboldItalic.woff2') format('woff2');
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Migra Extralight";
+    src: url('../fonts/Migra-Extralight.woff2') format('woff2');
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Fraktion Mono";
+    src: url('../fonts/FraktionMono-Regular.otf') format('opentype');
+    font-display: swap;
+}
+
+@import 'reset';
+
+$light: #f7f7f7;
 // $green: #357e69;
-$green: #2e7762;
+$green: #28715C;
 $dark: #3d3d3d;
 $yellow: #efd036;
 
 body {
+    font-family: 'Archia Light', Helvetica, Arial, sans-serif;
     position: relative;
     color: $dark;
-    background-color: $white;
+    background-color: $light;
 
     &:before {
         content: "";
@@ -26,25 +62,7 @@ body {
     }
 }
 
-a {
-    color: $green;
-}
-
-mark {
-    background-color: $green;
-}
-
-blockquote {
-    padding-left: 2rem;
-    font-family: 'Times New Roman', Times, serif;
-    font-style: italic;
-}
-
-pre,
-code {
-    font-family: "Fraktion Mono", Monaco, monospace !important;
-}
-
+@import 'typography';
 
 .block {
     margin: 3rem auto;
@@ -55,20 +73,12 @@ code {
 
 @media (prefers-color-scheme: dark) {
     body {
-        color: $white;
+        color: $light;
         background-color: $dark;
 
         &:before {
             opacity: .275;
         }
-    }
-
-    a {
-        color: $yellow;
-    }
-
-    mark {
-        background-color: $yellow;
     }
 
     .block {
