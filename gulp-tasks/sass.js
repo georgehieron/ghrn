@@ -15,6 +15,8 @@ const criticalStyles = [
     "about.scss",
     "page.scss",
     "work-item.scss",
+    "codetest.scss",
+    "dracula.scss",
 ];
 
 // Takes the arguments passed by `dest` and determines where the output file goes
