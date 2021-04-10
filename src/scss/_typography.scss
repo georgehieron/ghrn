@@ -70,7 +70,8 @@ h5,
 h4,
 .h4,
 h6,
-.h6 {
+.h6,
+blockquote {
     @include apply-utility('font', 'title-l');
     @include apply-utility('weight', 'light');
     letter-spacing: .033em;
@@ -104,7 +105,8 @@ h3,
 }
 
 h4,
-.h4 {
+.h4,
+blockquote {
     font-size: 2.7vw;
 
     @supports (font-size: clamp(#{get-size('600')}, 2.7vw, #{get-size('800')})) {
@@ -178,8 +180,6 @@ mark {
 }
 
 blockquote {
-    @include apply-utility('font', 'title-l');
-    @include apply-utility('weight', 'light');
     padding-left: 2rem;
     font-style: normal;
 }
