@@ -20,16 +20,17 @@ $font-mono: "Fraktion Mono", Monaco, monospace;
 /// your whole project.
 ///
 $gorko-size-scale: (
-    "300": $gorko-base-size * 0.8,
-    "400": $gorko-base-size,
-    "500": $gorko-base-size * 1.25,
-    "600": $gorko-base-size * 1.6,
-    "700": $gorko-base-size * 2,
-    "900": $gorko-base-size * 3,
-    "1000": $gorko-base-size * 3.8,
-    "1100": $gorko-base-size * 4.8,
-    "1400": $gorko-base-size * 9.3,
-    "1600": $gorko-base-size * 14.6,
+    "300": $gorko-base-size * 0.8, // 12.8px
+    "400": $gorko-base-size, // 16px
+    "500": $gorko-base-size * 1.25, // 20px
+    "600": $gorko-base-size * 1.56, // 25px
+    "700": $gorko-base-size * 1.95, // 31px
+    "800": $gorko-base-size * 2.44, // 39px
+    "900": $gorko-base-size * 3.05, // 48px
+    "1000": $gorko-base-size * 3.82, // 61px
+    "1100": $gorko-base-size * 4.77, // 76px
+    "1400": $gorko-base-size * 9.31, // 150px
+    "1600": $gorko-base-size * 14.6, // 233px
 );
 
 /// COLORS

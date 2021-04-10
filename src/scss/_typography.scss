@@ -31,8 +31,13 @@
 
 body {
     @include apply-utility('font', 'base');
-    font-size: get-size('400');
+    @include apply-utility('weight', 'regular');
+    font-size: get-size('500');
     line-height: 1.4;
+
+    @supports (font-size: clamp(#{get-size('400')}, 1.33vw, #{get-size('500')})) {
+        font-size: clamp(#{get-size('400')}, 1.33vw, #{get-size('500')});
+    }
 }
 
 h1,
@@ -47,15 +52,117 @@ h5,
 .h5,
 h6,
 .h6 {
+    line-height: 1.36;
+}
+
+h1,
+.h1,
+h2,
+.h2,
+h3,
+.h3,
+h5,
+.h5 {
     @include apply-utility('font', 'title');
+    @include apply-utility('weight', 'regular');
+}
+
+h4,
+.h4,
+h6,
+.h6 {
+    @include apply-utility('font', 'title-l');
+    @include apply-utility('weight', 'light');
+}
+
+h1,
+.h1 {
+    font-size: 5.3vw;
+
+    @supports (font-size: clamp(#{get-size('800')}, 5.3vw, #{get-size('1100')})) {
+        font-size: clamp(#{get-size('800')}, 5.3vw, #{get-size('1100')});
+    }
+}
+
+h2,
+.h2 {
+    font-size: 4.2vw;
+
+    @supports (font-size: clamp(#{get-size('700')}, 4.2vw, #{get-size('1000')})) {
+        font-size: clamp(#{get-size('700')}, 4.2vw, #{get-size('1000')});
+    }
+}
+
+h3,
+.h3 {
+    font-size: 3.3vw;
+
+    @supports (font-size: clamp(#{get-size('600')}, 3.3vw, #{get-size('900')})) {
+        font-size: clamp(#{get-size('600')}, 3.3vw, #{get-size('900')});
+    }
+}
+
+h4,
+.h4 {
+    font-size: 2.7vw;
+
+    @supports (font-size: clamp(#{get-size('600')}, 2.7vw, #{get-size('800')})) {
+        font-size: clamp(#{get-size('600')}, 2.7vw, #{get-size('800')});
+    }
+}
+
+h5,
+.h5,
+h6
+.h6 {
+    font-size: get-size('400');
+    line-height: 1.375;
+}
+
+h5,
+.h5 {
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.xl,
+.xxl {
+    @include apply-utility('font', 'title-i');
+    @include apply-utility('weight', 'regular');
+    line-height: 1;
+}
+
+.xl {
+    font-size: 10.3vw;
+
+    @supports (font-size: clamp(#{get-size('1000')}, 10.3vw, #{get-size('1400')})) {
+        font-size: clamp(#{get-size('1000')}, 10.3vw, #{get-size('1400')});
+    }
+}
+
+.xxl {
+    font-size: 16.2vw;
+
+    @supports (font-size: clamp(#{get-size('1100')}, 16.2vw, #{get-size('1600')})) {
+        font-size: clamp(#{get-size('1100')}, 16.2vw, #{get-size('1600')});
+    }
 }
 
 a {
     color: $green;
 }
 
-strong {
+strong,
+.lede {
     @include apply-utility('font', 'strong');
+}
+
+.lede {
+    font-size: get-size('600');
+
+    @supports (font-size: clamp(#{get-size('500')}, 1.725vw, #{get-size('600')})) {
+        font-size: clamp(#{get-size('500')}, 1.725vw, #{get-size('600')});
+    }
 }
 
 em {
@@ -71,6 +178,7 @@ mark {
 
 blockquote {
     @include apply-utility('font', 'title-l');
+    @include apply-utility('weight', 'light');
     padding-left: 2rem;
     font-style: normal;
 }
@@ -78,6 +186,9 @@ blockquote {
 pre,
 code {
     @include apply-utility('font', 'mono');
+    @include apply-utility('weight', 'regular');
+    font-size: get-size('400');
+    line-height: 1.375 !important;
 }
 
 @media (prefers-color-scheme: dark) {
