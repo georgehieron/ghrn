@@ -73,6 +73,7 @@ h6,
 .h6 {
     @include apply-utility('font', 'title-l');
     @include apply-utility('weight', 'light');
+    letter-spacing: .033em;
 }
 
 h1,
