@@ -1,10 +1,8 @@
-@font-face {
-    font-family: "Fraktion Mono";
-    src: url('../fonts/FraktionMono-Regular.otf') format('opentype');
-    font-display: swap;
-}
+// First up: config and functions
+@import 'config';
 
-pre,
-code {
-    font-family: "Fraktion Mono", Monaco, monospace !important;
-}
+// Set gorko to output no CSS for this file
+$outputTokenCSS: false;
+
+// Next: pull in gorko for design tokens
+@import '../../node_modules/gorko/gorko.scss';

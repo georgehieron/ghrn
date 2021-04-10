@@ -1,3 +1,40 @@
+@font-face {
+    font-family: "Archia Light";
+    src: url('/../fonts/archia-light-webfont.woff2') format('woff2');
+    font-display: swap;
+}
+@font-face {
+    font-family: "Archia Medium";
+    src: url('/../fonts/archia-medium-webfont.woff2') format('woff2');
+    font-display: swap;
+}
+@font-face {
+    font-family: "Migra Extrabold";
+    src: url('/../fonts/Migra-Extrabold.woff2') format('woff2');
+    font-display: swap;
+}
+@font-face {
+    font-family: "Migra Extrabold Italic";
+    src: url('/../fonts/MigraItalic-ExtraboldItalic.woff2') format('woff2');
+    font-display: swap;
+}
+@font-face {
+    font-family: "Migra Extralight";
+    src: url('/../fonts/Migra-Extralight.woff2') format('woff2');
+    font-display: swap;
+}
+@font-face {
+    font-family: "Fraktion Mono";
+    src: url('/../fonts/FraktionMono-Regular.otf') format('opentype');
+    font-display: swap;
+}
+
+body {
+    @include apply-utility('font', 'base');
+    font-size: get-size('400');
+    line-height: 1.4;
+}
+
 h1,
 .h1,
 h2,
@@ -10,7 +47,7 @@ h5,
 .h5,
 h6,
 .h6 {
-    font-family: 'Migra Extrabold', Georgia, Times, serif;
+    @include apply-utility('font', 'title');
 }
 
 a {
@@ -18,12 +55,13 @@ a {
 }
 
 strong {
-    font-family: 'Archia Medium', Helvetica, Arial, sans-serif;
+    @include apply-utility('font', 'strong');
 }
 
 em {
     font-style: normal;
-    text-decoration: overline;
+    display: inline-block;
+    transform: skew(-12.5deg);
 }
 
 mark {
@@ -32,14 +70,14 @@ mark {
 }
 
 blockquote {
+    @include apply-utility('font', 'title-l');
     padding-left: 2rem;
-    font-family: 'Migra Extralight', Georgia, Times, serif;
-    font-style: italic;
+    font-style: normal;
 }
 
 pre,
 code {
-    font-family: "Fraktion Mono", Monaco, monospace !important;
+    @include apply-utility('font', 'mono');
 }
 
 @media (prefers-color-scheme: dark) {
