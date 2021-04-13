@@ -32,6 +32,11 @@ $dark-primary: #efd036;
     --color-primary: #{$dark-primary};
 }
 
+:focus {
+    outline: .2rem dashed var(--color-primary);
+    outline-offset: .1rem;
+}
+
 body {
     position: relative;
     color: var(--color-text);
@@ -48,6 +53,12 @@ body {
         background-image: url(/images/textures/paper-3.png);
         opacity: .4;
         pointer-events: none;
+    }
+}
+
+main {
+    &:focus {
+        outline: none;
     }
 }
 
