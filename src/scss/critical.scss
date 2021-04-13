@@ -6,16 +6,32 @@
 
 @import 'reset';
 
+@import "mixins/dark-theme";
+
 $light: #f7f7f7;
 // $green: #357e69;
-$green: #28715C;
+$light-primary: #28715C;
 $dark: #3d3d3d;
-$yellow: #efd036;
+$dark-primary: #efd036;
+
+:root {
+    --color-theme: "light";
+    --color-base: #{$light};
+    --color-text: #{$dark};
+    --color-primary: #{$light-primary};
+}
+
+@include dark-theme() {
+    --color-theme: "dark";
+    --color-base: #{$dark};
+    --color-text: #{$light};
+    --color-primary: #{$dark-primary};
+}
 
 body {
     position: relative;
-    color: $dark;
-    background-color: $light;
+    color: var(--color-text);
+    background-color: var(--color-base);
 
     &:before {
         content: "";
@@ -37,20 +53,5 @@ body {
     margin: 3rem auto;
     width: 50vw;
     height: 50vh;
-    background-color: $green;
-}
-
-@media (prefers-color-scheme: dark) {
-    body {
-        color: $light;
-        background-color: $dark;
-
-        &:before {
-            opacity: .275;
-        }
-    }
-
-    .block {
-        background-color: $yellow;
-    }
+    background-color: var(--color-primary);
 }

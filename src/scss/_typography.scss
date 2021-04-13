@@ -152,7 +152,7 @@ h5,
 }
 
 a {
-    color: $green;
+    color: var(--color-primary);
 }
 
 strong,
@@ -176,7 +176,7 @@ em {
 
 mark {
     color: $light;
-    background-color: $green;
+    background-color: var(--color-primary);
 }
 
 blockquote {
@@ -192,13 +192,13 @@ code {
     line-height: 1.375 !important;
 }
 
-@media (prefers-color-scheme: dark) {
+@include dark-theme() {
     a {
-        color: $yellow;
+        color: var(--color-primary);
     }
 
     mark {
-        color: $dark;
-        background-color: $yellow;
+        color: var(--color-base);
+        background-color: var(--color-primary);
     }
 }
