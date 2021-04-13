@@ -6,12 +6,12 @@
 $gorko-base-size: 1rem;
 
 /// FONTS
-$font-body: 'Archia Light', Arial, sans-serif;
-$font-strong: 'Archia Medium', Arial, sans-serif;
-$font-title: 'Migra Extrabold', Georgia, serif;
-$font-title-i: 'Migra Extrabold Italic', Georgia, serif;
-$font-title-l: 'Migra Extralight', Georgia, serif;
-$font-mono: "Fraktion Mono", Monaco, monospace;
+$font-body: 'Archia Light', Geneva, "Trebuchet MS", sans-serif;
+$font-strong: 'Archia Medium', Geneva, "Trebuchet MS", sans-serif;
+$font-title: 'Migra Extrabold', Palatino, Palatino Linotype, Book Antiqua, serif;
+$font-title-i: 'Migra Extrabold Italic', Palatino, Palatino Linotype, Book Antiqua, serif;
+$font-title-l: 'Migra Extralight', Palatino, Palatino Linotype, Book Antiqua, serif;
+$font-mono: "Fraktion Mono", Monaco, "Courier New", Courier, monospace;
 
 /// SIZE SCALE
 /// This is a Major Third scale that powers all the utilities that
