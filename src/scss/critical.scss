@@ -21,6 +21,10 @@ $dark-primary: #efd036;
     --color-primary: #{$light-primary};
 }
 
+[data-user-color-theme="light"] {
+    --color-theme: "light" !important;
+}
+
 @include dark-theme() {
     --color-theme: "dark";
     --color-base: #{$dark};

@@ -43,7 +43,6 @@ document.addEventListener(
                     "data-user-color-theme",
                     currentSetting
                 );
-                console.log(currentSetting);
                 // setButtonLabelAndStatus(currentSetting);
             } else {
                 // setButtonLabelAndStatus(getCSSCustomProp(COLOR_MODE_KEY));
