@@ -33,6 +33,9 @@ $gorko-size-scale: (
     "1600": $gorko-base-size * 14.6, // 233px
 );
 
+// WIDTHS
+$max-width: 90em;
+
 /// COLORS
 /// Colors are shared between backgrounds and text by default.
 /// You can also use them to power borders, fills or shadows, for example.
@@ -158,5 +161,6 @@ $gorko-config: (
         "sm": "(min-width: 36em)",
         "md": "(min-width: 48em)",
         "lg": "(min-width: 62em)",
+        "xl": "(min-width: 90em)",
     ),
 );

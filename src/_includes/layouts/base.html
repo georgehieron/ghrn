@@ -27,7 +27,7 @@
 
     {# If there's a theme preference in localstorage, use it on the <html> #}
     <script>
-        localStorage.getItem('user-color-theme') && 
+        localStorage.getItem('user-color-theme') &&
         document.documentElement.setAttribute('data-user-color-theme', localStorage.getItem('user-color-theme'));
     </script>
     {# Main global scripts #}
@@ -41,13 +41,15 @@
 </head>
 
 <body>
-    {% include "partials/site-head.html" %}
+    <div id="site-wrap" class="site-wrap">
 
-    <button id="js-theme-toggle">Theme</button>
+        {% include "partials/site-head.html" %}
 
-    <main tabindex="-1" id="main-content">
-        {% block content %}{% endblock %}
-    </main>
+        <main tabindex="-1" id="main-content" class="main-content">
+            {% block content %}{% endblock %}
+        </main>
+
+    </div>
 </body>
 
 </html>
