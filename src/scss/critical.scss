@@ -37,11 +37,7 @@ $dark-primary: #efd036;
     outline-offset: .1rem;
 }
 
-body {
-    position: relative;
-    color: var(--color-text);
-    background-color: var(--color-base);
-
+html {
     &:before {
         content: "";
         position: absolute;
@@ -54,6 +50,12 @@ body {
         opacity: .4;
         pointer-events: none;
     }
+}
+
+body {
+    position: relative;
+    color: var(--color-text);
+    background-color: var(--color-base);
 }
 
 main {
