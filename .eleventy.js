@@ -5,6 +5,7 @@ const syntaxHighlight = require("@11ty/eleventy-plugin-syntaxhighlight");
 
 // Filters
 const dateFilter = require("./src/filters/date-filter.js");
+const markdownFilter = require("./src/filters/markdown-filter.js");
 
 // Transforms
 const htmlMinTransform = require('./src/transforms/html-min-transform.js');
@@ -23,6 +24,7 @@ module.exports = (config) => {
 
     // Add filters
     config.addFilter("dateFilter", dateFilter);
+    config.addFilter("markdownFilter", markdownFilter);
 
     // Only minify HTML if we are in production because it slows builds _right_ down
     if (isProduction) {
