@@ -54,11 +54,11 @@
 
         <div class="site-head__bottom">
             <div class="main-nav-wrap">
-                <nav id="main-nav" class="main-nav" aria-labelledby="main-nav__label">
+                <nav id="main-nav" class="main-nav box-block" aria-labelledby="main-nav__label">
                     <h2 id="main-nav__label" class="visually-hidden">
                         {{ trans.lation('Main menu', 'Päävalikko', locale) }}
                     </h2>
-                    <ul class="main-nav__list">
+                    <ul class="main-nav__list box-block">
                         {% for item in collections["pages_" + locale] | eleventyNavigation %}
                             {% set isCurrent = (item.url == page.url) %}
                             {% set isParent = item.url != '/' and item.url in page.url %}

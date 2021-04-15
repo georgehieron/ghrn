@@ -6,34 +6,9 @@
 
 @import 'reset';
 
-@import "mixins/dark-theme";
 @import "mixins/vis-h";
 
 @import "components/skip-link.scss";
-
-$light: #f7f7f7;
-// $green: #357e69;
-$light-primary: #28715C;
-$dark: #3d3d3d;
-$dark-primary: #efd036;
-
-:root {
-    --color-theme: "light";
-    --color-base: #{$light};
-    --color-text: #{$dark};
-    --color-primary: #{$light-primary};
-}
-
-[data-user-color-theme="light"] {
-    --color-theme: "light" !important;
-}
-
-@include dark-theme() {
-    --color-theme: "dark";
-    --color-base: #{$dark};
-    --color-text: #{$light};
-    --color-primary: #{$dark-primary};
-}
 
 :focus {
     outline: .2rem dashed var(--color-primary);
@@ -56,6 +31,7 @@ body {
         background-image: url(/images/textures/paper-3.png);
         opacity: .4;
         pointer-events: none;
+        box-shadow: inset 0 0 #{get-size('1400')} #{get-size('500')} var(--color-base);
     }
 }
 

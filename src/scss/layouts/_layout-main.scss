@@ -30,6 +30,7 @@ $header-top-height: clamp(7.5rem, 20vw, 12.5rem);
             z-index: 1;
             outline: .2rem dashed var(--color-primary);
             outline-offset: -.2rem;
+            margin-top: -#{get-size('400')};
         }
 
         .side-content {
@@ -55,8 +56,8 @@ $header-top-height: clamp(7.5rem, 20vw, 12.5rem);
     &__bottom {
         height: calc(100% - 12.5rem);
 
-        @supports (height: calc(100% - clamp(7.5rem, 20vw, 12.5rem))) {
-            height: calc(100% - clamp(7.5rem, 20vw, 12.5rem));
+        @supports (height: calc(100% - #{$header-top-height})) {
+            height: calc(100% - #{$header-top-height});
         }
     }
 
@@ -72,7 +73,6 @@ $header-top-height: clamp(7.5rem, 20vw, 12.5rem);
     }
 
     .main-nav {
-        display: block;
         max-width: 33%;
         padding-right: 4.2vw;
 
@@ -81,7 +81,6 @@ $header-top-height: clamp(7.5rem, 20vw, 12.5rem);
         }
 
         ul {
-            display: block;
             outline: .2rem dashed var(--color-primary);
             outline-offset: -.2rem;
         }
