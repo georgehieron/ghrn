@@ -1,3 +1,5 @@
+$header-top-height: clamp(7.5rem, 20vw, 12.5rem);
+
 .site-wrap {
     max-width: $max-width;
     min-height: 100vh;
@@ -17,8 +19,8 @@
     @include media-query('sm') {
         .site-wrap {
             display: grid;
-            grid-template-columns: minmax(11.5rem, 1fr) 1fr 1fr;
-            grid-template-rows: 11.5rem 1fr;
+            grid-template-columns: minmax($header-top-height, 1fr) 1fr 1fr;
+            grid-template-rows: $header-top-height 1fr;
         }
 
         .main-content {
@@ -44,10 +46,18 @@
 
     &__top {
         height: 12.5rem;
+
+        @supports (height: $header-top-height) {
+            height: $header-top-height;
+        }
     }
 
     &__bottom {
         height: calc(100% - 12.5rem);
+
+        @supports (height: calc(100% - clamp(7.5rem, 20vw, 12.5rem))) {
+            height: calc(100% - clamp(7.5rem, 20vw, 12.5rem));
+        }
     }
 
     .lang-nav {

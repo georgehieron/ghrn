@@ -7,6 +7,9 @@
 @import 'reset';
 
 @import "mixins/dark-theme";
+@import "mixins/vis-h";
+
+@import "components/skip-link.scss";
 
 $light: #f7f7f7;
 // $green: #357e69;
