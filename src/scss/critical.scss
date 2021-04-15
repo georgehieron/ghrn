@@ -8,7 +8,7 @@
 
 @import "mixins/vis-h";
 
-@import "components/skip-link.scss";
+@import "components/skip-link";
 
 :focus {
     outline: .2rem dashed var(--color-primary);

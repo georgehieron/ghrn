@@ -58,13 +58,13 @@
                     <h2 id="main-nav__label" class="visually-hidden">
                         {{ trans.lation('Main menu', 'Päävalikko', locale) }}
                     </h2>
-                    <ul class="main-nav__list box-block">
+                    <ul class="main-nav__list box-block with-indicator">
                         {% for item in collections["pages_" + locale] | eleventyNavigation %}
                             {% set isCurrent = (item.url == page.url) %}
                             {% set isParent = item.url != '/' and item.url in page.url %}
-                            <li class="nav__item{% if isCurrent or isParent %} nav__item--active{% endif %}">
+                            <li class="Nav-item nav__item{% if isCurrent or isParent %} nav__item--active{% endif %}">
                                 <a
-                                    class="nav__link"
+                                    class="nav__link font-title h3"
                                     href="{% if isCurrent %}#main{% else %}{{ item.url | url }}{% endif %}"
                                     {% if isCurrent %}aria-current="page"{% endif %}
                                 >
