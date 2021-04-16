@@ -124,10 +124,12 @@ $header-top-height: clamp(7.5rem, 20vw, 12.5rem);
 
                         &:hover,
                         &:focus {
-                            &:before {
-                                width: #{get-size('800')};
-                                left: -#{get-size('900')};
-                                transition: .3s ease-in-out width, .3s ease-in-out left;
+                            &:not([aria-current="page"]) {
+                                &:before {
+                                    width: #{get-size('600')};
+                                    left: -2.17rem; // size-600 + (size-800 - size-900);
+                                    transition: .3s ease-in-out width, .3s ease-in-out left;
+                                }
                             }
                         }
                     }
