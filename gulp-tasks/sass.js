@@ -14,7 +14,7 @@ const criticalStyles = [
     "home.scss",
     "about.scss",
     "page.scss",
-    "work-item.scss",
+    "work.scss",
     "codetest.scss",
     "dracula.scss",
 ];

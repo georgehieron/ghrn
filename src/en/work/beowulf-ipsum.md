@@ -2,6 +2,10 @@
 title: 'Beowulf Ipsum'
 summary: 'An Ipsum-style text generator that uses Beowulf.'
 displayOrder: 1
+eleventyNavigation:
+  key: Beowulf Ipsum
+  parent: Work
+translationKey: "bIpsum"
 ---
 
 One day, while I was working on the front-end build of a client's new website, I needed to block in some example content in order to correctly begin laying out whatever section I was working on at that moment. Of course, I reached for the classic Lorem Ipsum, the long-established and globally recognised dummy text used to infer the presence of real content in the context of a layout or design. However, as a bit of a medieval history nerd I wondered, why not take the concept and apply it to classical works? After all, in addition to Lorem Ipsum, these days there are plenty of other, often hilarious options for dummy text generators, such as [Pirate Ipsum](https://pirateipsum.me/), [Cheese Ipsum](http://www.cheeseipsum.co.uk/), [Cat Ipsum](http://www.catipsum.com/), and even [Zombie Ipsum](http://www.zombieipsum.com/).

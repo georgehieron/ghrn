@@ -61,7 +61,9 @@
                     <ul class="main-nav__list box-block">
                         {% for item in collections["pages_" + locale] | eleventyNavigation %}
                             {% set isCurrent = (item.url == page.url) %}
-                            {% set isParent = item.url != '/' and item.url in page.url %}
+                            {% if eleventyNavigation.parent %}
+                                {% set isParent = item.url != '/' and item.url in page.url and item.title == eleventyNavigation.parent %}
+                            {% endif %}
                             <li class="nav__item{% if isCurrent or isParent %} nav__item--active{% endif %}">
                                 <a
                                     class="nav__link font-title h3"
