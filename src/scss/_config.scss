@@ -34,7 +34,7 @@ $gorko-size-scale: (
 );
 
 // WIDTHS
-$max-width: 90em;
+$max-width: 90rem;
 
 /// COLORS
 /// Colors are shared between backgrounds and text by default.
@@ -194,9 +194,9 @@ $gorko-config: (
         "property": "width",
     ),
     "breakpoints": (
-        "sm": "(min-width: 36em)",
-        "md": "(min-width: 48em)",
-        "lg": "(min-width: 62em)",
-        "xl": "(min-width: 90em)",
+        "sm": "(min-width: 36rem)",
+        "md": "(min-width: 48rem)",
+        "lg": "(min-width: 62rem)",
+        "xl": "(min-width: 90rem)",
     ),
 );
