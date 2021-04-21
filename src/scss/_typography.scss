@@ -153,6 +153,8 @@ h5,
 
 a {
     color: var(--color-primary);
+    text-decoration-thickness: 2px;
+    text-underline-offset: .15em;
 
     &:not([class]) {
         position: relative;
@@ -163,7 +165,7 @@ a {
         vertical-align: bottom;
         overflow: hidden;
         transition: 0.3s ease-in-out background-position, 0.3s ease-in-out color;
-    
+
         &:hover,
         &:focus {
             color: var(--color-base);
@@ -210,9 +212,17 @@ code {
 }
 
 @include dark-theme() {
-    a {
-        color: var(--color-primary);
-    }
+    // a {
+
+    //     &:not([class]) {
+    //         color: var(--color-primary);
+    //         &:hover,
+    //         &:focus {
+    //             color: var(--color-base);
+    //             background-position: 0 0;
+    //         }
+    //     }
+    // }
 
     mark {
         color: var(--color-base);
