@@ -151,6 +151,39 @@ h5,
     }
 }
 
+.h-sep {
+    @include apply-utility('box', 'flex');
+    position: relative;
+
+    > :nth-child(2) {
+        flex: 0 0 auto;
+        margin-left: get-size('300');
+        margin-right: get-size('300');
+        max-width: 80%;
+
+        @include media-query('sm') {
+            margin-left: get-size('400');
+            margin-right: get-size('400');
+        }
+
+        @include media-query('md') {
+            margin-left: get-size('700');
+            margin-right: get-size('700');
+        }
+    }
+
+    > span {
+        flex: 1 1 auto;
+        display: block;
+        height: .125rem;
+        width: 100%;
+        background-color: var(--color-primary);
+        transform: translateY(-150%);
+        margin-top: auto;
+        margin-bottom: auto;
+    }
+}
+
 a {
     color: var(--color-primary);
     text-decoration-thickness: 2px;

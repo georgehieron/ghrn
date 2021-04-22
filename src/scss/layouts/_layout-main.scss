@@ -97,7 +97,7 @@ $header-top-height: clamp(7.5rem, 20vw, 12.5rem);
                                 left: -#{get-size('900')};
                                 display: block;
                                 width: #{get-size('800')};
-                                height: .15rem;
+                                height: .125rem;
                                 background-color: var(--color-primary);
                                 transform: translateY(-60%);
                             }
@@ -116,7 +116,7 @@ $header-top-height: clamp(7.5rem, 20vw, 12.5rem);
                             top: 45%;
                             left: calc(#{get-size('800')} - #{get-size('900')});
                             width: 0;
-                            height: .15rem;
+                            height: .125rem;
                             background-color: var(--color-text);
                             transition: .15s ease width, .15s ease left;
                         }

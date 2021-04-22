@@ -1,0 +1,8 @@
+@mixin ratio--3-2() {
+    position: relative;
+    padding-top: 66.666%;
+
+    > * {
+        position: absolute;
+    }
+}
