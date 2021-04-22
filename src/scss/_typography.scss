@@ -215,8 +215,8 @@ strong,
 .lede {
     font-size: get-size('700');
 
-    @supports (font-size: clamp(#{get-size('600')}, 2.2vw, #{get-size('700')})) {
-        font-size: clamp(#{get-size('600')}, 2.2vw, #{get-size('700')});
+    @supports (font-size: clamp(#{get-size('500')}, 2.2vw, #{get-size('700')})) {
+        font-size: clamp(#{get-size('500')}, 2.2vw, #{get-size('700')});
     }
 }
 
