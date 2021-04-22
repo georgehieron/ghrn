@@ -7,4 +7,12 @@
         left: 0;
         padding: .8em 1em;
     }
+
+    &:hover {
+        .card-link__title {
+            text-decoration: underline;
+            text-decoration-thickness: 2px;
+            text-underline-offset: .15em;
+        }
+    }
 }
