@@ -2,6 +2,8 @@
 
 {% set pageCriticalStyles = ['css/home.css'] %}
 
+{% import "macros/card-link.html" as cardLink %}
+
 {% block content %}
 <div class="home-content wrapper align-center">
     <article>
@@ -16,14 +18,12 @@
             </div>
             {% for item in collections.blog %}
                 {% if loop.index == 1 %}
-                    <a href="{{ item.url }}" id="blog-item--{{ loop.index }}" class="card-link box-block bg-primary color-base">
-                        <span class="card-link__title font-title h3">{{ item.data.title }}</span>
-                    </a>
+                    {{ cardLink.link(item.url, loop.index, 'bg-primary', item.data.title) }}
                 {% endif %}
             {% endfor %}
-        <section>
-
         </section>
+
+        <section>
             <div class="h-sep">
                 <span aria-hidden="true"></span>
                 <h2>Featured project</h2>
@@ -33,17 +33,13 @@
             {% if locale === 'en' %}
                 {% for item in collections.work_en %}
                     {% if loop.index == 1 %}
-                        <a href="{{ item.url }}" id="work-item--{{ loop.index }}" class="card-link box-block bg-primary color-base">
-                            <span class="card-link__title font-title h3">{{ item.data.title }}</span>
-                        </a>
+                        {{ cardLink.link(item.url, loop.index, 'bg-text', item.data.title) }}
                     {% endif %}
                 {% endfor %}
             {% elif locale === 'fi' %}
                 {% for item in collections.work_fi %}
                     {% if loop.index == 1 %}
-                        <a href="{{ item.url }}" id="work-item--{{ loop.index }}" class="card-link box-block bg-primary color-base">
-                            <span class="card-link__title font-title h3">{{ item.data.title }}</span>
-                        </a>
+                        {{ cardLink.link(item.url, loop.index, 'bg-text', item.data.title) }}
                     {% endif %}
                 {% endfor %}
             {% endif %}
