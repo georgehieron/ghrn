@@ -87,7 +87,10 @@ $header-top-height: clamp(7.5rem, 20vw, 12.5rem);
 
                 li {
                     padding-left: get-size('900');
-                    margin-bottom: .5em;
+
+                    + li {
+                        margin-top: .5em;
+                    }
 
                     &.nav__item--active {
                         a {
