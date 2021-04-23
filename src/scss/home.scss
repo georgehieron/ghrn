@@ -13,5 +13,7 @@ $outputTokenCSS: false;
 @import "utilities/visually-hidden";
 
 @import "layouts/layout-main";
+@import "layouts/layout-home";
 
+@import "components/main-nav";
 @import "components/card-link";

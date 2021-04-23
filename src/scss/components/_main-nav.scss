@@ -1,0 +1,71 @@
+.main-nav-wrap {
+    position: sticky;
+    top: get-size('400');
+}
+
+.main-nav {
+    max-width: 33%;
+    padding-right: 4.2vw;
+
+    @supports (padding-right: clamp(#{get-size('300')}, 4.2vw, #{get-size('1000')})) {
+        padding-right: clamp(#{get-size('300')}, 4.2vw, #{get-size('1000')});
+    }
+
+    @include media-query('sm') {
+        ul {
+            outline: .2rem dashed var(--color-primary);
+            outline-offset: -.2rem;
+
+            li {
+                margin-top: .5em;
+                padding-left: get-size('900');
+
+                &.nav__item--active {
+                    a {
+                        &:before {
+                            content: "";
+                            position: absolute;
+                            top: 45%;
+                            left: -#{get-size('900')};
+                            display: block;
+                            width: #{get-size('800')};
+                            height: .125rem;
+                            background-color: var(--color-primary);
+                            transform: translateY(-50%);
+                        }
+                    }
+                }
+
+                a {
+                    @include apply-utility('color', 'text');
+                    position: relative;
+                    line-height: 1.1;
+                    text-decoration: none;
+
+                    &:before {
+                        @include apply-utility('box', 'block');
+                        content: "";
+                        position: absolute;
+                        top: 45%;
+                        left: calc(#{get-size('800')} - #{get-size('900')});
+                        width: 0;
+                        height: .125rem;
+                        background-color: var(--color-text);
+                        transition: .15s ease width, .15s ease left;
+                    }
+
+                    &:hover,
+                    &:focus {
+                        &:not([aria-current="page"]) {
+                            &:before {
+                                width: #{get-size('600')};
+                                left: -2.17rem; // size-600 + (size-800 - size-900);
+                                transition: .15s ease width, .15s ease left;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

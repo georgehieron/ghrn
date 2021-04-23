@@ -154,6 +154,7 @@ h5,
 .h-sep {
     @include apply-utility('box', 'flex');
     position: relative;
+    margin-bottom: 1.75em;
 
     > :nth-child(2) {
         flex: 0 0 auto;
@@ -186,7 +187,7 @@ h5,
 
 a {
     color: var(--color-primary);
-    text-decoration-thickness: 2px;
+    text-decoration-thickness: .1em;
     text-underline-offset: .15em;
 
     &:not([class]) {
@@ -245,18 +246,6 @@ code {
 }
 
 @include dark-theme() {
-    // a {
-
-    //     &:not([class]) {
-    //         color: var(--color-primary);
-    //         &:hover,
-    //         &:focus {
-    //             color: var(--color-base);
-    //             background-position: 0 0;
-    //         }
-    //     }
-    // }
-
     mark {
         color: var(--color-base);
         background-color: var(--color-primary);

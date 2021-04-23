@@ -1,5 +1,10 @@
 .card-link {
     @include ratio--3-2;
+    margin-bottom: 4em;
+
+    @supports (margin-bottom: clamp(3em, 6.7vw, 5em)) {
+        margin-bottom: clamp(3em, 6.7vw, 5em);
+    }
 
     &__title {
         @include apply-utility('align', 'left');
