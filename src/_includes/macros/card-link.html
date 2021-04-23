@@ -1,5 +1,5 @@
-{% macro link(url, index, classes, title) %}
-<a href="{{ url }}" id="work-item--{{ index }}" class="card-link box-block color-base {{ classes }}">
+{% macro link(url, classes, title) %}
+<a href="{{ url }}" class="card-link box-block color-base {{ classes }}">
     <span class="card-link__title font-title h3">{{ title }}</span>
 </a>
 {% endmacro %}

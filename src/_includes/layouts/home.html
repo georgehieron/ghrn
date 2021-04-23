@@ -18,7 +18,7 @@
             </div>
             {% for item in collections.blog %}
                 {% if loop.index == 1 %}
-                    {{ cardLink.link(item.url, loop.index, 'bg-primary', item.data.title) }}
+                    {{ cardLink.link(item.url, 'bg-primary', item.data.title) }}
                 {% endif %}
             {% endfor %}
         </section>
@@ -32,13 +32,13 @@
             {% if locale === 'en' %}
                 {% for item in collections.work_en %}
                     {% if loop.index == 1 %}
-                        {{ cardLink.link(item.url, loop.index, 'bg-text', item.data.title) }}
+                        {{ cardLink.link(item.url, 'bg-text', item.data.title) }}
                     {% endif %}
                 {% endfor %}
             {% elif locale === 'fi' %}
                 {% for item in collections.work_fi %}
                     {% if loop.index == 1 %}
-                        {{ cardLink.link(item.url, loop.index, 'bg-text', item.data.title) }}
+                        {{ cardLink.link(item.url, 'bg-text', item.data.title) }}
                     {% endif %}
                 {% endfor %}
             {% endif %}
