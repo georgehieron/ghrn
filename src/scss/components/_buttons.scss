@@ -1,0 +1,13 @@
+.button {
+    @include apply-utility("font", "strong");
+    -webkit-appearance: none;
+    color: var(--color-base);
+    background: var(--color-primary);
+    text-decoration: none;
+    padding: get-size("100") get-size("700");
+    border: 0;
+
+    &:hover {
+        cursor: pointer;
+    }
+}

@@ -41,13 +41,7 @@ main {
 }
 
 @import 'typography';
-
-.block {
-    margin: 3rem auto;
-    width: 50vw;
-    height: 50vh;
-    background-color: var(--color-primary);
-}
+@import 'components/buttons';
 
 @include dark-theme() {
     body {

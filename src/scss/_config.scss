@@ -20,6 +20,8 @@ $font-mono: "Fraktion Mono", Monaco, "Courier New", Courier, monospace;
 /// your whole project.
 ///
 $gorko-size-scale: (
+    "100": $gorko-base-size * 0.512, // 8.19px
+    "200": $gorko-base-size * 0.64, // 10.24px
     "300": $gorko-base-size * 0.8, // 12.8px
     "400": $gorko-base-size, // 16px
     "500": $gorko-base-size * 1.25, // 20px
