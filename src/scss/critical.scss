@@ -15,26 +15,20 @@
     outline-offset: .1rem;
 }
 
-html,
-body {
-    overflow: visible;
-}
-
 body {
     position: relative;
     color: var(--color-text);
     background-color: var(--color-base);
 
     > .site-texture {
-        // content: "";
         position: fixed;
-        top: -10%;
-        left: -10%;
+        top: 0;
+        left: 0;
         display: block;
-        width: 120%;
-        height: 120%;
+        width: 110%;
+        height: 110%;
         background-image: url(/images/textures/paper-3.png);
-        opacity: .6;
+        opacity: .55;
         pointer-events: none;
     }
 }
@@ -52,4 +46,12 @@ main {
     width: 50vw;
     height: 50vh;
     background-color: var(--color-primary);
+}
+
+@include dark-theme() {
+    body {
+        > .site-texture {
+            opacity: .225;
+        }
+    }
 }
