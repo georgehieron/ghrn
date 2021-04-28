@@ -65,5 +65,24 @@ $header-top-height: clamp(7.5rem, 20vw, 12.5rem);
         position: absolute;
         top: 0;
         right: 0;
+        padding: 1em;
+
+        &__item {
+
+            a {
+                text-transform: uppercase;
+                text-decoration: none;
+            }
+
+            &__code {
+                &.row-reverse {
+                    flex-direction: row-reverse;
+                }
+
+                > span {
+                    margin: 0 .25rem;
+                }
+            }
+        }
     }
 }

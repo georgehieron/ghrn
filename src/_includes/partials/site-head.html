@@ -11,7 +11,7 @@
             {# Loop though site.languages #}
             {% for lang in site.languages %}
             {% if loop.first %}
-                <ul class="lang-nav">
+                <ul class="lang-nav box-flex">
             {% endif %}
 
                 {# Set translatedUrl to the homepage of that language by default #}
@@ -33,16 +33,24 @@
                 {% endfor %}
 
                 <li class="lang-nav__item">
-                    <a class="lang-nav__link  {{ activeClass }}" href="{{ translatedUrl }}" lang="{{ lang.code }}" hreflang="{{ lang.code }}">
-                        <span class="lang-nav__item__code">{{ lang.code }}</span>
-                        <span class="visually-hidden">{{ lang.label }}</span>
-                        <span aria-hidden="true">
-                            {% if lang.code === 'en' %}
-                            🇬🇧
-                            {% elif lang.code === 'fi' %}
-                            🇫🇮
-                            {% endif %}
+                    <a class="lang-nav__link box-flex font-title color-text{% if activeClass %} {{ activeClass }}{% endif %}" href="{{ translatedUrl }}" lang="{{ lang.code }}" hreflang="{{ lang.code }}"{% if activeClass %} aria-current="true"{% endif %}>
+                        {% if loop.last and not activeClass %}
+                            {% include "components/toggle-button.html" %}
+                        {% endif %}
+                        <span class="lang-nav__item__code box-flex{% if loop.last %} row-reverse{% endif %}">
+                            <span aria-hidden="true">
+                                {% if lang.code === 'en' %}
+                                🇬🇧
+                                {% elif lang.code === 'fi' %}
+                                🇫🇮
+                                {% endif %}
+                            </span>
+                            {{ lang.code }}
                         </span>
+                        <span class="visually-hidden">{{ lang.label }}</span>
+                        {% if loop.first and not activeClass %}
+                            {% include "components/toggle-button.html" %}
+                        {% endif %}
                     </a>
                 </li>
 
