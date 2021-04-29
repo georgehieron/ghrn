@@ -1,9 +1,43 @@
 .main-nav-wrap {
-    position: sticky;
     top: get-size('400');
+
+    @include media-query('sm') {
+        position: sticky;
+    }
 }
 
 .main-nav {
+    .nav__link {
+        @include apply-utility('color', 'text');
+    }
+
+    @media (max-width: 36rem) {
+        .nav__item {
+            &.nav__item--active {
+                .nav__link {
+                    &:before {
+                        content: "";
+                        position: absolute;
+                        top: auto;
+                        bottom: 0.2em;
+                        left: 0;
+                        display: block;
+                        height: .125rem;
+                        background-color: var(--color-primary);
+                        width: 100%;
+                        transform: none;
+                    }
+                }
+            }
+        }
+
+        .nav__link {
+            position: relative;
+            display: inline-block;
+            font-size: 7vh;
+            text-decoration: none;
+        }
+    }
 
     @include media-query('sm') {
         max-width: 33%;
@@ -22,28 +56,25 @@
                 padding-bottom: clamp(#{get-size("300")}, 4.2vw, #{get-size("1000")});
             }
 
-            li {
+            .nav__item {
                 margin-top: .5em;
                 padding-left: get-size('900');
 
                 &.nav__item--active {
-                    a {
+                    .nav__link {
                         &:before {
                             content: "";
                             position: absolute;
                             top: 45%;
+                            bottom: auto;
                             left: -#{get-size('900')};
-                            display: block;
                             width: #{get-size('800')};
-                            height: .125rem;
-                            background-color: var(--color-primary);
                             transform: translateY(-50%);
                         }
                     }
                 }
 
-                a {
-                    @include apply-utility('color', 'text');
+                .nav__link {
                     position: relative;
                     line-height: 1.1;
                     text-decoration: none;

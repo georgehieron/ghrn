@@ -4,16 +4,20 @@
     <a class="skip-link button" href="#main-content">
         {{ trans.lation('Skip to content', 'Siirry sisältöön', locale) }}
     </a>
-    <header role="banner" class="site-head">
-        <div class="site-head__top">
+    <header role="banner" id="site-head" class="site-head" data-menu-open="false">
+        <div class="site-head__top stack-700">
             <a href="/{{ locale }}" aria-label="{{ site.name }} - home" class="site-head__brand">
                 {% include "partials/ghrn.svg" %}
             </a>
 
+            <button id="js-brgr" class="burger" href="#" aria-expanded="false">
+                <div class="burger__inner"></div>
+            </button>
+
             {# Loop though site.languages #}
             {% for lang in site.languages %}
             {% if loop.first %}
-                <ul class="lang-nav box-flex">
+                <ul class="lang-nav box-flex stack-700">
             {% endif %}
 
                 {# Set translatedUrl to the homepage of that language by default #}
@@ -66,8 +70,12 @@
             {% endfor %}
         </div>
 
-        <div class="site-head__bottom">
+        <div class="site-head__bottom stack-600">
             {% include "partials/main-nav.html" %}
+        </div>
+
+        <div class="theme-toggle-wrap stack-700">
+            <button id="js-theme-toggle" class="button">Theme</button>
         </div>
     </header>
 </section>

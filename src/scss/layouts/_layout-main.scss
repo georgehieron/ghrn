@@ -55,6 +55,7 @@ $header-top-height: clamp(7.5rem, 20vw, 12.5rem);
     }
 
     &__bottom {
+        display: none;
         height: calc(100% - 12.5rem);
 
         @supports (height: calc(100% - #{$header-top-height})) {
@@ -63,10 +64,14 @@ $header-top-height: clamp(7.5rem, 20vw, 12.5rem);
     }
 
     .lang-nav {
-        position: absolute;
-        top: 0;
+        visibility: hidden;
+        position: fixed;
+        bottom: 0;
         right: 0;
-        padding: 1em 0 0 1em;
+        justify-content: center;
+        width: 100%;
+        background: var(--color-base);
+        padding: 1em;
 
         &__item {
 
@@ -89,12 +94,35 @@ $header-top-height: clamp(7.5rem, 20vw, 12.5rem);
         }
     }
 
+    .theme-toggle-wrap {
+        position: fixed;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        background: var(--color-text);
+
+        * {
+            color: var(--color-base);
+        }
+    }
+
     @include media-query('sm') {
+        .site-head__bottom {
+            display: block;
+        }
+
+        .lang-nav {
+            position: absolute;
+            top: 0;
+            bottom: auto;
+            right: 0;
+            width: auto;
+            justify-content: flex-end;
+            padding: 1em 0 0 1em;
+            visibility: visible;
+        }
+
         .theme-toggle-wrap {
-            position: fixed;
-            left: 0;
-            bottom: 0;
-            width: 100%;
             max-width: 33vw;
             background-color: rgba(0,0,0,.4);
             background-color: var(--color-base);
@@ -116,5 +144,31 @@ $header-top-height: clamp(7.5rem, 20vw, 12.5rem);
         .theme-toggle-wrap {
             left: calc((100vw - #{$max-width}) / 2);
         }
+    }
+}
+
+html[data-menu-open="true"] {
+    body {
+        overflow: hidden;
+    }
+
+    .site-head__bottom {
+        position: fixed;
+        top: 7.5rem;
+        left: 0;
+        display: block;
+        width: 100%;
+        height: calc(100% - 7.5rem);
+        padding-bottom: 4rem;
+        text-align: center;
+        background: var(--color-base);
+    }
+
+    .lang-nav {
+        visibility: visible;
+    }
+
+    .theme-toggle-wrap {
+        display: none;
     }
 }
