@@ -1,21 +1,21 @@
 .toggle-btn {
     position: relative;
-    top: 0.1em;
+    top: -0.05em;
     display: inline-block;
-    height: 1.25rem;
-    width: 2rem;
+    height: 1.5em;
+    width: 2.7em;
     margin-left: .75em;
     margin-right: .75em;
     padding: 0;
     background: 0;
     border: .1rem solid;
-    border-radius: 1rem;
+    border-radius: 1.5rem;
 
     &__indicator {
         position: absolute;
         top: 50%;
-        height: 1.05rem;
-        width: 1rem;
+        height: 1.25em;
+        width: 1.2em;
         background-color: var(--color-primary);
         border-radius: 50%;
     }
@@ -23,12 +23,12 @@
 
 html[lang="en"] {
     .toggle-btn__indicator {
-        transform: translate(calc(-50% + .5rem),-50%);
+        transform: translate(calc(-50% + .6em),-50%);
     }
 }
 
 html[lang="fi"] {
     .toggle-btn__indicator {
-        transform: translate(calc(50% + .4rem),-50%);
+        transform: translate(calc(50% + .75em),-50%);
     }
 }

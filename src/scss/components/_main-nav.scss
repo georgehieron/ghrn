@@ -4,14 +4,15 @@
 }
 
 .main-nav {
-    max-width: 33%;
-    padding-right: 4.2vw;
-
-    @supports (padding-right: clamp(#{get-size('300')}, 4.2vw, #{get-size('1000')})) {
-        padding-right: clamp(#{get-size('300')}, 4.2vw, #{get-size('1000')});
-    }
 
     @include media-query('sm') {
+        max-width: 33%;
+        padding-right: 4.2vw;
+
+        @supports (padding-right: clamp(#{get-size('300')}, 4.2vw, #{get-size('1000')})) {
+            padding-right: clamp(#{get-size('300')}, 4.2vw, #{get-size('1000')});
+        }
+
         ul {
             outline: .2rem dashed var(--color-primary);
             outline-offset: -.2rem;
