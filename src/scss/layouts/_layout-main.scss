@@ -107,4 +107,10 @@ $header-top-height: clamp(7.5rem, 20vw, 12.5rem);
             }
         }
     }
+
+    @include media-query('xl') {
+        .theme-toggle-wrap {
+            left: calc((100vw - #{$max-width}) / 2);
+        }
+    }
 }
