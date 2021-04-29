@@ -17,8 +17,11 @@
                 {# Set translatedUrl to the homepage of that language by default #}
                 {% set translatedUrl = "/" + lang.code + "/" %}
 
+                {# Set currentLand boolean #}
+                {% set currentLang = true if lang.code == locale %}
+
                 {# Set current language class #}
-                {% set activeClass = "is-active" if lang.code == locale else "" %}
+                {% set activeClass = "is-active" if currentLang %}
 
                 {# Loop through all the content of the site #}
                 {% for item in collections.all %}
@@ -33,8 +36,9 @@
                 {% endfor %}
 
                 <li class="lang-nav__item">
+
                     <a class="lang-nav__link box-flex font-title color-text{% if activeClass %} {{ activeClass }}{% endif %}" href="{{ translatedUrl }}" lang="{{ lang.code }}" hreflang="{{ lang.code }}"{% if activeClass %} aria-current="true"{% endif %}>
-                        {% if loop.last and not activeClass %}
+                        {% if loop.last and not currentLang %}
                             {% include "components/toggle-button.html" %}
                         {% endif %}
                         <span class="lang-nav__item__code box-flex{% if loop.last %} row-reverse{% endif %}">
@@ -48,7 +52,7 @@
                             {{ lang.code }}
                         </span>
                         <span class="visually-hidden">{{ lang.label }}</span>
-                        {% if loop.first and not activeClass %}
+                        {% if loop.first and not currentLang %}
                             {% include "components/toggle-button.html" %}
                         {% endif %}
                     </a>
@@ -84,7 +88,9 @@
                         {% endfor %}
                     </ul>
                 </nav>
-                <button id="js-theme-toggle" class="button">Theme</button>
+                <div class="theme-toggle-wrap">
+                    <button id="js-theme-toggle" class="button">Theme</button>
+                </div>
             </div>
         </div>
     </header>

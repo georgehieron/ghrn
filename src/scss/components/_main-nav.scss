@@ -15,6 +15,11 @@
         ul {
             outline: .2rem dashed var(--color-primary);
             outline-offset: -.2rem;
+            padding-bottom: 4.2vw;
+
+            @supports (padding-bottom: clamp(#{get-size("300")}, 4.2vw, #{get-size("1000")})) {
+                padding-bottom: clamp(#{get-size("300")}, 4.2vw, #{get-size("1000")});
+            }
 
             li {
                 margin-top: .5em;
