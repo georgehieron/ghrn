@@ -10,6 +10,8 @@
 
 @import "components/skip-link";
 
+@import "utilities/data-hide";
+
 :focus {
     outline: .2rem dashed var(--color-primary);
     outline-offset: .1rem;

@@ -4,11 +4,27 @@ $burger__layer-height: .5em;
 $burger__colour: var(--color-text);
 
 // Structure
-.burger {
+.burger-wrap {
+    @include apply-utility('box', 'flex');
+    align-content: center;
+    justify-content: flex-end;
     position: absolute;
     top: 1em;
     right: 1em;
-    display: block;
+
+    @include media-query('sm') {
+        display: none;
+    }
+}
+
+.burger-label {
+    position: relative;
+    top: -.15em;
+    margin: auto 1em auto 0;
+}
+
+.burger {
+    @include apply-utility('box', 'block');
     width: $burger__height;
     height: $burger__width;
     padding: 0;
@@ -37,14 +53,10 @@ $burger__colour: var(--color-text);
             }
         }
     }
-
-    @include media-query('sm') {
-        display: none;
-    }
 }
 
 .burger__inner {
-    display: block;
+    @include apply-utility('box', 'block');
     width: $burger__width;
     height: $burger__layer-height;
     margin-top: -#{$burger__layer-height};
@@ -57,7 +69,7 @@ $burger__colour: var(--color-text);
 
     &:before,
     &:after {
-        display: block;
+        @include apply-utility('box', 'block');
         position: absolute;
         content: "";
         z-index: -1;

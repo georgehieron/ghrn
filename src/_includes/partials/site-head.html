@@ -10,9 +10,16 @@
                 {% include "partials/ghrn.svg" %}
             </a>
 
-            <button id="js-brgr" class="burger" href="#" aria-expanded="false">
-                <div class="burger__inner"></div>
-            </button>
+            <div class="burger-wrap">
+                <span id="js-brgr-label" class="burger-label h5" lang="{{ locale }}">
+                    <span class="open visually-hidden" aria-hidden="false">{{ trans.lation('Open', 'Avaa', locale) }}</span>
+                    <span class="close" data-hide="true" aria-hidden="true">{{ trans.lation('Close', 'Sulje', locale) }}</span>
+                    <span class="menu" data-hide="false" aria-hidden="false">{{ trans.lation('Menu', 'Valikko', locale) }}</span>
+                </span>
+                <button id="js-brgr" class="burger" href="#" aria-expanded="false" aria-labelledby="js-brgr-label">
+                    <div class="burger__inner"></div>
+                </button>
+            </div>
 
             {# Loop though site.languages #}
             {% for lang in site.languages %}
