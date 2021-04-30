@@ -1,4 +1,4 @@
-$header-top-height: clamp(7.5rem, 20vw, 12.5rem);
+$header-top-height: clamp(get-size('1100'), 16vw, 12.5rem);
 
 .site-wrap {
     max-width: $max-width;
@@ -46,8 +46,23 @@ $header-top-height: clamp(7.5rem, 20vw, 12.5rem);
     height: 100%;
     position: relative;
 
+    &__brand {
+        display: inline-block;
+        max-height: 4rem;
+
+        svg {
+            max-height: 4rem;
+        }
+    }
+
     &__top {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
         height: 12.5rem;
+        background: var(--color-base);
+        box-shadow: 0 1.25em 1em var(--color-base);
 
         @supports (height: $header-top-height) {
             height: $header-top-height;
@@ -107,6 +122,12 @@ $header-top-height: clamp(7.5rem, 20vw, 12.5rem);
     }
 
     @include media-query('sm') {
+        .site-head__top {
+            position: relative;
+            top: 0;
+            box-shadow: none;
+        }
+
         .site-head__bottom {
             display: block;
         }
@@ -154,11 +175,12 @@ html[data-menu-open="true"] {
 
     .site-head__bottom {
         position: fixed;
-        top: 7.5rem;
+        top: get-size('1100');
         left: 0;
         display: block;
         width: 100%;
         height: calc(100% - 7.5rem);
+        padding-top: get-size('800');
         padding-bottom: get-size('1100');
         text-align: center;
         background: var(--color-base);
@@ -172,5 +194,15 @@ html[data-menu-open="true"] {
 
     .theme-toggle-wrap {
         display: none;
+    }
+}
+
+.main-content {
+    position: relative;
+    top: get-size('1100');
+    padding-top: get-size('800');
+
+    @include media-query('sm') {
+        top: 0;
     }
 }

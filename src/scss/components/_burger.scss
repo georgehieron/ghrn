@@ -7,7 +7,7 @@ $burger__colour: var(--color-text);
 .burger {
     position: absolute;
     top: 1em;
-    right: 0;
+    right: 1em;
     display: block;
     width: $burger__height;
     height: $burger__width;
