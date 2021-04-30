@@ -198,11 +198,12 @@ html[data-menu-open="true"] {
 }
 
 .main-content {
-    position: relative;
-    top: get-size('1100');
+    margin-top: get-size('1100');
     padding-top: get-size('800');
+    padding-bottom: get-size('1000');
 
     @include media-query('sm') {
-        top: 0;
+        padding-top: 0;
+        padding-bottom: 0;
     }
 }
