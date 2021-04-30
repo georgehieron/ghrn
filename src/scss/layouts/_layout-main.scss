@@ -159,13 +159,15 @@ html[data-menu-open="true"] {
         display: block;
         width: 100%;
         height: calc(100% - 7.5rem);
-        padding-bottom: 4rem;
+        padding-bottom: get-size('1100');
         text-align: center;
         background: var(--color-base);
+        overflow-y: auto;
     }
 
     .lang-nav {
         visibility: visible;
+        box-shadow: 0 -1.25em 1em 0 var(--color-base);
     }
 
     .theme-toggle-wrap {

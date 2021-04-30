@@ -17,14 +17,14 @@
                 .nav__link {
                     &:before {
                         content: "";
+                        @include apply-utility('box', 'block');
+                        @include apply-utility('width', 'full');
                         position: absolute;
                         top: auto;
                         bottom: 0.2em;
                         left: 0;
-                        display: block;
                         height: .125rem;
                         background-color: var(--color-primary);
-                        width: 100%;
                         transform: none;
                     }
                 }
@@ -34,7 +34,7 @@
         .nav__link {
             position: relative;
             display: inline-block;
-            font-size: 7vh;
+            font-size: get-size('900');
             text-decoration: none;
         }
     }

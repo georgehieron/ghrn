@@ -1,6 +1,6 @@
 $burger__height: 3em;
 $burger__width: 3em;
-$burger__layer__height: .5em;
+$burger__layer-height: .5em;
 $burger__colour: var(--color-text);
 
 // Structure
@@ -16,26 +16,23 @@ $burger__colour: var(--color-text);
     -webkit-appearance: none;
     background: none;
     border: 0;
+    cursor: pointer;
 
     // Clicked State
     &[aria-expanded="true"] {
         .burger__inner {
-            background: none;
+            background-position: 3em 0;
 
             &:before,
             &:after {
-                top: $burger__layer__height * 2;
+                top: $burger__layer-height * 2;
             }
 
             &:before {
-                -webkit-transform: rotate(-45deg);
-                -ms-transform: rotate(-45deg);
                 transform: rotate(-45deg);
             }
 
             &:after {
-                -webkit-transform: rotate(45deg);
-                -ms-transform: rotate(45deg);
                 transform: rotate(45deg);
             }
         }
@@ -49,11 +46,14 @@ $burger__colour: var(--color-text);
 .burger__inner {
     display: block;
     width: $burger__width;
-    height: $burger__layer__height;
-    margin-top: -#{$burger__layer__height};
+    height: $burger__layer-height;
+    margin-top: -#{$burger__layer-height};
     background: $burger__colour;
-    -webkit-transition: all .3s ease-in-out;
-    transition: all .3s ease-in-out;
+    background: linear-gradient(90deg,$burger__colour 0,$burger__colour 100%);
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    transition: all .15s ease-in-out, .2s ease-in-out background-position;
+    border-radius: 2px;
 
     &:before,
     &:after {
@@ -62,10 +62,10 @@ $burger__colour: var(--color-text);
         content: "";
         z-index: -1;
         width: $burger__width;
-        height: $burger__layer__height;
+        height: $burger__layer-height;
         background: $burger__colour;
-        -webkit-transition: all .3s ease-in-out;
-        transition: all .3s ease-in-out;
+        transition: all .15s ease-in-out;
+        border-radius: 2px;
     }
 
     &:before {
@@ -73,6 +73,6 @@ $burger__colour: var(--color-text);
     }
 
     &:after {
-        top: $burger__layer__height * 4;
+        top: $burger__layer-height * 4;
     }
 }
