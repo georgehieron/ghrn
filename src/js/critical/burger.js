@@ -1,19 +1,17 @@
 document.addEventListener(
     "DOMContentLoaded",
     function () {
-        const menuBrgr = document.getElementById("js-brgr");
+        const brgrBtn = document.getElementById("js-brgr");
         const brgrLabel = document.getElementById("js-brgr-label");
         const brgrTxtOpen = brgrLabel.querySelector(".open");
         const brgrTxtClose = brgrLabel.querySelector(".close");
         const brgrTxtMenu = brgrLabel.querySelector(".menu");
 
-        console.log(brgrTxtOpen);
-
         /**
          * Get’s the current setting > reverses it > sets it
          */
         const toggleBrgr = () => {
-            let currentSetting = menuBrgr.getAttribute("aria-expanded");
+            let currentSetting = brgrBtn.getAttribute("aria-expanded");
             let oppositeSetting;
 
             switch (currentSetting) {
@@ -27,12 +25,16 @@ document.addEventListener(
                     break;
             }
 
-            menuBrgr.setAttribute("aria-expanded", currentSetting);
+            brgrBtn.setAttribute("disabled", true);
+            brgrBtn.setAttribute("aria-expanded", currentSetting);
             brgrTxtOpen.setAttribute("aria-hidden", currentSetting);
             brgrTxtClose.setAttribute("data-hide", oppositeSetting);
             brgrTxtClose.setAttribute("aria-hidden", oppositeSetting);
             brgrTxtMenu.setAttribute("data-hide", currentSetting);
             document.documentElement.setAttribute("data-menu-open", currentSetting);
+            setTimeout(function() {
+                brgrBtn.removeAttribute("disabled");
+            }, 333);
         };
 
         const smallDevice = window.matchMedia("(min-width: 36rem)");
@@ -42,7 +44,7 @@ document.addEventListener(
         });
 
         function closeBrgr(e) {
-            menuBrgr.setAttribute("aria-expanded", "false");
+            brgrBtn.setAttribute("aria-expanded", "false");
             document.documentElement.setAttribute("data-menu-open", "false");
         }
 
@@ -50,7 +52,7 @@ document.addEventListener(
          * Clicking the button runs the apply setting method which grabs its parameter
          * from the toggle setting method.
          */
-        menuBrgr.addEventListener("click", (evt) => {
+        brgrBtn.addEventListener("click", (evt) => {
             evt.preventDefault();
 
             toggleBrgr();
