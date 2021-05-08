@@ -38,7 +38,7 @@ $toggle-indicator-right: translate(calc(50% + .85em),-50%);
     .toggle-btn__indicator {
         background: var(--color-primary-alt);
         transform: $toggle-indicator-left;
-        transition: .15s cubic-bezier(.1,.01,1,.01) transform;
+        transition: .3s cubic-bezier(.1,.01,1,.01) transform;
     }
 
     .theme-toggle-text--light {
