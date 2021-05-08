@@ -25,8 +25,36 @@ $toggle-indicator-right: translate(calc(50% + .85em),-50%);
 }
 
 .toggle-btn--theme {
+    color: var(--color-base);
+    appearance: none;
+    background: transparent;
+    padding: 0;
+    border: 0;
+
+    &:hover {
+        cursor: pointer;
+    }
+
     .toggle-btn__indicator {
+        background: var(--color-primary-alt);
         transform: $toggle-indicator-left;
+        transition: .15s cubic-bezier(.1,.01,1,.01) transform;
+    }
+
+    .theme-toggle-text--light {
+        @include apply-utility('box', 'hide');
+    }
+
+    .theme-toggle-text--dark {
+        @include apply-utility('box', 'show');
+    }
+
+    @include media-query('sm') {
+        color: var(--color-text);
+
+        .toggle-btn__indicator {
+            background: var(--color-primary);
+        }
     }
 }
 
@@ -34,6 +62,14 @@ $toggle-indicator-right: translate(calc(50% + .85em),-50%);
     .toggle-btn--theme {
         .toggle-btn__indicator {
             transform: $toggle-indicator-right;
+        }
+
+        .theme-toggle-text--light {
+            @include apply-utility('box', 'show');
+        }
+
+        .theme-toggle-text--dark {
+            @include apply-utility('box', 'hide');
         }
     }
 }

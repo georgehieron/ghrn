@@ -52,7 +52,7 @@
 
                     <a class="lang-nav__link box-flex font-title color-text{% if activeClass %} {{ activeClass }}{% endif %}" href="{{ translatedUrl }}" lang="{{ lang.code }}" hreflang="{{ lang.code }}"{% if activeClass %} aria-current="true"{% endif %}>
                         {% if loop.last and not currentLang %}
-                            {% include "components/toggle-button.html" %}
+                            {% include "components/toggle-button-lang.html" %}
                         {% endif %}
                         <span class="lang-nav__item__code box-flex{% if loop.last %} row-reverse{% endif %}">
                             <span aria-hidden="true">
@@ -66,7 +66,7 @@
                         </span>
                         <span class="visually-hidden">{{ lang.label }}</span>
                         {% if loop.first and not currentLang %}
-                            {% include "components/toggle-button.html" %}
+                            {% include "components/toggle-button-lang.html" %}
                         {% endif %}
                     </a>
                 </li>
@@ -81,16 +81,8 @@
             {% include "partials/main-nav.html" %}
         </div>
 
-        <div class="theme-toggle-wrap stack-700">
-            <button id="js-theme-toggle" class="toggle-btn toggle-btn--theme color-text">
-                <span id="js-theme-toggle-text--light" class="visually-hidden">
-                    {{ trans.lation('Switch to light theme', 'Vaihda vaaleaan teemaan', locale) }}
-                </span>
-                <span id="js-theme-toggle-text--dark" class="visually-hidden">
-                    {{ trans.lation('Switch to dark theme', 'Vaihda tummaan teemaan', locale) }}
-                </span>
-                <span class="toggle-btn__indicator box-block" aria-hidden="true"></span>
-            </button>
+        <div class="theme-toggle-wrap box-flex stack-700">
+            {% include "components/toggle-button-theme.html" %}
         </div>
     </header>
 </section>

@@ -5,10 +5,7 @@ document.addEventListener(
         const COLOR_MODE_KEY = "--color-theme";
 
         // Colour Theme Toggle
-        const modeToggleButton = document.getElementById("js-theme-toggle");
-
-        // const modeToggleText = document.getElementById("js-theme-toggle-text");
-        // const modeStatusElement = document.getElementById("js-theme-status");
+        const themeToggleButton = document.getElementById("js-theme-toggle");
 
         /**
          * Pass in a custom prop key and this function will return its
@@ -43,9 +40,6 @@ document.addEventListener(
                     "data-user-color-theme",
                     currentSetting
                 );
-                // setButtonLabelAndStatus(currentSetting);
-            } else {
-                // setButtonLabelAndStatus(getCSSCustomProp(COLOR_MODE_KEY));
             }
         };
 
@@ -76,24 +70,20 @@ document.addEventListener(
         };
 
         /**
-         * A shared method for setting the theme toggle's button text label and visually hidden status element
-         */
-        const setButtonLabelAndStatus = (currentSetting) => {
-            modeToggleText.innerText = `Enable ${
-                currentSetting === "dark" ? "light" : "dark"
-            } theme`;
-            modeStatusElement.innerText = `Colour theme is now "${currentSetting}"`;
-        };
-
-        /**
          * Clicking the button runs the apply setting method which grabs its parameter
          * from the toggle setting method.
          */
-        modeToggleButton.addEventListener("click", (evt) => {
+        themeToggleButton.addEventListener("click", (evt) => {
             evt.preventDefault();
+
+            themeToggleButton.setAttribute("disabled", true);
 
             // Apply the styles
             applySetting(toggleSetting());
+
+            setTimeout(function() {
+                themeToggleButton.removeAttribute("disabled");
+            }, 500);
         });
 
         // On load, apply the user's preferred setting

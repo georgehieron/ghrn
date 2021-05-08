@@ -54,6 +54,7 @@ $dark-primary: #efd036;
     --color-base: #{$light};
     --color-text: #{$dark};
     --color-primary: #{$light-primary};
+    --color-primary-alt: #{$dark-primary};
 }
 
 [data-user-color-theme="light"] {
@@ -65,12 +66,14 @@ $dark-primary: #efd036;
     --color-base: #{$dark};
     --color-text: #{$light};
     --color-primary: #{$dark-primary};
+    --color-primary-alt: #{$light-primary};
 }
 
 $gorko-colors: (
     "base": var(--color-base),
     "text": var(--color-text),
     "primary": var(--color-primary),
+    "primary-alt": var(--color-primary-alt),
 );
 
 /// CORE CONFIG
