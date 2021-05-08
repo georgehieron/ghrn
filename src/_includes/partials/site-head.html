@@ -82,7 +82,15 @@
         </div>
 
         <div class="theme-toggle-wrap stack-700">
-            <button id="js-theme-toggle" class="button">Theme</button>
+            <button id="js-theme-toggle" class="toggle-btn toggle-btn--theme color-text">
+                <span id="js-theme-toggle-text--light" class="visually-hidden">
+                    {{ trans.lation('Switch to light theme', 'Vaihda vaaleaan teemaan', locale) }}
+                </span>
+                <span id="js-theme-toggle-text--dark" class="visually-hidden">
+                    {{ trans.lation('Switch to dark theme', 'Vaihda tummaan teemaan', locale) }}
+                </span>
+                <span class="toggle-btn__indicator box-block" aria-hidden="true"></span>
+            </button>
         </div>
     </header>
 </section>

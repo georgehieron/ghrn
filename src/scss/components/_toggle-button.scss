@@ -1,9 +1,12 @@
+$toggle-indicator-left: translate(calc(-50% + .6em),-50%);
+$toggle-indicator-right: translate(calc(50% + .85em),-50%);
+
 .toggle-btn {
     position: relative;
     top: -0.05em;
     display: inline-block;
     height: 1.5em;
-    width: 2.7em;
+    width: 2.8em;
     margin-left: .75em;
     margin-right: .75em;
     padding: 0;
@@ -21,14 +24,32 @@
     }
 }
 
-html[lang="en"] {
+.toggle-btn--theme {
     .toggle-btn__indicator {
-        transform: translate(calc(-50% + .6em),-50%);
+        transform: $toggle-indicator-left;
+    }
+}
+
+@include dark-theme() {
+    .toggle-btn--theme {
+        .toggle-btn__indicator {
+            transform: $toggle-indicator-right;
+        }
+    }
+}
+
+html[lang="en"] {
+    .toggle-btn--lang {
+        .toggle-btn__indicator {
+            transform: $toggle-indicator-left;
+        }
     }
 }
 
 html[lang="fi"] {
-    .toggle-btn__indicator {
-        transform: translate(calc(50% + .725em),-50%);
+    .toggle-btn--lang {
+        .toggle-btn__indicator {
+            transform: $toggle-indicator-right;
+        }
     }
 }

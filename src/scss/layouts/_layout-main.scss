@@ -113,10 +113,6 @@ $header-top-height: clamp(get-size('1100'), 16vw, 12.5rem);
         bottom: 0;
         width: 100%;
         background: var(--color-text);
-
-        * {
-            color: var(--color-base);
-        }
     }
 
     @include media-query('sm') {
