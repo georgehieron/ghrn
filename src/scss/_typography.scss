@@ -227,8 +227,9 @@ em {
     transform: skew(-12.5deg);
 }
 
-mark {
-    color: $light;
+mark,
+::selection {
+    color: var(--color-base);
     background-color: var(--color-primary);
 }
 
@@ -243,11 +244,4 @@ code {
     @include apply-utility('weight', 'regular');
     font-size: get-size('400');
     line-height: 1.375 !important;
-}
-
-@include dark-theme() {
-    mark {
-        color: var(--color-base);
-        background-color: var(--color-primary);
-    }
 }
