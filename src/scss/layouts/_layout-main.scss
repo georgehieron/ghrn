@@ -115,6 +115,18 @@ $header-top-height: clamp(get-size('1100'), 16vw, 12.5rem);
         background: var(--color-text);
         justify-content: flex-end;
         padding: .75rem 1rem .5rem 1rem;
+
+        &:after {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url(/images/textures/paper-3.png);
+            opacity: .35;
+            pointer-events: none;
+        }
     }
 
     @include media-query('sm') {
@@ -154,6 +166,10 @@ $header-top-height: clamp(get-size('1100'), 16vw, 12.5rem);
             @supports (padding-left: clamp(#{get-size("300")}, 4.2vw, #{get-size("1000")})) {
                 padding-right: clamp(#{get-size("300")}, 4.2vw, #{get-size("1000")});
                 padding-left: clamp(#{get-size("300")}, 4.2vw, #{get-size("1000")});
+            }
+
+            &:after {
+                display: none;
             }
         }
     }
@@ -201,5 +217,13 @@ html[data-menu-open="true"] {
 
     .theme-toggle-wrap {
         @include apply-utility('box', 'hide');
+    }
+}
+
+@include dark-theme() {
+    .theme-toggle-wrap {
+        &:after {
+            opacity: .2;
+        }
     }
 }

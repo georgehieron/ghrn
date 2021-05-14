@@ -44,12 +44,10 @@ $max-width: 90rem;
 ///
 $light: #fff;
 $light-invert: #303030;
-// $light-primary: #28715c;
 $light-primary: #137C5f;
 $dark: #3d3d3d;
 $dark-invert: #f7f7f7;
-// $dark-primary: #efd036;
-$dark-primary: #ffe046;
+$dark-primary: #efd036;
 
 @import "mixins/dark-theme";
 
