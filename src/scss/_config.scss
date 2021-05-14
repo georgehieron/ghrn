@@ -42,17 +42,21 @@ $max-width: 90rem;
 /// Colors are shared between backgrounds and text by default.
 /// You can also use them to power borders, fills or shadows, for example.
 ///
-$light: #f7f7f7;
-$light-primary: #28715C;
+$light: #fff;
+$light-invert: #303030;
+// $light-primary: #28715c;
+$light-primary: #137C5f;
 $dark: #3d3d3d;
-$dark-primary: #efd036;
+$dark-invert: #f7f7f7;
+// $dark-primary: #efd036;
+$dark-primary: #ffe046;
 
 @import "mixins/dark-theme";
 
 :root {
     --color-theme: "light";
     --color-base: #{$light};
-    --color-text: #{$dark};
+    --color-text: #{$light-invert};
     --color-primary: #{$light-primary};
     --color-primary-alt: #{$dark-primary};
 }
@@ -64,7 +68,7 @@ $dark-primary: #efd036;
 @include dark-theme() {
     --color-theme: "dark";
     --color-base: #{$dark};
-    --color-text: #{$light};
+    --color-text: #{$dark-invert};
     --color-primary: #{$dark-primary};
     --color-primary-alt: #{$light-primary};
 }
@@ -160,6 +164,8 @@ $gorko-config: (
             "500": 20,
             "600": 30,
             "700": 40,
+            "1000": 70,
+            "1100": 80,
         ),
         "output": "standard",
         "property": "z-index",

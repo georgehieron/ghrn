@@ -1,7 +1,7 @@
 $burger__height: 3em;
 $burger__width: 3em;
 $burger__layer-height: .5em;
-$burger__colour: var(--color-text);
+$burger__colour: var(--color-primary);
 
 // Structure
 .burger-wrap {
@@ -70,7 +70,7 @@ $burger__colour: var(--color-text);
     background: linear-gradient(90deg,$burger__colour 0,$burger__colour 100%);
     background-repeat: no-repeat;
     background-position: 0 0;
-    transition: all .15s ease-in-out, .2s ease-in-out background-position;
+    transition: transform .15s ease-in-out, top .15s ease-in-out, .2s ease-in-out background-position;
     border-radius: 2px;
 
     &:before,
@@ -82,7 +82,7 @@ $burger__colour: var(--color-text);
         width: $burger__width;
         height: $burger__layer-height;
         background: $burger__colour;
-        transition: all .15s ease-in-out;
+        transition: transform .15s ease-in-out, top .15s ease-in-out;
         border-radius: 2px;
     }
 
