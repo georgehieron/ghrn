@@ -1,4 +1,4 @@
-$header-top-height: clamp(get-size('1200'), 16vw, 12.5rem);
+$header-top-height: clamp(get-size('1100'), 16vw, 12.5rem);
 
 .site-wrap {
     max-width: $max-width;
@@ -46,8 +46,10 @@ $header-top-height: clamp(get-size('1200'), 16vw, 12.5rem);
     &__brand {
         position: relative;
         display: inline-block;
-        height: 12vw;
-        width: 24vw;
+        min-height: get-size('900');
+        min-width: calc(#{get-size('900')} * 2);
+        height: 7vw;
+        width: 15vw;
         max-height: get-size('1100');
         max-width: get-size('1400');
         overflow: hidden;
@@ -195,7 +197,7 @@ $header-top-height: clamp(get-size('1200'), 16vw, 12.5rem);
 }
 
 .main-content {
-    padding-top: calc(#{get-size('800')} + #{get-size('1200')});
+    padding-top: calc(#{get-size('800')} + #{get-size('1100')});
     padding-bottom: get-size('1000');
 
     @include media-query('sm') {
