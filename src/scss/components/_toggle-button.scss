@@ -1,5 +1,5 @@
-$toggle-indicator-left: translate(calc(-50% + .6em),-50%);
-$toggle-indicator-right: translate(calc(50% + .825em),-50%);
+$toggle-indicator-left: translate(calc(-50% + .57em),-50%);
+$toggle-indicator-right: translate(calc(50% + .77em),-50%);
 
 .toggle-btn {
     position: relative;
@@ -7,11 +7,13 @@ $toggle-indicator-right: translate(calc(50% + .825em),-50%);
     display: inline-block;
     height: 1.5em;
     width: 2.8em;
+    margin-top: auto;
     margin-left: .75em;
+    margin-bottom: auto;
     margin-right: .75em;
     padding: 0;
     background: 0;
-    border: .12em solid;
+    border: .15em solid;
     border-radius: 1.5rem;
 
     &__indicator {

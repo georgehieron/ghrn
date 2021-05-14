@@ -1,0 +1,84 @@
+@mixin invert-mobile-icons() {
+    @media (max-width: 36rem) {
+        .icon_moon {
+            path {
+                fill: var(--color-base);
+            }
+        }
+
+        .icon_sun {
+            path {
+                fill: var(--color-base);
+
+                &#centre {
+                    fill: transparent;
+                }
+            }
+
+            line {
+                stroke: var(--color-base);
+            }
+        }
+    }
+}
+
+@media (prefers-color-scheme: no-preference) {
+    :root:not([data-user-color-theme]) {
+        @include invert-mobile-icons();
+    }
+}
+
+@media (prefers-color-scheme: light) {
+    :root:not([data-user-color-theme]) {
+        @include invert-mobile-icons();
+    }
+}
+
+[data-user-color-theme="light"] {
+    @include invert-mobile-icons();
+}
+
+
+@include dark-theme() {
+    .ghrn_logo {
+        .cls-1 {
+            fill: var(--color-text);
+        }
+
+        .cls-2 {
+            fill: var(--color-primary);
+        }
+    }
+
+    .ghrn_icon {
+        path {
+            fill: var(--color-primary);
+        }
+
+        polygon {
+            fill: var(--color-text);
+        }
+    }
+
+    @include media-query('sm') {
+        .icon_moon {
+            path {
+                fill: var(--color-primary);
+            }
+        }
+
+        .icon_sun {
+            path {
+                fill: var(--color-text);
+
+                &#centre {
+                    fill: transparent;
+                }
+            }
+
+            line {
+                stroke: var(--color-text);
+            }
+        }
+    }
+}

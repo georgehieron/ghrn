@@ -6,11 +6,15 @@
 
 @import 'reset';
 
+@import "mixins/dark-theme";
 @import "mixins/vis-h";
+
+@import 'typography';
 
 @import "components/skip-link";
 
 @import "utilities/data-hide";
+@import "utilities/visually-hidden";
 
 :focus {
     outline: .2rem dashed var(--color-primary);
@@ -40,8 +44,11 @@ main {
     }
 }
 
-@import 'typography';
+@import "layouts/layout-main";
+
+@import "components/main-nav";
 @import 'components/toggle-button';
+@import 'components/icons';
 @import 'components/burger';
 @import 'components/buttons';
 

@@ -1,4 +1,4 @@
-$header-top-height: clamp(get-size('1100'), 16vw, 12.5rem);
+$header-top-height: clamp(get-size('1200'), 16vw, 12.5rem);
 
 .site-wrap {
     max-width: $max-width;
@@ -29,7 +29,6 @@ $header-top-height: clamp(get-size('1100'), 16vw, 12.5rem);
             grid-row: 2/3;
             min-width: 0;
             z-index: 1;
-            margin-top: -#{get-size("400")};
         }
 
         .side-content {
@@ -45,11 +44,25 @@ $header-top-height: clamp(get-size('1100'), 16vw, 12.5rem);
     position: relative;
 
     &__brand {
+        position: relative;
         display: inline-block;
-        max-height: 4rem;
+        height: 12vw;
+        width: 24vw;
+        max-height: get-size('1100');
+        max-width: get-size('1400');
+        overflow: hidden;
+        margin-top: get-size('400');
+        margin-left: get-size('400');
 
         svg {
-            max-height: 4rem;
+            position: absolute;
+            top: 0;
+            left: 0;
+            object-fit: contain;
+        }
+
+        @include media-query('sm') {
+            margin-left: 0;
         }
     }
 
@@ -182,7 +195,7 @@ $header-top-height: clamp(get-size('1100'), 16vw, 12.5rem);
 }
 
 .main-content {
-    padding-top: calc(#{get-size('800')} + #{get-size('1100')});
+    padding-top: calc(#{get-size('800')} + #{get-size('1200')});
     padding-bottom: get-size('1000');
 
     @include media-query('sm') {

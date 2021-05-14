@@ -1,5 +1,5 @@
 <button id="js-theme-toggle" class="toggle-btn--theme box-flex">
-    <span aria-hidden="true">☀️</span>
+    {% include "partials/svg/icon_sun.svg" %}
     <span id="js-theme-toggle-text--light" class="theme-toggle-text--light visually-hidden">
         {{ trans.lation('Switch to light theme', 'Vaihda vaaleaan teemaan', locale) }}
     </span>
@@ -9,5 +9,5 @@
     <span class="toggle-btn box-flex">
         <span class="toggle-btn__indicator box-block" aria-hidden="true"></span>
     </span>
-    <span aria-hidden="true">🌒</span>
+    {% include "partials/svg/icon_moon.svg" %}
 </button>
