@@ -16,7 +16,7 @@
 @font-face {
     font-family: "Migra Extrabold Italic";
     src: url('/../fonts/MigraItalic-ExtraboldItalic.woff2') format('woff2');
-    font-display: block;
+    font-display: swap;
 }
 @font-face {
     font-family: "Migra Extralight";
@@ -29,25 +29,25 @@
     font-display: swap;
 }
 
-@keyframes text-fill {
-    from {
-        -webkit-text-fill-color: transparent;
-    }
+// @keyframes text-fill {
+//     from {
+//         -webkit-text-fill-color: transparent;
+//     }
 
-    to {
-        -webkit-text-fill-color: var(--color-text);
-    }
-}
+//     to {
+//         -webkit-text-fill-color: var(--color-text);
+//     }
+// }
 
-@keyframes text-empty {
-    from {
-        -webkit-text-fill-color: var(--color-text);
-    }
+// @keyframes text-empty {
+//     from {
+//         -webkit-text-fill-color: var(--color-text);
+//     }
 
-    to {
-        -webkit-text-fill-color: transparent;
-    }
-}
+//     to {
+//         -webkit-text-fill-color: transparent;
+//     }
+// }
 
 body {
     @include apply-utility('font', 'base');
@@ -288,6 +288,8 @@ code {
 }
 
 pre {
+    display: block;
+    overflow: scroll;
     border-radius: 0;
 }
 
