@@ -16,7 +16,7 @@
 @font-face {
     font-family: "Migra Extrabold Italic";
     src: url('/../fonts/MigraItalic-ExtraboldItalic.woff2') format('woff2');
-    font-display: swap;
+    font-display: block;
 }
 @font-face {
     font-family: "Migra Extralight";
@@ -27,6 +27,26 @@
     font-family: "Fraktion Mono";
     src: url('/../fonts/FraktionMono-Regular.otf') format('opentype');
     font-display: swap;
+}
+
+@keyframes text-fill {
+    from {
+        -webkit-text-fill-color: transparent;
+    }
+
+    to {
+        -webkit-text-fill-color: var(--color-text);
+    }
+}
+
+@keyframes text-empty {
+    from {
+        -webkit-text-fill-color: var(--color-text);
+    }
+
+    to {
+        -webkit-text-fill-color: transparent;
+    }
 }
 
 body {
@@ -116,10 +136,12 @@ blockquote {
 
 h5,
 .h5,
-h6
+h6,
 .h6 {
     font-size: get-size('400');
     line-height: 1.375;
+    margin-top: 0;
+    margin-bottom: get-size('300');
 }
 
 h5,
@@ -133,6 +155,17 @@ h5,
     @include apply-utility('font', 'title-i');
     @include apply-utility('weight', 'regular');
     line-height: 1;
+
+    // @supports (-webkit-text-stroke: 1px) {
+    //     -webkit-text-stroke: 1px var(--color-text);
+    //     -webkit-text-fill-color: transparent;
+    //     animation: text-fill 2s ease-in-out 1s 1 forwards;
+
+    //     &:hover {
+    //         animation: text-empty .5s ease-in-out 0s 1 forwards;
+    //         cursor: crosshair;
+    //     }
+    // }
 }
 
 .xl {
@@ -227,8 +260,7 @@ em {
     transform: skew(-12.5deg);
 }
 
-mark,
-::selection {
+mark {
     color: var(--color-base);
     background-color: var(--color-primary);
 }
@@ -239,9 +271,57 @@ blockquote {
 }
 
 pre,
-code {
+code,
+kbd {
     @include apply-utility('font', 'mono');
     @include apply-utility('weight', 'regular');
-    font-size: get-size('400');
     line-height: 1.375 !important;
+    display: inline-block;
+}
+
+pre,
+code {
+    color: darken($light-primary, 5%);
+    background: rgba($light-primary, .15);
+    border-radius: 3px;
+    padding: 0 .25rem .25rem;
+}
+
+pre {
+    border-radius: 0;
+}
+
+code {
+    border-radius: 3px;
+}
+
+kbd {
+    font-size: get-size('400');
+    padding: 0 .75rem .15rem;
+    border: 2px solid;
+    border-radius: 6px;
+
+    font-size: get-size('500');
+    line-height: 1.4;
+
+    @supports (font-size: clamp(#{get-size('300')}, 1.25vw, #{get-size('400')})) {
+        font-size: clamp(#{get-size('300')}, 1.25vw, #{get-size('400')});
+    }
+}
+
+::selection {
+    color: var(--color-base);
+    background-color: rgba(darken($light-primary, 5%), .9);
+}
+
+@include dark-theme() {
+    ::selection {
+        background-color: rgba(lighten($dark-primary, 5%), .9);
+    }
+
+    pre,
+    code {
+        color: $dark-primary;
+        background: rgba($dark-primary, .15);
+    }
 }

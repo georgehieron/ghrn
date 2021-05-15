@@ -49,6 +49,22 @@ $dark: $light-invert;
 $dark-invert: #f7f7f7;
 $dark-primary: #efd036;
 
+// CODE COLOURS
+$code-bg--light: $dark-invert;
+$code-fg--light: lighten($light-invert, 5%);
+
+$code-bg--dark: darken($dark, 5%);
+$code-fg--dark: $dark-invert;
+$code-comment--dark: #a8a8a8;
+$code-pink--dark: #ee81d3;
+$code-green--dark: #13c292;
+$code-orange--dark: #eb9437;
+$code-yellow--dark: $dark-primary;
+// $code-violet--dark: #96a4f8;
+$code-violet--dark: #f78e8e;
+$code-coral--dark: #f78e8e;
+$code-blue--dark: #33c9eb;
+
 @import "mixins/dark-theme";
 
 :root {

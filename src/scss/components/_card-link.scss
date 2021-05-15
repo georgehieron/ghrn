@@ -13,7 +13,8 @@
         padding: .8em 1em;
     }
 
-    &:hover {
+    &:hover,
+    &:focus {
         .card-link__title {
             text-decoration: underline;
             text-decoration-thickness: 2px;

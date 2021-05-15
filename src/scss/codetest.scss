@@ -1,11 +1,11 @@
 // First up: config and functions
-@import 'config';
+@import "config";
 
 // Set gorko to output no CSS for this file
 $outputTokenCSS: false;
 
 // Next: pull in gorko for design tokens
-@import '../../node_modules/gorko/gorko.scss';
+@import "../../node_modules/gorko/gorko.scss";
 
 /**
  * Dracula Theme originally by Zeno Rocha [@zenorocha]
@@ -14,152 +14,165 @@ $outputTokenCSS: false;
  * Ported for PrismJS by Albert Vallverdu [@byverdu]
  */
 
- code[class*="language-"],
- pre[class*="language-"] {
-     color: #f7f7f7;
-     background: none;
-     text-shadow: 0 1px rgba(0, 0, 0, 0.3);
-    //  font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
-     text-align: left;
-     white-space: pre;
-     word-spacing: normal;
-     word-break: normal;
-     word-wrap: normal;
-     line-height: 1.5;
-     -moz-tab-size: 4;
-     -o-tab-size: 4;
-     tab-size: 4;
-     -webkit-hyphens: none;
-     -moz-hyphens: none;
-     -ms-hyphens: none;
-     hyphens: none;
- }
- 
- /* Code blocks */
- pre[class*="language-"] {
-     padding: 1em;
-     margin: .5em 0;
-     overflow: auto;
-     border-radius: 0.3em;
- }
- 
- :not(pre) > code[class*="language-"],
- pre[class*="language-"] {
-     background: #3d3d3d;
- }
- 
- /* Inline code */
- :not(pre) > code[class*="language-"] {
-     padding: .1em;
-     border-radius: .3em;
-     white-space: normal;
- }
- 
- .token.comment,
- .token.prolog,
- .token.doctype,
- .token.cdata {
-     color: #a8a8a8;
- }
- 
- .token.punctuation {
-    color: #f7f7f7;
- }
- 
- .namespace {
-     opacity: .7;
- }
+code[class*="language-"],
+pre[class*="language-"] {
+    color: $code-fg--light;
+    background: none;
+    text-align: left;
+    white-space: pre;
+    word-spacing: normal;
+    word-break: normal;
+    word-wrap: normal;
+    line-height: 1.5;
+    -moz-tab-size: 4;
+    -o-tab-size: 4;
+    tab-size: 4;
+    -webkit-hyphens: none;
+    -moz-hyphens: none;
+    -ms-hyphens: none;
+    hyphens: none;
+}
 
- .token.tag,
- .token.constant,
- .token.symbol,
- .token.deleted,
- .token.delimiter {
-     color: #efd036;
- }
- 
- .token.boolean,
- .token.number {
-     color: #96a4f8;
- }
- 
- .token.property {
-     color: #ee81d3;
- }
+/* Code blocks */
+pre[class*="language-"] {
+    padding: 1em;
+    margin: 0.5em 0;
+    overflow: auto;
+    border-radius: 0;
+}
 
- .token.attr-value,
- .token.string,
- .token.char,
- .token.builtin,
- .token.inserted {
-     color: #33c9eb;
- }
- 
- .token.operator,
- .token.atrule,
- .token.entity,
- .token.url,
- .token.keyword,
- .language-css .token.string,
- .style .token.string,
- .token.variable {
-    color: #efd036;
- }
- 
- .token.selector,
- .token.attr-name,
- .token.function,
- .token.class-name {
-     color: #13c292;
- }
- 
- .token.regex,
- .token.important,
- .token.parameter,
- .token.content {
-     color: #eb9437;
- }
- 
- .token.important,
- .token.bold {
-     font-weight: bold;
- }
- 
- .token.italic {
-     font-style: italic;
- }
- 
- .token.entity {
-     cursor: help;
- }
+:not(pre) > code[class*="language-"],
+pre[class*="language-"] {
+    background: $code-bg--light;
+}
 
- .token.title {
+/* Inline code */
+:not(pre) > code[class*="language-"] {
+    padding: 0.1em;
+    white-space: normal;
+}
+
+.token.comment,
+.token.prolog,
+.token.doctype,
+.token.cdata {
+    color: $code-comment--dark;
+}
+
+.token.punctuation {
+    color: $code-fg--light;
+}
+
+.namespace {
+    opacity: 0.7;
+}
+
+.token.tag,
+.token.constant,
+.token.symbol,
+.token.deleted,
+.token.delimiter {
+    color: $code-yellow--dark;
+}
+
+.token.boolean,
+.token.number {
+    color: $code-violet--dark;
+}
+
+.token.property {
+    color: $code-pink--dark;
+}
+
+.token.attr-value,
+.token.string,
+.token.char,
+.token.builtin,
+.token.inserted {
+    color: $code-blue--dark;
+}
+
+.token.operator,
+.token.atrule,
+.token.entity,
+.token.url,
+.token.keyword,
+.language-css .token.string,
+.style .token.string,
+.token.variable {
+    color: $code-yellow--dark;
+}
+
+.token.selector,
+.token.attr-name,
+.token.function,
+.token.class-name {
+    color: $code-green--dark;
+}
+
+.token.regex,
+.token.important,
+.token.parameter,
+.token.content {
+    color: $code-orange--dark;
+}
+
+.token.important,
+.token.bold {
+    font-weight: bold;
+}
+
+.token.italic {
+    font-style: italic;
+}
+
+.token.entity {
+    cursor: help;
+}
+
+.token.title {
     .token.punctuation {
-        color: #96a4f8;
+        color: $code-violet--dark;
     }
-    color: #96a4f8;
- }
+    color: $code-violet--dark;
+}
 
- .token.bold {
+.token.bold {
     .token.punctuation {
-        color: #eb9437;
+        color: $code-orange--dark;
     }
-    color: #eb9437;
- }
+    color: $code-orange--dark;
+}
 
- .token.italic,
- .token.blockquote {
+.token.italic,
+.token.blockquote {
     .token.punctuation,
     .token.content {
-        color: #33c9eb;
+        color: $code-blue--dark;
     }
-    color: #33c9eb;
- }
+    color: $code-blue--dark;
+}
 
- .token.strike {
+.token.strike {
     .token.punctuation,
     .token.content {
-        color: #f7f7f7;
+        color: $code-fg--dark;
     }
-    color: #f7f7f7;
- }
+    color: $code-fg--dark;
+}
+
+@include dark-theme() {
+    code[class*="language-"],
+    pre[class*="language-"] {
+        color: $code-fg--dark;
+    }
+
+    :not(pre) > code[class*="language-"],
+    pre[class*="language-"] {
+        background: $code-bg--dark;
+    }
+
+    .token.punctuation {
+        color: $code-fg--dark;
+    }
+}
