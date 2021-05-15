@@ -6,11 +6,21 @@
         margin-bottom: clamp(3em, 6.7vw, 5em);
     }
 
-    &__title {
-        @include apply-utility('align', 'left');
+    &__title,
+    &__image {
         top: 0;
         left: 0;
+    }
+
+    &__title {
+        @include apply-utility('align', 'left');
         padding: .8em 1em;
+    }
+
+    &__image {
+        + .card-link__title {
+            color: $light;
+        }
     }
 
     &:hover,

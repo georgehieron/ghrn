@@ -1,5 +1,8 @@
-{% macro link(url, classes, title) %}
+{% macro link(url, classes, title, img) %}
 <a href="{{ url }}" class="card-link box-block color-base {{ classes }}">
-    <span class="card-link__title font-title h3">{{ title }}</span>
+    {% if img %}
+        <img src="{{ img }}" alt="" class="card-link__image stack-400">
+    {% endif %}
+    <span class="card-link__title font-title h3 stack-500">{{ title }}</span>
 </a>
 {% endmacro %}
