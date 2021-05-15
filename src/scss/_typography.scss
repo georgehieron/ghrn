@@ -82,7 +82,8 @@ h2,
 h3,
 .h3,
 h5,
-.h5 {
+.h5,
+cite {
     @include apply-utility('font', 'title');
     @include apply-utility('weight', 'regular');
 }
@@ -137,7 +138,8 @@ blockquote {
 h5,
 .h5,
 h6,
-.h6 {
+.h6,
+cite {
     font-size: get-size('400');
     line-height: 1.375;
     margin-top: 0;
@@ -145,7 +147,8 @@ h6,
 }
 
 h5,
-.h5 {
+.h5,
+cite {
     text-transform: uppercase;
     letter-spacing: 1px;
 }
@@ -266,8 +269,65 @@ mark {
 }
 
 blockquote {
-    padding-left: 2rem;
+    padding-left: calc(#{get-size('400')} + 5vw);
     font-style: normal;
+
+    @include media-query('md') {
+        padding-right: calc(#{get-size('300')} + 3vw);
+    }
+
+    > p {
+        line-height: 1.2;
+
+        &:first-of-type {
+            position: relative;
+
+            &:before,
+            &:after {
+                position: relative;
+            }
+
+            &:before {
+                content: "“";
+            }
+
+            &:after {
+                content: "”";
+            }
+        }
+    }
+
+    cite {
+        position: relative;
+        font-style: normal;
+        color: var(--color-primary);
+
+        &:before {
+            content: "—";
+            margin-right: .5em;
+        }
+    }
+}
+
+ul,
+ol {
+    li {
+        &::marker {
+            color: var(--color-primary);
+        }
+    }
+}
+
+ul {
+    ul {
+        list-style: square;
+    }
+}
+
+ol {
+    ol {
+        list-style: lower-roman;
+    }
 }
 
 pre,
