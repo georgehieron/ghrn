@@ -50,10 +50,18 @@
 // }
 
 body {
-    @include base-font-size();
     @include apply-utility('font', 'base');
     @include apply-utility('weight', 'regular');
+    font-size: get-size('400');
     line-height: 1.4;
+
+    @include media-query('lg') {
+        font-size: get-size('500');
+    }
+
+    @supports (font-size: clamp(#{get-size('400')}, 1.33vw, #{get-size('500')})) {
+        font-size: clamp(#{get-size('400')}, 1.33vw, #{get-size('500')});
+    }
 }
 
 h1,
@@ -337,7 +345,6 @@ kbd {
 
 pre,
 code {
-    @include base-font-size();
     color: darken($light-primary, 5%);
     background: rgba($light-primary, .15);
     border-radius: 3px;

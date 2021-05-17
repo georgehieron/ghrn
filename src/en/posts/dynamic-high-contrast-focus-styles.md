@@ -4,11 +4,32 @@ date: '2020-09-06'
 tags: ['CSS', 'Accessibility']
 ---
 
-Gumum ætgædere. Guðbyrne scan heard hondlocen, **hringiren** scir song in searwum, þa hie to sele furðum in hyra gryregeatwum gangan cwomon. Setton sæmeþe side scyldas, rondas *regnhearde*, wið þæs recedes weal, bugon þa to bence. Byrnan hringdon, guðsearo gumena; [garas stodon](#beowulf), sæmanna searo, samod ætgædere, æscholt ufan græg; wæs se irenþreat. Wæpnum gewurþad. Þa ðær wlonc hæleð oretmecgas æfter æþelum frægn: "Hwanon ferigeað ge fætte scyldas, græge syrcan ond grimhelmas, heresceafta heap? Ic eom Hroðgares ar ond ombiht. Ne seah ic elþeodige þus manige men modiglicran. Wen ic þæt ge for wlenco, nalles for wræcsiðum, ac for higeþrymmum Hroðgar sohton." 
+Gumum ætgædere. Guðbyrne scan heard hondlocen, **hringiren** scir song in searwum, þa hie to sele furðum in hyra gryregeatwum gangan cwomon. Setton sæmeþe side scyldas, rondas *regnhearde*, wið þæs recedes weal, bugon þa to bence. Byrnan hringdon, guðsearo gumena; [garas stodon](#beowulf), sæmanna searo, samod ætgædere, æscholt ufan græg; wæs se irenþreat. Wæpnum gewurþad. Þa ðær wlonc hæleð oretmecgas æfter æþelum frægn: "Hwanon ferigeað ge fætte scyldas, græge syrcan ond grimhelmas, heresceafta heap? Ic eom Hroðgares ar ond ombiht. Ne seah ic elþeodige þus manige men modiglicran. Wen ic þæt ge for wlenco, nalles for wræcsiðum, ac for higeþrymmum Hroðgar sohton."
+
+{% highlight "html" %}
+<table>
+    <tr>
+        <th scope="row">Client:</th>
+        <td>{{ item.client }}</td>
+    </tr>
+    <tr>
+        <th scope="row">Agency:</th>
+        <td>{{ item.agency }}</td>
+    </tr>
+    <tr>
+        <th scope="row">Expertise:</th>
+        <td>{{ item.expertise }}</td>
+    </tr>
+    <tr>
+        <th scope="row">Project Outcomes:</th>
+        <td>{{ item.outcomes }}</td>
+    </tr>
+</table>
+{% endhighlight %}
 
 ## Him þa ellenrof andswarode.
 
-Wlanc Wedera leod, word æfter spræc, heard under helme: 
+Wlanc Wedera leod, word æfter spræc, heard under helme:
 - "We synt Higelaces beodgeneatas; Beowulf is min nama.
 - Wille ic asecgan sunu Healfdenes, mærum þeodne, min ærende, aldre þinum, gif he us geunnan wile þæt we hine swa godne gretan moton."
 - Wulfgar maþelode (þæt wæs Wendla leod; wæs his modsefa manegum gecyðed, wig ond wisdom):
@@ -20,6 +41,18 @@ Wlanc Wedera leod, word æfter spræc, heard under helme:
 ## Heaþorof hæbbe.
 
 Hine halig god for arstafum us onsende, to Westdenum, þæs ic wen hæbbe, wið Grendles gryre. Ic þæm godan sceal for his modþræce madmas beodan. Beo ðu on ofeste, hat in gan seon sibbegedriht samod ætgædere; gesaga him eac wordum þæt hie sint wilcuman Deniga leodum." word inne abead.
+
+{% highlight "scss" %}
+// A comment
+body {
+    @include apply-utility('font', 'base');
+    @include apply-utility('weight', 'bold');
+    @include fluid-type($min_width, $max_width, $min_font, $max_font);
+    line-height: 1.333;
+    background: var(--color-base);
+    color: var(--color-text);
+}
+{% endhighlight %}
 
 1. "Eow het secgan sigedrihten min, aldor Eastdena, þæt he eower æþelu can, ond ge him syndon ofer sæwylmas heardhicgende hider wilcuman.
 2. Nu ge moton gangan in eowrum guðgeatawum under heregriman Hroðgar geseon; lætað hildebord her onbidan, wudu, wælsceaftas, worda geþinges."

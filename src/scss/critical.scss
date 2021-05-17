@@ -6,7 +6,6 @@
 
 @import 'reset';
 
-@import "mixins/base-font-size";
 @import "mixins/dark-theme";
 @import "mixins/vis-h";
 
@@ -52,6 +51,7 @@ main {
 @import 'components/icons';
 @import 'components/burger';
 @import 'components/buttons';
+@import 'components/code'; // TODO: Move this, not critical
 
 @include dark-theme() {
     body {
