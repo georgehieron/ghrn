@@ -50,14 +50,10 @@
 // }
 
 body {
+    @include base-font-size();
     @include apply-utility('font', 'base');
     @include apply-utility('weight', 'regular');
-    font-size: get-size('500');
     line-height: 1.4;
-
-    @supports (font-size: clamp(#{get-size('400')}, 1.33vw, #{get-size('500')})) {
-        font-size: clamp(#{get-size('400')}, 1.33vw, #{get-size('500')});
-    }
 }
 
 h1,
@@ -341,6 +337,7 @@ kbd {
 
 pre,
 code {
+    @include base-font-size();
     color: darken($light-primary, 5%);
     background: rgba($light-primary, .15);
     border-radius: 3px;
@@ -351,6 +348,10 @@ pre {
     display: block;
     overflow: scroll;
     border-radius: 0;
+
+    code {
+        background: none;
+    }
 }
 
 code {
@@ -385,5 +386,11 @@ kbd {
     code {
         color: $dark-primary;
         background: rgba($dark-primary, .15);
+    }
+
+    pre {
+        code {
+            background: none;
+        }
     }
 }

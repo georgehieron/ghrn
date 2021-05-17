@@ -1,0 +1,11 @@
+@mixin base-font-size() {
+    font-size: get-size('400');
+
+    @include media-query('lg') {
+        font-size: get-size('500');
+    }
+
+    @supports (font-size: clamp(#{get-size('400')}, 1.33vw, #{get-size('500')})) {
+        font-size: clamp(#{get-size('400')}, 1.33vw, #{get-size('500')});
+    }
+}
