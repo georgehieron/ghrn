@@ -46,6 +46,10 @@ document.addEventListener(
 
         function closeBrgr(e) {
             brgrBtn.setAttribute("aria-expanded", "false");
+            brgrTxtOpen.setAttribute("aria-hidden", false);
+            brgrTxtClose.setAttribute("data-hide", true);
+            brgrTxtClose.setAttribute("aria-hidden", true);
+            brgrTxtMenu.setAttribute("data-hide", false);
             document.documentElement.setAttribute("data-menu-open", "false");
         }
 
