@@ -6,6 +6,7 @@ document.addEventListener(
         const brgrTxtOpen = brgrLabel.querySelector(".open");
         const brgrTxtClose = brgrLabel.querySelector(".close");
         const brgrTxtMenu = brgrLabel.querySelector(".menu");
+        const skipLink = document.getElementById("js-skip-link");
 
         /**
          * Get’s the current setting > reverses it > sets it
@@ -56,6 +57,10 @@ document.addEventListener(
             evt.preventDefault();
 
             toggleBrgr();
+        });
+
+        skipLink.addEventListener("click", () => {
+            closeBrgr();
         });
     },
     false

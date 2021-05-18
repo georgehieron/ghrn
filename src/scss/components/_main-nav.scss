@@ -7,6 +7,10 @@
 }
 
 .main-nav {
+    ul.main-nav__list {
+        padding-bottom: #{get-size('800')};
+    }
+
     .nav__item {
         &.nav__item--active {
             .nav__link {
