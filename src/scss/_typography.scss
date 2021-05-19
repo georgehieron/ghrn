@@ -345,19 +345,10 @@ kbd {
 
 pre,
 code {
-    font-size: get-size('400');
     color: darken($light-primary, 5%);
     background: rgba($light-primary, .15);
     border-radius: 3px;
     padding: 0 .25rem .25rem;
-
-    @include media-query('md') {
-        font-size: get-size('500');
-
-        @supports (font-size: clamp(#{get-size('400')}, 1.33vw, #{get-size('500')})) {
-            font-size: clamp(#{get-size('400')}, 1.33vw, #{get-size('500')});
-        }
-    }
 }
 
 pre {
