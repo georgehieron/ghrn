@@ -6,6 +6,19 @@
         margin-bottom: clamp(3em, 6.7vw, 5em);
     }
 
+    &:after {
+        content: "";
+        @include apply-utility('box', 'block');
+        @include apply-utility('stack', '400');
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        background: transparent;
+        transition: .3s ease-in-out box-shadow;
+    }
+
     &__title,
     &__image {
         top: 0;
@@ -25,6 +38,12 @@
 
     &:hover,
     &:focus {
+
+        &:after {
+            box-shadow: inset 0rem -9em 4.5em -4.5em rgba(0,0,0,.6);
+            transition: .3s ease-in-out box-shadow;
+        }
+
         .card-link__title {
             text-decoration: underline;
             text-decoration-thickness: 2px;

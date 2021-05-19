@@ -349,6 +349,17 @@ code {
     background: rgba($light-primary, .15);
     border-radius: 3px;
     padding: 0 .25rem .25rem;
+
+    font-size: get-size('300');
+    line-height: 1.4;
+
+    @include media-query('lg') {
+        font-size: get-size('400');
+    }
+
+    @supports (font-size: clamp(#{get-size('300')}, 1.33vw, #{get-size('400')})) {
+        font-size: clamp(#{get-size('300')}, 1.33vw, #{get-size('400')});
+    }
 }
 
 pre {
