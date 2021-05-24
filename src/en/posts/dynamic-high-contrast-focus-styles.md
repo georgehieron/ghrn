@@ -1,12 +1,12 @@
 ---
 title: 'Dynamic High-contrast focus styles'
-date: '2020-09-06'
+date: '2021-05-25'
 tags: ['CSS', 'Accessibility']
 ---
 
-## The context
+<p class="lede">I was recently working on accessibility improvements to a relatively old site, and I needed to implement better focus styles with sufficient colour contrast.</p>
 
-I was recently working on accessibility improvements to a relatively old site, and I needed to implement better focus styles with sufficient colour contrast. The site's primary brand colours were white and a dark blue, requiring primarily a dark focus style and, where the dark blue was in use as a background colour, a light focus style to achieve the desired result.
+The site's primary brand colours were white and a dark blue, requiring primarily a dark focus style and, where the dark blue was in use as a background colour, a light focus style to achieve the desired result.
 
 ## The problem
 
