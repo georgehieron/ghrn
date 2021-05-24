@@ -20,8 +20,6 @@
 {% block content %}
 <article>
     {% include "partials/page-header.html" %}
-    <div>
-        {{ content | safe }}
-    </div>
+    {{ content | safe }}
 </article>
 {% endblock %}

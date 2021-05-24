@@ -1,6 +1,6 @@
 code[class*="language-"],
 pre[class*="language-"] {
-    color: $code-fg--light;
+    color: var(--color-code-fg);
     background: none;
     text-align: left;
     white-space: pre;
@@ -27,7 +27,7 @@ pre[class*="language-"] {
 
 :not(pre) > code[class*="language-"],
 pre[class*="language-"] {
-    background: $code-bg--light;
+    background: var(--color-code-bg);
 }
 
 /* Inline code */
@@ -40,11 +40,11 @@ pre[class*="language-"] {
 .token.prolog,
 .token.doctype,
 .token.cdata {
-    color: $code-comment--dark;
+    color: var(--color-code-comment);;
 }
 
 .token.punctuation {
-    color: $code-fg--light;
+    color: var(--color-code-fg);
 }
 
 .namespace {
@@ -56,16 +56,16 @@ pre[class*="language-"] {
 .token.symbol,
 .token.deleted,
 .token.delimiter {
-    color: $code-yellow--dark;
+    color: var(--color-code-quaternary);
 }
 
 .token.boolean,
 .token.number {
-    color: $code-violet--dark;
+    color: var(--color-code-quinary);
 }
 
 .token.property {
-    color: $code-pink--dark;
+    color: var(--color-code-primary);
 }
 
 .token.attr-value,
@@ -73,7 +73,7 @@ pre[class*="language-"] {
 .token.char,
 .token.builtin,
 .token.inserted {
-    color: $code-blue--dark;
+    color: var(--color-code-septenary);
 }
 
 .token.operator,
@@ -84,21 +84,21 @@ pre[class*="language-"] {
 .language-css .token.string,
 .style .token.string,
 .token.variable {
-    color: $code-yellow--dark;
+    color: var(--color-code-quaternary);
 }
 
 .token.selector,
 .token.attr-name,
 .token.function,
 .token.class-name {
-    color: $code-green--dark;
+    color: var(--color-code-secondary);
 }
 
 .token.regex,
 .token.important,
 .token.parameter,
 .token.content {
-    color: $code-orange--dark;
+    color: var(--color-code-tertiary);
 }
 
 .token.important,
@@ -116,47 +116,31 @@ pre[class*="language-"] {
 
 .token.title {
     .token.punctuation {
-        color: $code-violet--dark;
+        color: var(--color-code-quinary);
     }
-    color: $code-violet--dark;
+    color: var(--color-code-quinary);
 }
 
 .token.bold {
     .token.punctuation {
-        color: $code-orange--dark;
+        color: var(--color-code-tertiary);
     }
-    color: $code-orange--dark;
+    color: var(--color-code-tertiary);
 }
 
 .token.italic,
 .token.blockquote {
     .token.punctuation,
     .token.content {
-        color: $code-blue--dark;
+        color: var(--color-code-septenary);
     }
-    color: $code-blue--dark;
+    color: var(--color-code-septenary);
 }
 
 .token.strike {
     .token.punctuation,
     .token.content {
-        color: $code-fg--dark;
+        color: var(--color-code-fg);
     }
-    color: $code-fg--dark;
-}
-
-@include dark-theme() {
-    code[class*="language-"],
-    pre[class*="language-"] {
-        color: $code-fg--dark;
-    }
-
-    :not(pre) > code[class*="language-"],
-    pre[class*="language-"] {
-        background: $code-bg--dark;
-    }
-
-    .token.punctuation {
-        color: $code-fg--dark;
-    }
+    color: var(--color-code-fg);
 }

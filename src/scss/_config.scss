@@ -51,19 +51,28 @@ $dark-primary: #efd036;
 
 // CODE COLOURS
 $code-bg--light: $dark-invert;
-$code-fg--light: lighten($light-invert, 5%);
+$code-fg--light: $light-invert;
+$code-comment--light: #717171;
+$code-primary--light: #ce1ca2;
+$code-secondary--light: #3aa386;
+$code-tertiary--light: #ad5a00;
+$code-quaternary--light: #e01010;
+// $code-quinary--light: #96a4f8;
+$code-quinary--light: #0f7c95;
+$code-senary--light: #a724ff;
+$code-septenary--light: #455ff2;
 
 $code-bg--dark: darken($dark, 5%);
 $code-fg--dark: $dark-invert;
 $code-comment--dark: #a8a8a8;
-$code-pink--dark: #ee81d3;
-$code-green--dark: #13c292;
-$code-orange--dark: #eb9437;
-$code-yellow--dark: $dark-primary;
-// $code-violet--dark: #96a4f8;
-$code-violet--dark: #f78e8e;
-$code-coral--dark: #f78e8e;
-$code-blue--dark: #33c9eb;
+$code-primary--dark: #ee81d3;
+$code-secondary--dark: #13c292;
+$code-tertiary--dark: #eb9437;
+$code-quaternary--dark: $dark-primary;
+// $code-quinary--dark: #96a4f8;
+$code-quinary--dark: #f78e8e;
+$code-senary--dark: #f78e8e;
+$code-septenary--dark: #33c9eb;
 
 @import "mixins/dark-theme";
 
@@ -73,6 +82,16 @@ $code-blue--dark: #33c9eb;
     --color-text: #{$light-invert};
     --color-primary: #{$light-primary};
     --color-primary-alt: #{$dark-primary};
+    --color-code-bg: #{$code-bg--light};
+    --color-code-fg: #{$code-fg--light};
+    --color-code-comment: #{$code-comment--light};
+    --color-code-primary: #{$code-primary--light};
+    --color-code-secondary: #{$code-secondary--light};
+    --color-code-tertiary: #{$code-tertiary--light};
+    --color-code-quaternary: #{$code-quaternary--light};
+    --color-code-quinary: #{$code-quinary--light};
+    --color-code-senary: #{$code-senary--light};
+    --color-code-septenary: #{$code-septenary--light};
 }
 
 [data-user-color-theme="light"] {
@@ -85,6 +104,16 @@ $code-blue--dark: #33c9eb;
     --color-text: #{$dark-invert};
     --color-primary: #{$dark-primary};
     --color-primary-alt: #{$light-primary};
+    --color-code-bg: #{$code-bg--dark};
+    --color-code-fg: #{$code-fg--dark};
+    --color-code-comment: #{$code-comment--dark};
+    --color-code-primary: #{$code-primary--dark};
+    --color-code-secondary: #{$code-secondary--dark};
+    --color-code-tertiary: #{$code-tertiary--dark};
+    --color-code-quaternary: #{$code-quaternary--dark};
+    --color-code-quinary: #{$code-quinary--dark};
+    --color-code-senary: #{$code-senary--dark};
+    --color-code-septenary: #{$code-septenary--dark};
 }
 
 $gorko-colors: (
