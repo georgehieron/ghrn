@@ -10,13 +10,13 @@ The site's primary brand colours were white and a dark blue, requiring primarily
 
 ## The problem
 
-However, due to the age of the site and the amount of continuous development additions and improvements that had been made to it over the years, the code base had become somewhat sprawling, making it difficult to quickly and easily target every instance of a section or component with a dark blue background, where the light focus style was required.
+Due to the age of the site and the amount of continuous development additions and improvements that had been made to it over the years, the code base had become somewhat sprawling, making it difficult to quickly and easily target every instance of a section or component with a dark blue background, where the light focus style was required.
 
 I had to spend a not insignificant amount of time sifting through the code base with searches to catch every instance. It wasn't a big problem, but it got me thinking – would it be possible to make a robust, CSS-only solution to such a problem, such that the colour of the focus style would be dynamically light or dark without having to target specific components or element groups separately.
 
 ## The solution
 
-The solution I came with depends heavily on two things: the use of the CSS keyword `currentColor`, and the assumption that that the value of currenColor is already compliant with the WCAG level you are aiming for against the background colour. The solution essentially uses box shadow in the role of outline for most elements that receive focus, and for elements such as buttons that have a boxy appearance, the application of `background-color: inherit;` gives the visual effect of a button that is transparent, defined only by its visual border. However, by inheriting the parent container's colour combination, then the same colour contrast ratio is achieved. Since for buttons, the visual border becomes necessary to define the clickable area of the component, outline with a style other than solid can then be applied to further enhance the visual clarity of the focus position.
+The solution I came with depends heavily on two things: the use of the CSS keyword `currentColor`, and the assumption that that the value of currenColor is already compliant with the WCAG level you are aiming for against the background colour. The solution essentially uses `box-shadow` in the role of `outline` for most elements that receive focus, and for elements such as buttons that have a boxy appearance, the application of `background-color: inherit;` gives the visual effect of a button that is transparent, defined only by its visual border. However, by inheriting the parent container's colour combination, then the same colour contrast ratio is achieved. Since for buttons, the visual border becomes necessary to define the clickable area of the component, the additional use of outline with an offset value can be applied to further enhance the visual clarity of the focus position.
 
 ### The code
 
@@ -44,7 +44,7 @@ button,
 }
 {% endhighlight %}
 
-### Caveats
+## Caveats
 
 <mark>I have not used or tested this solution outside of the proof-of-concept CodePen below – use it in a production site at your own discretion!</mark>
 
@@ -54,7 +54,7 @@ button,
   on <a href="https://codepen.io">CodePen</a>.</span>
 </p>
 
-This solution may or may not be simple to implement depending on the project you are dealing with. Either way, whether this is something that gets used or not, I hope it at least highlights the importance of ensuring sufficient contrast for focus styles sitewide, particularly when background colours change per page, section, or component.
+This solution may or may not be simple to implement depending on the project you are dealing with - and of course, these focus styles might not be permissible according to the site's / brand's design guidelines. Whether this is something that gets used or not, I hope it at least highlights the importance of ensuring sufficient contrast for focus styles sitewide, particularly when background colours change per page, section, or component.
 
 If you do use it, or if it simply inspires you to keep a closer eye on your accessibile colours, let me know!
 
