@@ -14,18 +14,10 @@
     .nav__item {
         &.nav__item--active {
             .nav__link {
-                &:before {
-                    content: "";
-                    @include apply-utility('box', 'block');
-                    @include apply-utility('width', 'full');
-                    position: absolute;
-                    top: auto;
-                    bottom: 0.2em;
-                    left: 0;
-                    height: .125rem;
-                    background-color: var(--color-primary);
-                    transform: none;
-                }
+                text-decoration: underline;
+                text-decoration-thickness: .125rem;
+                text-underline-offset: .65rem;
+                text-decoration-color: var(--color-primary);
             }
         }
     }
@@ -37,26 +29,11 @@
         font-size: get-size('900');
         text-decoration: none;
 
-        &:before {
-            content: "";
-            @include apply-utility('box', 'block');
-            @include apply-utility('width', 'full');
-            position: absolute;
-            top: auto;
-            bottom: 0.2em;
-            left: 0;
-            height: .125rem;
-            background-color: transparent;
-            transform: none;
-        }
-
         &:hover,
         &:focus {
-            &:not([aria-current="page"]) {
-                &:before {
-                    background-color: var(--color-text);
-                }
-            }
+            text-decoration: underline;
+            text-decoration-thickness: .125rem;
+            text-underline-offset: .65rem;
         }
     }
 

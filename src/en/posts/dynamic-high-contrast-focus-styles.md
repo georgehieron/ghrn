@@ -2,6 +2,9 @@
 title: 'Dynamic High-contrast focus styles'
 date: '2021-05-25'
 tags: ['CSS', 'Accessibility']
+eleventyNavigation:
+  key: Dynamic High-contrast focus styles
+  parent: Blog
 ---
 
 <p class="lede">I was recently working on accessibility improvements to a relatively old site, and I needed to implement better focus styles with sufficient colour contrast.</p>
