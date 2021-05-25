@@ -44,15 +44,18 @@ button,
 }
 {% endhighlight %}
 
-## Caveats
+Check out my proof-of-concept CodePen below for a living example. Click inside and <kbd>Tab</kbd> around to see the focus styles!
 
-<mark>I have not used or tested this solution outside of the proof-of-concept CodePen below – use it in a production site at your own discretion!</mark>
-
-<p class="codepen" data-height="382" data-theme-id="dark" data-default-tab="css,result" data-user="georgehieron" data-slug-hash="PopWYPL" data-preview="true" style="height: 382px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="Dynamic contrast on focus highlight – CSS only">
+<p class="codepen" data-height="455" data-theme-id="dark" data-default-tab="result" data-user="georgehieron" data-slug-hash="PopWYPL" data-preview="true" style="height: 455px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="Dynamic contrast on focus highlight – CSS only">
   <span>See the Pen <a href="https://codepen.io/georgehieron/pen/PopWYPL">
   Dynamic contrast on focus highlight – CSS only</a> by George Hieron (<a href="https://codepen.io/georgehieron">@georgehieron</a>)
   on <a href="https://codepen.io">CodePen</a>.</span>
 </p>
+<script async src="https://cpwebassets.codepen.io/assets/embed/ei.js"></script>
+
+## Caveats
+
+<mark>I have not used or tested this solution outside of the CodePen example – use it in a production site at your own discretion!</mark>
 
 This solution may or may not be simple to implement depending on the project you are dealing with - and of course, these focus styles might not be permissible according to the site's / brand's design guidelines. Whether this is something that gets used or not, I hope it at least highlights the importance of ensuring sufficient contrast for focus styles sitewide, particularly when background colours change per page, section, or component.
 
