@@ -109,6 +109,10 @@ h1,
     @supports (font-size: clamp(#{get-size('800')}, 5.3vw, #{get-size('1100')})) {
         font-size: clamp(#{get-size('800')}, 5.3vw, #{get-size('1100')});
     }
+
+    &:not([class]) {
+        margin-bottom: .512em;
+    }
 }
 
 h2,
