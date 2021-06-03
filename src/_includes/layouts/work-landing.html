@@ -1,34 +1,29 @@
 {% extends "layouts/base.html" %}
 
 {% set pageHeaderTitle = title %}
-{% set pageHeaderSummary = content %}
+{% set pageHeaderSummary = '' %}
 
 {% set pageCriticalStyles = ['css/work.css'] %}
 
 {% block content %}
 <article>
     {% include "partials/page-header.html" %}
+
+    {% for item in collections["work_" + locale] %}
+    <figure>
+        <div>
+            <img src="{{ item.data.hero.image }}" alt="{{ item.data.hero.imageAlt }}" />
+        </div>
+        <figcaption>
+            <h2>
+                {{ item.data.title }}
+            </h2>
+            <p>
+                {{ item.data.summary }}
+            </p>
+            <a href="{{ item.url }}" class="button">{{ itemButtonText }}</a>
+        </figcaption>
+    </figure>
+    {% endfor %}
 </article>
-<div>
-    <div class="wrapper">
-        <article>
-            {% for item in collections["work_" + locale] %}
-            <figure>
-                <div>
-                    <img src="{{ item.data.hero.image }}" alt="{{ item.data.hero.imageAlt }}" />
-                </div>
-                <figcaption>
-                    <h2>
-                        {{ item.data.title }}
-                    </h2>
-                    <p>
-                        {{ item.data.summary }}
-                    </p>
-                    <a href="{{ item.url }}" class="button">{{ itemButtonText }}</a>
-                </figcaption>
-            </figure>
-            {% endfor %}
-        </article>
-    </div>
-</div>
 {% endblock %}
