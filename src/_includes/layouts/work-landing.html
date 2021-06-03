@@ -5,25 +5,14 @@
 
 {% set pageCriticalStyles = ['css/work.css'] %}
 
+{% import "macros/card-link.html" as cardLink %}
+
 {% block content %}
 <article>
     {% include "partials/page-header.html" %}
 
     {% for item in collections["work_" + locale] %}
-    <figure>
-        <div>
-            <img src="{{ item.data.hero.image }}" alt="{{ item.data.hero.imageAlt }}" />
-        </div>
-        <figcaption>
-            <h2>
-                {{ item.data.title }}
-            </h2>
-            <p>
-                {{ item.data.summary }}
-            </p>
-            <a href="{{ item.url }}" class="button">{{ itemButtonText }}</a>
-        </figcaption>
-    </figure>
+        {{ cardLink.link(item.url, 'bg-text', item.data.title, item.data.summary, item.data.hero.image) }}
     {% endfor %}
 </article>
 {% endblock %}
