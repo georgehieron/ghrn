@@ -345,6 +345,7 @@ kbd {
     @include apply-utility('weight', 'regular');
     line-height: 1.375 !important;
     display: inline-block;
+    -webkit-text-size-adjust: 100%;
 }
 
 pre,
