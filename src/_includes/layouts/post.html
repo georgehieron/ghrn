@@ -4,23 +4,26 @@
 
 {% set pageCriticalStyles = ['css/post.css'] %}
 
+{% set navCrumb = collections.all | eleventyNavigationBreadcrumb(title) %}
+
 {# Render post date and any tags that this post has been filed under #}
 {% set pageHeaderSummary %}
-<time datetime="{{ date }}" class="box-block h6">{{ date | dateFilter }}</time>
-{% if tags %}
-<p class="visually-hidden" id="tags-desc">Tags that this post has been filed under.</p>
-<ul aria-describedby="tags-desc" class="box-flex list--unstyled">
-    {% for tag in tags %}
-        {% if loop.first %}
-        <li>
-        {% else %}
-        <li class="gap-left-200">
-        {% endif %}
-            <a href="/{{ locale }}/tag/{{ tag | slug }}/" class="h5">#{{ tag | title | replace(' ', '') }}</a>
-        </li>
-    {% endfor %}
-</ul>
-{% endif %}
+    <time datetime="{{ date }}" class="box-block h6">{{ date | dateFilter }}</time>
+
+    {% if tags %}
+        <p class="visually-hidden" id="tags-desc">Tags that this post has been filed under.</p>
+        <ul aria-describedby="tags-desc" class="box-flex list--unstyled">
+            {% for tag in tags %}
+                {% if loop.first %}
+                <li>
+                {% else %}
+                <li class="gap-left-200">
+                {% endif %}
+                    <a href="/{{ locale }}/tag/{{ tag | slug }}/" class="h5">#{{ tag | title | replace(' ', '') }}</a>
+                </li>
+            {% endfor %}
+        </ul>
+    {% endif %}
 {% endset %}
 
 {% block content %}
@@ -29,7 +32,9 @@
     {{ content | safe }}
     <footer class="gap-top-800">
         <p class="h6 pad-bottom-800">Words by George Hieron</p>
-        <a href="#top" class="h5">Back to top</a>
+        {% for entry in navCrumb %}
+            <a href="{{ entry.url | url }}" class="h5">Back to {{ entry.title }}</a>
+        {% endfor %}
     </footer>
 </article>
 {% endblock %}

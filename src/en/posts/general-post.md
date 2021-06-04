@@ -2,6 +2,9 @@
 title: 'A general post'
 date: '2019-11-16'
 tags: 'General'
+eleventyNavigation:
+  key: A general post
+  parent: Blog
 ---
 
 Frean Scildinga, frinan wille, beaga bryttan, swa þu bena eart, þeoden mærne, ymb þinne sið, ond þe þa ondsware ædre gecyðan ðe me se goda agifan þenceð." *Hwearf þa hrædlice þær Hroðgar* sæt eald ond anhar mid his eorla gedriht; eode ellenrof, þæt he for eaxlum gestod Deniga frean; cuþe he duguðe þeaw. Wulfgar maðelode to his winedrihtne. "Her syndon geferede, feorran cumene ofer geofenes begang Geata leode; þone yldestan oretmecgas [Beowulf](#beowulf) nemnað. Hy benan synt þæt hie, þeoden min, wið þe moton wordum wrixlan. No ðu him wearne geteoh ðinra gegncwida, glædman Hroðgar. Hy on wiggetawum wyrðe þinceað eorla geæhtlan; huru se aldor deah, se þæm heaðorincum hider wisade.".
