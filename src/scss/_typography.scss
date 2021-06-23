@@ -167,6 +167,24 @@ cite {
     @include apply-utility('weight', 'regular');
     line-height: 1;
 
+    + * {
+        margin-top: 3em;
+
+        @supports (margin-top: clamp(2em, 6.7vw, 3em)) {
+            margin-top: clamp(2em, 6.7vw, 3em);
+        }
+    }
+
+    + .lede {
+        &:first-of-type {
+            margin-bottom: 5em;
+
+            @supports (margin-bottom: clamp(4em, 6.7vw, 5em)) {
+                margin-bottom: clamp(4em, 6.7vw, 5em);
+            }
+        }
+    }
+
     // @supports (-webkit-text-stroke: 1px) {
     //     -webkit-text-stroke: 1px var(--color-text);
     //     -webkit-text-fill-color: transparent;
@@ -217,15 +235,18 @@ cite {
         }
     }
 
-    > span {
+    > span:not(:nth-child(2)) {
         flex: 1 1 auto;
         display: block;
         height: .125rem;
         width: 100%;
-        background-color: var(--color-primary);
         transform: translateY(-150%);
         margin-top: auto;
         margin-bottom: auto;
+
+        &:not([class^="bg-"]) {
+            background-color: var(--color-primary);
+        }
     }
 }
 

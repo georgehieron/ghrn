@@ -28,12 +28,6 @@
         overflow: hidden;
     }
 
-    &__title,
-    &__image {
-        top: 0;
-        left: 0;
-    }
-
     &__title {
         @include apply-utility('align', 'left');
         padding: .8em 1em 0;

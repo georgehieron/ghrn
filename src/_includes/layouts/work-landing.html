@@ -1,18 +1,21 @@
 {% extends "layouts/base.html" %}
 
 {% set pageHeaderTitle = title %}
-{% set pageHeaderSummary = '' %}
+{% set pageHeaderSummary = content %}
 
-{% set pageCriticalStyles = ['css/work.css'] %}
+{% set pageCriticalStyles = ['css/work-landing.css'] %}
 
-{% import "macros/card-link.html" as cardLink %}
+{% import "macros/page-head.html" as pageHead %}
+{% import "macros/work-list-item.html" as workItem %}
 
 {% block content %}
 <article>
-    {% include "partials/page-header.html" %}
+    {{ pageHead.header('xxl align-center', pageHeaderTitle, 'lede align-center', pageHeaderSummary) }}
 
-    {% for item in collections["work_" + locale] %}
-        {{ cardLink.link(item.url, 'bg-text', item.data.title, item.data.summary, item.data.hero.image) }}
-    {% endfor %}
+    <ul class="list--unstyled">
+        {% for item in collections["work_" + locale] %}
+            {{ workItem.link(item.url, '', item.data.year, item.data.title) }}
+        {% endfor %}
+    </ul>
 </article>
 {% endblock %}

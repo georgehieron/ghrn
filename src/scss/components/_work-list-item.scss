@@ -1,0 +1,20 @@
+.work-list-item {
+    + .work-list-item {
+        margin-top: 3em;
+    }
+
+    a {
+        text-decoration: none;
+
+        &:hover,
+        &:focus {
+            text-decoration: underline;
+            text-decoration-thickness: .125rem;
+            text-underline-offset: .65rem;
+        }
+    }
+
+    .h-sep {
+        margin-bottom: 0;
+    }
+}
