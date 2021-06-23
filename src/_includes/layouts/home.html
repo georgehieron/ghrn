@@ -32,13 +32,13 @@
             {% if locale === 'en' %}
                 {% for item in collections.work_en %}
                     {% if loop.index == 1 %}
-                        {{ cardLink.link(item.url, 'bg-text', item.data.title, '', item.data.hero.image) }}
+                        {{ cardLink.link(item.url, 'bg-mid-grey', item.data.title, '', item.data.hero.image) }}
                     {% endif %}
                 {% endfor %}
             {% elif locale === 'fi' %}
                 {% for item in collections.work_fi %}
                     {% if loop.index == 1 %}
-                        {{ cardLink.link(item.url, 'bg-text', item.data.title, '', item.data.hero.image) }}
+                        {{ cardLink.link(item.url, 'bg-mid-grey', item.data.title, '', item.data.hero.image) }}
                     {% endif %}
                 {% endfor %}
             {% endif %}

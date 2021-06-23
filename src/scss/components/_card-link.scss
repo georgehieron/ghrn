@@ -1,6 +1,7 @@
 .card-link {
     @include ratio--3-2;
     margin-bottom: 4em;
+    overflow: hidden;
 
     @supports (margin-bottom: clamp(3em, 6.7vw, 5em)) {
         margin-bottom: clamp(3em, 6.7vw, 5em);
@@ -19,6 +20,14 @@
         transition: .3s ease-in-out box-shadow;
     }
 
+    &__inner {
+        top: 0;
+        left: 0;
+        flex-direction: column-reverse;
+        flex-wrap: nowrap;
+        overflow: hidden;
+    }
+
     &__title,
     &__image {
         top: 0;
@@ -27,7 +36,7 @@
 
     &__title {
         @include apply-utility('align', 'left');
-        padding: .8em 1em;
+        padding: .8em 1em 0;
     }
 
     &__image {

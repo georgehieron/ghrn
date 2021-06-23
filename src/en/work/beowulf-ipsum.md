@@ -7,7 +7,7 @@ eleventyNavigation:
   parent: Work
 translationKey: "bIpsum"
 hero:
-  image: '/images/work/beowulf_thumb@2x.jpg'
+  image: '/images/work/beowulf_full@2x.webp'
   imageAlt: 'Beowulf Ipsum cover image showing stylised Beowulf sample text.'
 ---
 

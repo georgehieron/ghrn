@@ -50,6 +50,7 @@ main {
 @import 'components/icons';
 @import 'components/burger';
 @import 'components/buttons';
+@import 'components/images';
 @import 'components/code'; // TODO: Move this, not critical
 
 @include dark-theme() {
@@ -57,5 +58,11 @@ main {
         > .site-texture {
             opacity: .2;
         }
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .site-texture {
+        display: none;
     }
 }

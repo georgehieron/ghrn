@@ -45,6 +45,7 @@ $max-width: 90rem;
 $light: #fff;
 $light-invert: #3d3d3d;
 $light-primary: #137C5f;
+$mid-grey: #4c4c4c;
 $dark: $light-invert;
 $dark-invert: #f7f7f7;
 $dark-primary: #efd036;
@@ -82,6 +83,7 @@ $code-septenary--dark: #33c9eb;
     --color-text: #{$light-invert};
     --color-primary: #{$light-primary};
     --color-primary-alt: #{$dark-primary};
+    --color-mid-grey: #{$mid-grey};
     --color-code-bg: #{$code-bg--light};
     --color-code-fg: #{$code-fg--light};
     --color-code-comment: #{$code-comment--light};
@@ -104,6 +106,7 @@ $code-septenary--dark: #33c9eb;
     --color-text: #{$dark-invert};
     --color-primary: #{$dark-primary};
     --color-primary-alt: #{$light-primary};
+    --color-mid-grey: #{$mid-grey};
     --color-code-bg: #{$code-bg--dark};
     --color-code-fg: #{$code-fg--dark};
     --color-code-comment: #{$code-comment--dark};
@@ -121,6 +124,7 @@ $gorko-colors: (
     "text": var(--color-text),
     "primary": var(--color-primary),
     "primary-alt": var(--color-primary-alt),
+    "mid-grey": var(--color-mid-grey),
 );
 
 /// CORE CONFIG
