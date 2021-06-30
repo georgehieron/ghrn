@@ -17,5 +17,9 @@
             {{ workItem.link(item.url, '', item.data.year, item.data.title) }}
         {% endfor %}
     </ul>
+
+    <footer class="align-center">
+        {% include "components/back-to-top.html" %}
+    </footer>
 </article>
 {% endblock %}

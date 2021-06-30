@@ -264,6 +264,7 @@ a {
         vertical-align: bottom;
         overflow: hidden;
         transition: 0.3s ease-in-out background-position, 0.3s ease-in-out color;
+        transition-delay: .1s;
 
         &:hover,
         &:focus {
