@@ -2,6 +2,7 @@
 
 {% set pageCriticalStyles = ['css/home.css'] %}
 
+{% import "macros/translation.html" as trans %}
 {% import "macros/card-link.html" as cardLink %}
 
 {% block content %}
@@ -13,20 +14,27 @@
         <section>
             <div class="h-sep">
                 <span aria-hidden="true"></span>
-                <h2>Latest post</h2>
+                <h2>{{ trans.lation('Latest post', 'Tuorein artikkeli', locale) }}</h2>
                 <span aria-hidden="true"></span>
             </div>
-            {% for item in collections.blog %}
-                {% if loop.index == 1 %}
-                    {{ cardLink.link(item.url, 'bg-primary', item.data.title) }}
-                {% endif %}
-            {% endfor %}
+            {% if locale === 'fi' %}
+                <p class="h6">Artikkelit saatavilla vain englanniksi <span aria-hidden="true">:-)</span></p>
+                <div lang="en">
+            {% endif %}
+                {% for item in collections.blog %}
+                    {% if loop.index == 1 %}
+                        {{ cardLink.link(item.url, 'bg-primary', item.data.title) }}
+                    {% endif %}
+                {% endfor %}
+            {% if locale === 'fi' %}
+                </div>
+            {% endif %}
         </section>
 
         <section>
             <div class="h-sep">
                 <span aria-hidden="true"></span>
-                <h2>Featured project</h2>
+                <h2>{{ trans.lation('Featured project', 'Nostettu projekti', locale) }}</h2>
                 <span aria-hidden="true"></span>
             </div>
             {% if locale === 'en' %}
@@ -47,14 +55,14 @@
         <footer>
             <div class="h-sep">
                 <span aria-hidden="true"></span>
-                <h2>Information</h2>
+                <h2>{{ trans.lation('Information', 'Tietoa', locale) }}</h2>
                 <span aria-hidden="true"></span>
             </div>
             <div class="lede">
                 <p class="box-block">&#169; George Hieron 2021</p>
-                <p class="box-block">Build: Me</p>
-                <p class="box-block">Design: <a href="https://www.ben-hamilton.co.uk/" target="_blank" rel="nofollow">Ben Hamilton</a></p>
-                <p class="box-block">Type: <a href="https://pangrampangram.com/products/migra" target="_blank" rel="nofollow">Migra</a>, <a href="https://www.atipofoundry.com/fonts/archia" target="_blank" rel="nofollow">Archia</a>, <a href="https://pangrampangram.com/products/fraktion" target="_blank" rel="nofollow">Fraktion Mono</a></p>
+                <p class="box-block">{{ trans.lation('Build: Me', 'Rakenne: minä', locale) }}</p>
+                <p class="box-block">{{ trans.lation('Design:', 'Suunnittelu:', locale) }} <a href="https://www.ben-hamilton.co.uk/" target="_blank" rel="nofollow">Ben Hamilton</a></p>
+                <p class="box-block">{{ trans.lation('Type:', 'Typografia:', locale) }} <a href="https://pangrampangram.com/products/migra" target="_blank" rel="nofollow">Migra</a>, <a href="https://www.atipofoundry.com/fonts/archia" target="_blank" rel="nofollow">Archia</a>, <a href="https://pangrampangram.com/products/fraktion" target="_blank" rel="nofollow">Fraktion Mono</a></p>
             </div>
             {% include "components/back-to-top.html" %}
         </footer>

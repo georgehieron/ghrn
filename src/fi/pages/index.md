@@ -1,19 +1,14 @@
 ---
-title: "GHRN"
+title: "George Hieron"
 permalink: '/{{ locale }}/index.html'
 eleventyNavigation:
   key: Etusivu
   order: 1
 translationKey: "homePage"
-metaDesc: ''
+metaDesc: 'Suomen asuva brittiläinen web-kehittäjä'
 layout: "layouts/home.html"
 intro:
-    main: "GHRN"
-    summary: "Suomen asuva brittiläinen web-kehittäjä"
-    buttonText: "Paina"
-    buttonUrl: "/fi/toita"
-    image: ""
-    imageAlt: "Image alt"
+    main: "Moi, olen George"
 ---
 
-# Moi, olen George.
+Olen front-end-keskittynyt web-kehittäjä Bristolista, Iso-Britanniasta. Sijaitsen Tampereella, ja työskentelen WordPress-kehittäjänä [Geniemissä](https://www.geniem.fi/). Erikoistun saavutettavuudessa ja pidän paljon modernien CSS-tekniikkien käytöstä. Minua myös kiinnostaa, miten netti voi tehdä vihreämmäksi ja kestävämmäksi. 🌲

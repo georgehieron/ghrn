@@ -5,12 +5,15 @@
 
     a {
         text-decoration: none;
+        transition: .15s ease-in-out color;
 
         &:hover,
         &:focus {
+            color: var(--color-text);
             text-decoration: underline;
             text-decoration-thickness: .125rem;
             text-underline-offset: .65rem;
+            transition: .15s ease-in-out color;
         }
     }
 
