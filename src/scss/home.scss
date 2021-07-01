@@ -10,3 +10,7 @@ $outputTokenCSS: false;
 @import "mixins/ratio-3-2";
 
 @import "components/card-link";
+
+.section-header {
+    margin-bottom: 1.7em;
+}

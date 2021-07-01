@@ -216,7 +216,6 @@ cite {
 .h-sep {
     @include apply-utility('box', 'flex');
     position: relative;
-    margin-bottom: 1.75em;
 
     > :nth-child(2) {
         flex: 0 0 auto;

@@ -11,4 +11,4 @@ intro:
     main: "Moi, olen George"
 ---
 
-Olen front-end-keskittynyt web-kehittäjä Bristolista, Iso-Britanniasta. Sijaitsen Tampereella, ja työskentelen WordPress-kehittäjänä [Geniemissä](https://www.geniem.fi/). Erikoistun saavutettavuudessa ja pidän paljon modernien CSS-tekniikkien käytöstä. Minua myös kiinnostaa, miten netti voi tehdä vihreämmäksi ja kestävämmäksi. 🌲
+Olen front-end -keskittynyt web-kehittäjä Bristolista, Iso-Britanniasta. Sijaitsen Tampereella, ja työskentelen WordPress-kehittäjänä [Geniemissä](https://www.geniem.fi/). Erikoistun saavutettavuudessa ja pidän paljon modernien CSS-tekniikkien käytöstä. Minua myös kiinnostaa, miten netti voi tehdä vihreämmäksi ja kestävämmäksi. 🌲

@@ -58,7 +58,6 @@ $code-primary--light: #ce1ca2;
 $code-secondary--light: #3aa386;
 $code-tertiary--light: #ad5a00;
 $code-quaternary--light: #e01010;
-// $code-quinary--light: #96a4f8;
 $code-quinary--light: #0f7c95;
 $code-senary--light: #a724ff;
 $code-septenary--light: #455ff2;
@@ -70,9 +69,8 @@ $code-primary--dark: #ee81d3;
 $code-secondary--dark: #13c292;
 $code-tertiary--dark: #eb9437;
 $code-quaternary--dark: $dark-primary;
-// $code-quinary--dark: #96a4f8;
 $code-quinary--dark: #f78e8e;
-$code-senary--dark: #f78e8e;
+$code-senary--dark: lighten(#a724ff, 20%);
 $code-septenary--dark: #33c9eb;
 
 @import "mixins/dark-theme";
