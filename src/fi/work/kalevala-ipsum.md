@@ -6,4 +6,5 @@ eleventyNavigation:
   key: Kalevala Ipsum
   parent: Work
 translationKey: "kIpsum"
+year: '2020'
 ---

@@ -5,6 +5,6 @@ displayOrder: 2
 eleventyNavigation:
   key: Kalevala Ipsum
   parent: Work
-year: '2020'
 translationKey: "kIpsum"
+year: '2020'
 ---
