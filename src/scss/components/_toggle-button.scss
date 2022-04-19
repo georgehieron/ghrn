@@ -1,5 +1,5 @@
-$toggle-indicator-left: translate(calc(-50% + .57em),-50%);
-$toggle-indicator-right: translate(calc(50% + .71em),-50%);
+$toggle-indicator-left: translate(-1%,-50%);
+$toggle-indicator-right: translate(110%,-50%);
 
 .toggle-btn {
     position: relative;

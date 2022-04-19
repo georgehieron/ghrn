@@ -20,6 +20,17 @@
     outline-offset: .1rem;
 }
 
+@supports selector(:focus-visible) {
+    :focus {
+        outline: none;
+    }
+
+    :focus-visible {
+        outline: .2rem dashed var(--color-primary);
+        outline-offset: .1rem;
+    }
+}
+
 body {
     position: relative;
     color: var(--color-text);
