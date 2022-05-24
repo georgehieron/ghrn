@@ -1,21 +1,27 @@
 {% extends "layouts/base.html" %}
 
-{% set pageCriticalStyles = '' %}
+{% set pageCriticalStyles = ['css/work-item.css'] %}
 
 {% block content %}
 <section>
-    <header>
-        <div>
-            <div>
-                <h1>{{ title }}</h1>
-                <p>{{ summary }}</p>
-            </div>
-        </div>
-        <picture>
-            <img src="{{ hero.image }}" alt="{{ hero.imageAlt }}" />
-        </picture>
-    </header>
     <article>
+        <header class="work-item-header">
+            <h1>{{ title }}</h1>
+            <p class="lede">{{ summary }}</p>
+            <picture>
+                <img src="{{ hero.image }}" alt="{{ hero.imageAlt }}" />
+            </picture>
+        </header>
+
+        <details class="tech-stack" open>
+            <summary class="h5">Tech stack</summary>
+            <ul>
+                {% for item in techStack %}
+                    <li>{{ item|safe }}</li>
+                {% endfor %}
+            </ul>
+        </details>
+
         {{content|safe}}
 
         <footer class="align-center">

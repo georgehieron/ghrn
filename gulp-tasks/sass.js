@@ -15,6 +15,7 @@ const criticalStyles = [
     "about.scss",
     "page.scss",
     "work-landing.scss",
+    "work-item.scss",
     "post.scss",
 ];
 

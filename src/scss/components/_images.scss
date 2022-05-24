@@ -1,3 +1,8 @@
+picture,
+img {
+    border-radius: #{get-size('600')};
+}
+
 picture {
     background-color: var(--color-mid-grey);
 }
