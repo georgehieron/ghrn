@@ -54,6 +54,10 @@ main {
     }
 }
 
+details summary:hover {
+    cursor: pointer;
+}
+
 @import "layouts/layout-main";
 
 @import "components/main-nav";
