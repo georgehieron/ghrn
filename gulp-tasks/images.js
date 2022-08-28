@@ -11,10 +11,6 @@ const images = () => {
             imagemin(
                 [
                     imagemin.mozjpeg({ quality: 60, progressive: true }),
-                    imagemin.optipng({
-                        optimizationLevel: 5,
-                        interlaced: null,
-                    }),
                 ],
                 {
                     silent: true,
