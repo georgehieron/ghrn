@@ -1,5 +1,17 @@
 .tech-stack {
-    border-top: 2px solid var(--color-primary);
     width: max(50%, 25rem);
     max-width: 100%;
+    margin-top: 3em;
+    margin-bottom: 2em;
+    border-top: 2px solid var(--color-primary);
+
+    summary {
+        padding-top: #{get-size('100')};
+        list-style: none;
+        user-select: none;
+
+        &::marker {
+            opacity: 0;
+        }
+    }
 }

@@ -2,7 +2,8 @@
     position: relative;
     padding-top: 66.666%;
 
-    > * {
-        position: absolute;
+    @supports (aspect-ratio: 3/2) {
+        padding-top: 0;
+        aspect-ratio: 3/2;
     }
 }

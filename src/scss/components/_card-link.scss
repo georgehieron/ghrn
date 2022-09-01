@@ -20,6 +20,10 @@
         transition: .3s ease-in-out box-shadow;
     }
 
+    > * {
+        position: absolute;
+    }
+
     &__inner {
         top: 0;
         left: 0;

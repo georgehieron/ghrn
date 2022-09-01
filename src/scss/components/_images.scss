@@ -4,5 +4,23 @@ img {
 }
 
 picture {
+    @include ratio--3-2;
     background-color: var(--color-mid-grey);
+
+    img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: top left;
+    }
+}
+
+* + picture,
+* + img {
+    margin-top: 3.5em;
+}
+
+picture + *,
+img + * {
+    margin-top: 3.5em;
 }

@@ -87,7 +87,8 @@ h3,
 .h3,
 h5,
 .h5,
-cite {
+cite,
+.cite {
     @include apply-utility('font', 'title');
     @include apply-utility('weight', 'regular');
 }
@@ -147,7 +148,8 @@ h5,
 .h5,
 h6,
 .h6,
-cite {
+cite,
+.cite {
     font-size: get-size('400');
     line-height: 1.375;
     margin-top: 0;
@@ -156,7 +158,8 @@ cite {
 
 h5,
 .h5,
-cite {
+cite,
+.cite {
     text-transform: uppercase;
     letter-spacing: 1px;
 }
@@ -297,13 +300,18 @@ mark {
     background-color: var(--color-primary);
 }
 
-blockquote {
+blockquote,
+cite,
+.cite {
     padding-left: calc(#{get-size('400')} + 5vw);
-    font-style: normal;
 
     @include media-query('md') {
         padding-right: calc(#{get-size('300')} + 3vw);
     }
+}
+
+blockquote {
+    font-style: normal;
 
     > p {
         line-height: 1.2;
@@ -326,7 +334,8 @@ blockquote {
         }
     }
 
-    cite {
+    + cite,
+    + .cite {
         position: relative;
         font-style: normal;
         color: var(--color-primary);
@@ -336,6 +345,14 @@ blockquote {
             margin-right: .5em;
         }
     }
+}
+
+* + .blockquote {
+    margin-top: 3.5em;
+}
+
+.blockquote + * {
+    margin-top: 3.5em;
 }
 
 ul,
