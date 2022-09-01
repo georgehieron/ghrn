@@ -347,11 +347,11 @@ blockquote {
     }
 }
 
-* + .blockquote {
+p + .blockquote {
     margin-top: 3.5em;
 }
 
-.blockquote + * {
+.blockquote + p {
     margin-top: 3.5em;
 }
 

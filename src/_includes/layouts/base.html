@@ -33,14 +33,19 @@
     {# Main global scripts #}
     <script type="module" src="/js/main.js" defer></script>
 
-    {% if pageCriticalScripts %}
-        {% for item in pageCriticalScripts %}
+    {# Generic page inline scripts - not critical, but sitewide #}
+    {% set pageInlineScripts = ['js/cursor-dot.js'] %}
+
+    {% if pageInlineScripts %}
+        {% for item in pageInlineScripts %}
         <script>{% include item %}</script>
         {% endfor %}
     {% endif %}
 </head>
 
 <body>
+    <span class="cursor-dot"></span>
+
     <div class="site-texture box-block stack-1000"></div>
 
     <div id="site-wrap" class="site-wrap">

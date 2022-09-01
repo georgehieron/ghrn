@@ -1,6 +1,6 @@
 ---
 title: 'Kalevala Ipsum'
-summary: 'An Ipsum-style text generator that uses Kalevala.'
+summary: 'An Ipsum-style text generator based on the Finnish epic poem, Kalevala.'
 displayOrder: 2
 eleventyNavigation:
   key: Kalevala Ipsum

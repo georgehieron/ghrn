@@ -83,7 +83,7 @@ document.addEventListener(
 
             setTimeout(function() {
                 themeToggleButton.removeAttribute("disabled");
-            }, 500);
+            }, 400);
         });
 
         // On load, apply the user's preferred setting
