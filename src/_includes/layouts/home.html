@@ -15,30 +15,6 @@
             <div class="section-header">
                 <div class="h-sep">
                     <span aria-hidden="true"></span>
-                    <h2>{{ trans.lation('Latest post', 'Tuorein artikkeli', locale) }}</h2>
-                    <span aria-hidden="true"></span>
-                </div>
-                {% if locale === 'fi' %}
-                    <p class="h6">Artikkelit saatavilla vain englanniksi <span aria-hidden="true">:-)</span></p>
-                {% endif %}
-            </div>
-            {% if locale === 'fi' %}
-                <div lang="en">
-            {% endif %}
-                {% for item in collections.blog %}
-                    {% if loop.index == 1 %}
-                        {{ cardLink.link(item.url, 'bg-primary', item.data.title) }}
-                    {% endif %}
-                {% endfor %}
-            {% if locale === 'fi' %}
-                </div>
-            {% endif %}
-        </section>
-
-        <section>
-            <div class="section-header">
-                <div class="h-sep">
-                    <span aria-hidden="true"></span>
                     <h2>{{ trans.lation('Featured project', 'Nostettu projekti', locale) }}</h2>
                     <span aria-hidden="true"></span>
                 </div>

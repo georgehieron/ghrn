@@ -1,6 +1,0 @@
-{
-    "layout": "layouts/post.html",
-    "permalink": "{{ locale }}/blog/{{ title | slug }}/index.html",
-    "translationKey": "post",
-    "parent": "Blog"
-}
