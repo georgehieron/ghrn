@@ -8,4 +8,4 @@ translationKey: "work"
 itemButtonText: "Lue lisää"
 ---
 
-Töitä.
+Tässä on muutama henkilökohtaista projektia, jota olen tehnyt vapaa-ajallani.

@@ -1,5 +1,5 @@
 ---
-title: 'A bit about me'
+title: 'About me'
 eleventyNavigation:
   key: About
   order: 2
@@ -11,13 +11,13 @@ I'm a full-stack web developer whose focus leans more towards front-end developm
 
 I'm from the UK, but these days I live in Tampere, Finland. 🇫🇮
 
-## A bit about my work
+## About my work
 
 Professionally, I have always used [WordPress](https://wordpress.org/) as the foundation of the sites I have built and worked on for clients. Outside of my job, I enjoy experimenting with side projects, for which I have recently been using [Eleventy](https://www.11ty.dev/) static site generator.
 
 Have a peek at some of [my stuff](/{{locale}}/work). 👀
 
-## A bit about my hobbies
+## About my hobbies
 
 When I'm not coding, I love playing the guitar and listening to metal music (although, actually, I listen to metal while I'm coding too). I also enjoy landscape photography, have a look at [George Hieron Photography](https://www.georgehieron.com/) if you'd like to see some of my images. 📷
 
