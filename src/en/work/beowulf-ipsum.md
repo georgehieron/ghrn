@@ -16,9 +16,9 @@ techStack:
   - "Vanilla JS"
 ---
 
-One day, while I was working on the front-end build of a new website, I needed to block in some example content in order to correctly begin laying out whatever section I was working on at that moment. Of course, I reached for the classic Lorem Ipsum, the long-established and globally recognised dummy text used to infer the presence of real content in the context of a layout or design. However, as a bit of a medieval history nerd I wondered, why not take the concept and apply it to classical works? After all, in addition to Lorem Ipsum, these days there are plenty of other, often hilarious options for dummy text generators, such as [Pirate Ipsum](https://pirateipsum.me/), [Cheese Ipsum](http://www.cheeseipsum.co.uk/), [Cat Ipsum](http://www.catipsum.com/), and even [Zombie&nbsp;Ipsum](http://www.zombieipsum.com/).
+One day, while I was working on the front-end build of a new website, I needed to block in some example content in order to correctly begin laying out whatever section I was working on at that moment. Of course, I reached for the classic Lorem Ipsum, the long-established and globally recognised dummy text used to infer the presence of real content in the context of a layout or design. However, as a bit of a medieval history nerd I wondered, why not take the concept and apply it to historical texts? After all, in addition to Lorem Ipsum, these days there are plenty of other, often hilarious options for dummy text generators, such as [Pirate Ipsum](https://pirateipsum.me/), [Coffee Ipsum](http://coffeeipsum.com/), and [Cat Ipsum](http://www.catipsum.com/).
 
-Although I love the concepts, I feel like I would rarely use these because while they are great fun, the fact that they are in readable English can make them still somewhat distracting, as I find myself reading through and attempting to make sense of the nonsense that was generated. After all, according to [lipsum.com](https://lipsum.com/):
+Although these are fun, I rarely use them because that they generate readable English words can make them still somewhat distracting, as I find myself reading through and attempting to make sense of the nonsense sentences that were generated. As stated by [lipsum.com](https://lipsum.com/):
 
 <figure class="blockquote">
     <blockquote>
@@ -32,11 +32,11 @@ So, to me the idea of using ancient or medieval literature for this was perfect;
 
 <picture>
     <img src="/images/Screenshot_2021-02-08_Beowulf_Ipsum.png"
-        alt="Screenshot of Beowulf Ipsum showing line count"
+        alt="Screenshot of Beowulf Ipsum showing line count."
         title="Beowulf Ipsum line count screenshot">
 </picture>
 
-For some finishing touches, I decided to add a toggle to allow starting the output with Beowulf's (in)famously ambiguous opening declaration of _Hwæt!_, to equate to beginning with _Lorem Ipsum dolor sit amet_, and for a bit of fun I thought to write copy for the site in some kind of mock Old English.
+For some finishing touches, I decided to add a toggle to allow starting the output with Beowulf's (in)famously ambiguous opening declaration of <span lang="ang">_Hwæt!_</span>, to equate to beginning with <span lang="la">_Lorem Ipsum dolor sit amet_</span>, and for a bit of fun I thought to write copy for the site in some kind of mock Old English.
 
 The site is static, using just HTML for its single page with vanilla Sass for styling and vanilla JS for the content generation. I manually sanitized and added around 600 lines of Beowulf (but I might add more at a later date to increase the variety), and I also added a 'Copy Text' button to top it off. I certainly had fun with the styles as it definitely doesn't look like something you'd make for a typical client.
 
