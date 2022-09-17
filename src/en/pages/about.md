@@ -13,7 +13,7 @@ I'm from the UK, but these days I live in Tampere, Finland. 🇫🇮
 
 ## About my work
 
-Professionally, I have always used [WordPress](https://wordpress.org/) as the foundation of the sites I have built and worked on for clients. Outside of my job, I enjoy experimenting with side projects, for which I have recently been using [Eleventy](https://www.11ty.dev/) static site generator.
+Professionally, I have always used [WordPress](https://wordpress.org/) as the foundation of the sites I have built and worked on for clients. Outside of my job, I enjoy experimenting with other technologies in side projects; lately, I have been using [Eleventy](https://www.11ty.dev/) static site generator, in addition to [NuxtJS](https://nuxtjs.org/).
 
 Have a peek at some of [my stuff](/{{locale}}/work). 👀
 
@@ -21,4 +21,4 @@ Have a peek at some of [my stuff](/{{locale}}/work). 👀
 
 When I'm not coding, I love playing the guitar and listening to metal music (although, actually, I listen to metal while I'm coding too). I also enjoy landscape photography, have a look at [George Hieron Photography](https://www.georgehieron.com/) if you'd like to see some of my images. 📷
 
-Apart from all that, I'm really interested in medieval history (particularly the Viking age), and learning languages. I can speak some Norwegian, some Finnish, and even some Old Norse. 📜
+Apart from all that, I'm really interested in medieval history (particularly the Viking age), and learning languages. I can speak Norwegian, Finnish, a little Swedish and Danish, and even some Old Norse. 📜

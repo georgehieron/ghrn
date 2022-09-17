@@ -11,7 +11,7 @@ Olen full-stack -web-kehittäjä, jonka keskitys on enemmän fronttia päin. Tee
 
 ## Minun työstä
 
-Urassani olen aina käyttänyt [WordPressia](https://wordpress.org/) minun tekemien sivustojen pohjana, sekä oman käyttön varten että asiakkaille.
+Urassani olen aina käyttänyt [WordPressia](https://wordpress.org/) minun tekemien sivustojen pohjana, sekä oman käyttön varten että asiakkaille. Vapaa-ajallani, tykkään uuden teknologian kokeilemisesta sivuprojekteilla; viime aikoina olen ollut käyttämässä [Eleventy](https://www.11ty.dev/) staattinen sivustogeneraattori, sekä [NuxtJS](https://nuxtjs.org/).
 
 Kurkkaa [minun tavaroihin](/{{locale}}/toita). 👀
 
