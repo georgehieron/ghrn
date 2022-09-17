@@ -31,7 +31,7 @@ Although these are fun, I rarely use them because that they generate readable En
 So, to me the idea of using ancient or medieval literature for this was perfect; a great way to synthesize my work as a web developer with my love of history and languages. I also thought that since I'd be using real texts as the source material, I would add a twist to the concept and generate portions of the content in order, from a random starting point; additionally, since Beowulf is a poem and is typically presented with a line count, I would show the line numbers of the output such that, if a user was so inclined, they could go to that portion to read what they had generated.
 
 <picture>
-    <img src="/images/Screenshot_2021-02-08_Beowulf_Ipsum.png"
+    <img src="/images/Screenshot_2021-02-08_Beowulf_Ipsumdd.png"
         alt="Screenshot of Beowulf Ipsum showing line count."
         title="Beowulf Ipsum line count screenshot">
 </picture>
@@ -40,4 +40,4 @@ For some finishing touches, I decided to add a toggle to allow starting the outp
 
 The site is static, using just HTML for its single page with vanilla Sass for styling and vanilla JS for the content generation. I manually sanitized and added around 600 lines of Beowulf (but I might add more at a later date to increase the variety), and I also added a 'Copy Text' button to top it off. I certainly had fun with the styles as it definitely doesn't look like something you'd make for a typical client.
 
-I enjoyed bringing such a nerdy concept to life; feel free to give it a go and drop me a tweet if you use it for anything!
+I enjoyed bringing such a nerdy concept to life; feel free to give it a go, and maybe let me know on Twitter if you do!
