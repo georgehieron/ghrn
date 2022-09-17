@@ -7,20 +7,26 @@
     <article>
         <header class="work-item-header">
             <h1>{{ title }}</h1>
-            <p class="lede">{{ summary }}</p>
-            <picture>
-                <img src="{{ hero.image }}" alt="{{ hero.imageAlt }}" />
-            </picture>
+            {% if summary %}
+                <p class="lede">{{ summary }}</p>
+            {% endif %}
+            {% if hero.image %}
+                <picture>
+                    <img src="{{ hero.image }}" alt="{{ hero.imageAlt }}" />
+                </picture>
+            {% endif %}
         </header>
 
-        <details class="tech-stack" open>
-            <summary class="h5">Tech stack</summary>
-            <ul>
-                {% for item in techStack %}
-                    <li>{{ item|safe }}</li>
-                {% endfor %}
-            </ul>
-        </details>
+        {% if techStack %}
+            <details class="tech-stack" open>
+                <summary class="h5">Tech stack</summary>
+                <ul>
+                    {% for item in techStack %}
+                        <li>{{ item|safe }}</li>
+                    {% endfor %}
+                </ul>
+            </details>
+        {% endif %}
 
         {{content|safe}}
 
@@ -28,40 +34,6 @@
             {% include "components/back-to-top.html" %}
         </footer>
     </article>
-    {# <article>
-        <div class="wrapper">
-            <h2>Key facts</h2>
-            <div>
-                <ol>
-                    {% for item in keyFacts %}
-                    <li>
-                        <span>{{ item.primary }}</span>
-                        <span>{{ item.secondary }}</span>
-                    </li>
-                    {% endfor %}
-                </ol>
-            </div>
-        </div>
-    </article>
-    <div class="wrapper">
-        <article>
-            {% for item in gallery %}
-            <figure>
-                <div>
-                    <img src="{{ item.image }}" alt="" aria-hidden="true" />
-                </div>
-                <figcaption>
-                    <h2>
-                        {{ item.title }}
-                    </h2>
-                    <p>
-                        {{ item.summary }}
-                    </p>
-                </figcaption>
-            </figure>
-            {% endfor %}
-        </article>
-    </div> #}
 </section>
 
 {% endblock %}
