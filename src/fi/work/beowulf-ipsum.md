@@ -32,7 +32,7 @@ Niin, minulle se idea käyttää muinaista tai keskiaikaista kirjoituksia tämä
         title="Beowulf Ipsum rivimäärä kuvakaappaus">
 </picture>
 
-Heittää projekti maaliin, päätin että lisäsin valintaruutu jolla teksti voi aloittaa sanalla <span lang="ang">_Hwæt!_</span>, Beowulfin tunnettu epäselvä aloitusdeklaraatio, niin kuin Lorem Ipsumin tunnettu aloituskohta <span lang="la">_Lorem Ipsum dolor sit amet_</span>. Huvin vuoksi kirjoitin sivuston ohjetekstit vähän muinaisenglannin tavalla.
+Heittää projekti maaliin, päätin että lisäisin valintaruutu jolla teksti voi aloittaa sanalla <span lang="ang">_Hwæt!_</span>, Beowulfin tunnettu epäselvä aloitusdeklaraatio, niin kuin Lorem Ipsumin tunnettu aloituskohta <span lang="la">_Lorem Ipsum dolor sit amet_</span>. Huvin vuoksi kirjoitin sivuston ohjetekstit vähän muinaisenglannin tavalla.
 
 Sivusto on staattinen; vain HTML on käytetty sen ainoan sivun varten, tavallinen Sass tyyleillä ja tavallinen JS generoida sisältöä. Siivosin manuaalisesti noin 600 riviä Beowulfia tämän varten (ehkä myöhemmin lisään enemmän), ja tein lopuksi myös painike, jolla voi helposti kopioida generoitut sisällöt. Minulla oli kyllä hauska tekemään sivuston tyylejä, koska se on varmaan erilainen kuin mitä asiakkaita yleensä haluaa.
 
