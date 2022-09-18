@@ -4,7 +4,7 @@ summary: 'Ipsum-tyylinen tekstigeneraattori jonka lähde on Beowulf.'
 displayOrder: 1
 eleventyNavigation:
   key: Beowulf Ipsum
-  parent: Work
+  parent: Töitä
 translationKey: "bIpsum"
 year: '2019'
 hero:
