@@ -2,7 +2,7 @@ document.addEventListener(
     "DOMContentLoaded",
     function () {
         var cursor = {
-            delay: 8,
+            delay: 12,
             _x: 0,
             _y: 0,
             endX: window.innerWidth / 2,
@@ -23,7 +23,7 @@ document.addEventListener(
                 var self = this;
 
                 // Anchor hovering
-                document.querySelectorAll("a, button").forEach(function (el) {
+                document.querySelectorAll("a, button, summary").forEach(function (el) {
                     el.addEventListener("mouseover", function () {
                         self.cursorEnlarged = true;
                         self.toggleCursorSize();
@@ -84,7 +84,7 @@ document.addEventListener(
 
                 if (self.cursorEnlarged) {
                     self.$outline.style.transform =
-                        "translate(-50%, -50%) scale(1.5)";
+                        "translate(-50%, -50%) scale(.666)";
                 } else {
                     self.$outline.style.transform =
                         "translate(-50%, -50%) scale(1)";
