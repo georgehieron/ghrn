@@ -12,7 +12,7 @@ hero:
   imageAlt: 'Beowulf Ipsum cover image showing stylised Beowulf sample text.'
 techStack:
   - "HTML5"
-  - "Vanilla CSS"
+  - "Vanilla Sass"
   - "Vanilla JS"
 ---
 

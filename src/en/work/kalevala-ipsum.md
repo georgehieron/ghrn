@@ -9,7 +9,7 @@ translationKey: "kIpsum"
 year: '2020'
 techStack:
   - "HTML5"
-  - "Vanilla CSS"
+  - "Vanilla Sass"
   - "Vanilla JS"
 ---
 
