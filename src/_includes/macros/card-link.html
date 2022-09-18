@@ -1,8 +1,11 @@
 {% macro link(url, classes, title, desc, img) %}
+
 <a href="{{ url }}" class="card-link box-block color-base {{ classes }}">
     <div class="card-link__inner box-flex">
         {% if img %}
-            <img src="{{ img }}" alt="" class="card-link__image stack-400">
+            {% import "macros/picture.html" as pic %}
+
+            {{ pic.image( img, 'card-link__image stack-400', '', '' ) }}
         {% endif %}
         <span class="card-link__title h3 stack-500">
             {{ title }}

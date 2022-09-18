@@ -30,11 +30,14 @@ Although these are fun, I rarely use them because that they generate readable En
 
 So, to me the idea of using ancient or medieval literature for this was perfect; a great way to synthesize my work as a web developer with my love of history and languages. I also thought that since I'd be using real texts as the source material, I would add a twist to the concept and generate portions of the content in order, from a random starting point; additionally, since Beowulf is a poem and is typically presented with a line count, I would show the line numbers of the output such that, if a user was so inclined, they could go to that portion to read what they had generated.
 
-<picture>
-    <img src="/images/Screenshot_2021-02-08_Beowulf_Ipsumdd.png"
-        alt="Screenshot of Beowulf Ipsum showing line count."
-        title="Beowulf Ipsum line count screenshot">
-</picture>
+{% import "macros/picture.html" as pic %}
+
+{{ pic.image(
+    '/images/Screenshot_2021-02-08_Beowulf_Ipsum.png',
+    '',
+    'Screenshot of Beowulf Ipsum showing line count.',
+    'Beowulf Ipsum line count screenshot'
+) }}
 
 For some finishing touches, I decided to add a toggle to allow starting the output with Beowulf's (in)famously ambiguous opening declaration of <span lang="ang">_Hwæt!_</span>, to equate to beginning with <span lang="la">_Lorem Ipsum dolor sit amet_</span>, and for a bit of fun I thought to write copy for the site in some kind of mock Old English.
 

@@ -5,6 +5,7 @@ img {
 
 picture {
     @include ratio--3-2;
+    color: var(--color-light);
     background-color: var(--color-mid-grey);
 
     img {

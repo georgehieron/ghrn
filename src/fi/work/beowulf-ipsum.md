@@ -10,6 +10,10 @@ year: '2019'
 hero:
   image: '/images/work/beowulf_full@2x.webp'
   imageAlt: 'Tyylitetty Beowulf esimerkkiteksti.'
+techStack:
+  - "HTML5"
+  - "Tavallinen CSS"
+  - "Tavallinen JS"
 ---
 
 Eräänä päivänä, kun olin tekemässä jonkun uuden sivun fronttia, tarvitsin esimerkkisisältöä, että helpottaisin kyseessä olevan komponentin rakentamisen. Tietysti käytin klassinen ratkaisu eli Lorem Ipsum, joka on pitkään ja maailman ympäri ollut tietty mallitekstiä oikean sisällön tilalla leiskojen konteksteissa. Mutta, keskiaikashistoria-nörttinä, luulin että miksi ei viedä konseptin kauempaa ja tee vastaava generaattori historiaalisilla kirjoituksilla? Joka tapauksessa, Lorem Ipsumin lisäksi on nykyään olemassa monta muuta ja usein todella hauskaa mallitekstigeneraattoria, kuten [Pirate Ipsum](https://pirateipsum.me/), [Coffee Ipsum](http://coffeeipsum.com/),ja [Cat Ipsum](http://www.catipsum.com/).
@@ -26,11 +30,14 @@ Vaikka nämä ovat hauskaa, käytän niitä harvoin, koska ne generoivat lukevat
 
 Niin, minulle se idea käyttää muinaista tai keskiaikaista kirjoituksia tämän tarkoituksen varten oli täydellinen; mahtava tapa yhdistää työni web-kehittäjän ja minun rakkaus historiaa ja kieliä kohtaan. Ajattelin myös, että koska se käyttäisi oikeat tekstit lähteenä, olisin tehdä generaattori vähän erilaisella tavalla, että generoidaan tekstit oikeassa järjestyksessä, randomista aloituskohdasta. Lisäksi, kun Beowulf on runo jolla on rivinumerot merkitty, käyttäisin rivinumerot myös mallitekstin tulostuksessa, niin että jos loppukäyttäjä haluaisin, voidaan lukea sieltä kohdalta alkuperäisessä kirjoituksessa.
 
-<picture>
-    <img src="/images/Screenshot_2021-02-08_Beowulf_Ipsum.png"
-        alt="Kuvakaappaus Beowulf Ipsumista, josa näytetään rivinumerot."
-        title="Beowulf Ipsum rivimäärä kuvakaappaus">
-</picture>
+{% import "macros/picture.html" as pic %}
+
+{{ pic.image(
+    '/images/Screenshot_2021-02-08_Beowulf_Ipsum.png',
+    '',
+    'Kuvakaappaus Beowulf Ipsumista, josa näytetään rivinumerot.',
+    'Beowulf Ipsum rivimäärä kuvakaappaus'
+) }}
 
 Heittää projekti maaliin, päätin että lisäisin valintaruutu jolla teksti voi aloittaa sanalla <span lang="ang">_Hwæt!_</span>, Beowulfin tunnettu epäselvä aloitusdeklaraatio, niin kuin Lorem Ipsumin tunnettu aloituskohta <span lang="la">_Lorem Ipsum dolor sit amet_</span>. Huvin vuoksi kirjoitin sivuston ohjetekstit vähän muinaisenglannin tavalla.
 
