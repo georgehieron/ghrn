@@ -41,6 +41,7 @@ $header-top-height: clamp(get-size('1100'), 16vw, 12.5rem);
 
 .site-head {
     height: 100%;
+    padding-bottom: #{get-size("700")};
     position: relative;
 
     &__brand {
@@ -69,13 +70,8 @@ $header-top-height: clamp(get-size('1100'), 16vw, 12.5rem);
     }
 
     &__top {
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
         height: 12.5rem;
         background: var(--color-base);
-        box-shadow: 0 1.25em 1em var(--color-base);
 
         @supports (height: $header-top-height) {
             height: $header-top-height;
@@ -203,7 +199,6 @@ $header-top-height: clamp(get-size('1100'), 16vw, 12.5rem);
 }
 
 .main-content {
-    padding-top: calc(#{get-size('800')} + #{get-size('1100')});
     padding-bottom: get-size('1000');
     @supports (padding-bottom: calc(env(safe-area-inset-bottom) + #{get-size('1000')})) {
         padding-bottom: calc(env(safe-area-inset-bottom) + #{get-size('1000')});
