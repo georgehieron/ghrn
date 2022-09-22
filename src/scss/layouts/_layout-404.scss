@@ -6,21 +6,20 @@
 .title-404--light,
 .title-404--dark {
     text-align: center;
+
+    .xl {
+        display: block;
+    }
 }
 
 .title-404--light,
 .message-404--light {
-    display: inline-block;
+    display: block;
 }
 
 .title-404--dark,
 .message-404--dark {
     display: none;
-}
-
-.lede.message-404--light,
-.lede.message-404--dark {
-    margin-bottom: 0;
 }
 
 @include dark-theme() {
@@ -31,6 +30,6 @@
 
     .title-404--dark,
     .message-404--dark {
-        display: inline-block;
+        display: block;
     }
 }
