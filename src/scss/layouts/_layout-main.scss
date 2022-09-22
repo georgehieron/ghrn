@@ -55,7 +55,6 @@ $header-top-height: clamp(get-size('1100'), 16vw, 12.5rem);
         max-width: get-size('1400');
         overflow: hidden;
         margin-top: get-size('400');
-        margin-left: get-size('400');
 
         svg {
             position: absolute;
