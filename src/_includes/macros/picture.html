@@ -1,7 +1,7 @@
-{% macro image(src, classes, alt, title) %}
-<picture>
+{% macro image(picClasses, src, imgClasses, alt, title) %}
+<picture class="{{ picClasses }}">
     <img src="{{ src }}"
-        class="{{ classes }}"
+        class="{{ imgClasses }}"
         alt="{{ alt }}"
         title="{{ title }}"
         onerror="this.style.padding = '1rem'"

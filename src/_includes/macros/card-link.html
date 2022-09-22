@@ -5,7 +5,7 @@
         {% if img %}
             {% import "macros/picture.html" as pic %}
 
-            {{ pic.image( img, 'card-link__image stack-400', '', '' ) }}
+            {{ pic.image( 'card-link__image stack-400', img, '', '', '' ) }}
         {% endif %}
         <span class="card-link__title h3 stack-500">
             {{ title }}

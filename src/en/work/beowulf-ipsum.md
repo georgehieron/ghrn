@@ -33,6 +33,7 @@ So, to me the idea of using ancient or medieval literature for this was perfect;
 {% import "macros/picture.html" as pic %}
 
 {{ pic.image(
+    '',
     '/images/Screenshot_2021-02-08_Beowulf_Ipsum.png',
     '',
     'Screenshot of Beowulf Ipsum showing line count.',

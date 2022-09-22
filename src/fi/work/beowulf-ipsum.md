@@ -33,6 +33,7 @@ Niin, minulle se idea käyttää muinaista tai keskiaikaista kirjoituksia tämä
 {% import "macros/picture.html" as pic %}
 
 {{ pic.image(
+    '',
     '/images/Screenshot_2021-02-08_Beowulf_Ipsum.png',
     '',
     'Kuvakaappaus Beowulf Ipsumista, josa näytetään rivinumerot.',
