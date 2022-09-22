@@ -6,3 +6,5 @@ $outputTokenCSS: false;
 
 // Next: pull in gorko for design tokens
 @import '../../node_modules/gorko/gorko.scss';
+
+@import 'layouts/layout-404';

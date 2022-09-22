@@ -1,0 +1,21 @@
+.title-404--light,
+.message-404--light {
+    display: block;
+}
+
+.title-404--dark,
+.message-404--dark {
+    display: none;
+}
+
+@include dark-theme() {
+    .title-404--light,
+    .message-404--light {
+        display: none;
+    }
+
+    .title-404--dark,
+    .message-404--dark {
+        display: block;
+    }
+}

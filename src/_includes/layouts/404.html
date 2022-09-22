@@ -9,10 +9,12 @@
     <h1 class="xxl">
         {{title}}
         <br>
-        <span>Follow the light!</span>
+        <span class="title-404--light">Follow the light!</span>
+        <span class="title-404--dark">Lost in the dark?</span>
     </h1>
 
-    <p class="lede">Let's guide you to the <a href="/{{ locale }}" aria-label="{{ site.name }} - home">homepage</a></p>
+    <p class="lede message-404--light">Let's guide you to the <a href="/{{ locale }}" aria-label="{{ site.name }} - home">homepage</a>.</p>
+    <p class="lede message-404--dark">Seek out the <a href="/{{ locale }}" aria-label="{{ site.name }} - home">homepage</a>?</p>
 </div>
 
 {% endblock %}

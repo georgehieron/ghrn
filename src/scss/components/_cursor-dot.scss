@@ -22,17 +22,9 @@
                     transform .3s ease-in-out;
     }
 
-    [data-user-color-theme="dark"] {
+    @include dark-theme() {
         .cursor-dot {
             background: darken($dark-primary, 11%);
-        }
-    }
-
-    @media (prefers-color-scheme: dark) {
-        :root:not([data-user-color-theme]) {
-            .cursor-dot {
-                background: darken($dark-primary, 11%);
-            }
         }
     }
 
