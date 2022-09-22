@@ -4,6 +4,11 @@
 }
 
 .title-404--light,
+.title-404--dark {
+    text-align: center;
+}
+
+.title-404--light,
 .message-404--light {
     display: inline-block;
 }
@@ -13,8 +18,8 @@
     display: none;
 }
 
-.message-404--light,
-.message-404--dark {
+.lede.message-404--light,
+.lede.message-404--dark {
     margin-bottom: 0;
 }
 
