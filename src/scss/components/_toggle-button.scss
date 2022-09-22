@@ -32,6 +32,7 @@ $toggle-indicator-right: translate(110%,-50%);
     background: transparent;
     padding: 0;
     border: 0;
+    outline-color: var(--color-primary-alt);
 
     &:hover {
         cursor: pointer;
@@ -53,6 +54,7 @@ $toggle-indicator-right: translate(110%,-50%);
 
     @include media-query('sm') {
         color: var(--color-text);
+        outline-color: var(--color-primary);
 
         .toggle-btn__indicator {
             background: var(--color-primary);
