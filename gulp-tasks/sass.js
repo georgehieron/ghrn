@@ -17,6 +17,7 @@ const criticalStyles = [
     "work-landing.scss",
     "work-item.scss",
     "post.scss",
+    "not-found.scss",
 ];
 
 // Takes the arguments passed by `dest` and determines where the output file goes

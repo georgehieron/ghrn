@@ -1,0 +1,18 @@
+{% extends "layouts/base.html" %}
+
+{% set pageCriticalStyles = ['css/not-found.css'] %}
+{% set pageCriticalScripts = ['js/cursor-dot.js'] %}
+
+{% block content %}
+
+<div class="wrapper wrapper--404 box-flex">
+    <h1 class="xxl">
+        {{title}}
+        <br>
+        <span>Follow the light!</span>
+    </h1>
+
+    <p class="lede">Let's guide you to the <a href="/{{ locale }}" aria-label="{{ site.name }} - home">homepage</a></p>
+</div>
+
+{% endblock %}
