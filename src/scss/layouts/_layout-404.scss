@@ -3,10 +3,12 @@
     align-items: center;
 }
 
-.title-404--light,
-.title-404--dark {
+[class^="title-404"],
+[class^="message-404"] {
     text-align: center;
+}
 
+[class^="title-404"] {
     .xl {
         display: block;
     }
