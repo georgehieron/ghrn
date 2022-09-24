@@ -8,8 +8,8 @@ eleventyNavigation:
 translationKey: "bIpsum"
 year: '2019'
 hero:
-  image: '/images/work/beowulf_full@2x.webp'
-  imageAlt: 'Beowulf Ipsum cover image showing stylised Beowulf sample text.'
+  image: '/images/work/beowulf-ipsum-cover_1920px.webp'
+  imageAlt: 'Beowulf Ipsum cover image showing a sample of generated text.'
 techStack:
   - "HTML5"
   - "Vanilla Sass"

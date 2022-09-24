@@ -7,6 +7,9 @@ eleventyNavigation:
   parent: Work
 translationKey: "kIpsum"
 year: '2020'
+hero:
+  image: '/images/work/kalevala-ipsum-cover_1920px.webp'
+  imageAlt: 'Kalevala Ipsum cover image showing a sample of generated text.'
 techStack:
   - "HTML5"
   - "Vanilla Sass"
