@@ -12,7 +12,7 @@
                 <li class="nav__item{% if isCurrent or isParent %} nav__item--active{% endif %}">
                     <a
                         class="nav__link h3"
-                        href="{% if isCurrent %}#main-content{% else %}{{ item.url | url }}{% endif %}"
+                        href="{{ item.url | url }}"
                         {% if isCurrent %}aria-current="page"{% endif %}
                     >
                         {{ item.title }}
