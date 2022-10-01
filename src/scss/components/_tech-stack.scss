@@ -10,7 +10,8 @@
         list-style: none;
         user-select: none;
 
-        &::marker {
+        &::marker,
+        &::-webkit-details-marker {
             opacity: 0;
         }
     }
