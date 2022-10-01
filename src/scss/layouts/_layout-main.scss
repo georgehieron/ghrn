@@ -95,9 +95,9 @@ $header-top-height: clamp(get-size('1100'), 16vw, 12.5rem);
         width: min-content;
         background: transparent;
         z-index: 90;
-        padding: .75rem 1rem .75rem;
-        @supports (padding-bottom: calc(env(safe-area-inset-bottom) + .75rem)) {
-            padding-bottom: calc(env(safe-area-inset-bottom) + .75rem);
+        padding: .75rem 1rem .7rem;
+        @supports (padding-bottom: calc(env(safe-area-inset-bottom) + .7rem)) {
+            padding-bottom: calc(env(safe-area-inset-bottom) + .7rem);
         }
 
         &__link {
