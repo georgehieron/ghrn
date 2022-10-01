@@ -34,7 +34,7 @@ So, to me the idea of using ancient or medieval literature for this was perfect;
 
 {{ pic.image(
     '',
-    '/images/Screenshot_2021-02-08_Beowulf_Ipsum.png',
+    '/images/work/beowufl-ipsum-text_1920.webp',
     '',
     'Screenshot of Beowulf Ipsum showing line count.',
     'Beowulf Ipsum line count screenshot'

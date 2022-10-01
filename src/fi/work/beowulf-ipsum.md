@@ -8,8 +8,8 @@ eleventyNavigation:
 translationKey: "bIpsum"
 year: '2019'
 hero:
-  image: '/images/work/beowulf_full@2x.webp'
-  imageAlt: 'Tyylitetty Beowulf esimerkkiteksti.'
+  image: '/images/work/beowulf-ipsum-cover_1920px.webp'
+  imageAlt: 'Beowulf Ipsum kansikuva missä näytetään tekstiesimerkkia.'
 techStack:
   - "HTML5"
   - "Tavallinen Sass"
@@ -34,7 +34,7 @@ Niin, minulle se idea käyttää muinaista tai keskiaikaista kirjoituksia tämä
 
 {{ pic.image(
     '',
-    '/images/Screenshot_2021-02-08_Beowulf_Ipsum.png',
+    '/images/work/beowufl-ipsum-text_1920.webp',
     '',
     'Kuvakaappaus Beowulf Ipsumista, josa näytetään rivinumerot.',
     'Beowulf Ipsum rivimäärä kuvakaappaus'
