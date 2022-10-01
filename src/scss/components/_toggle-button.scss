@@ -3,7 +3,7 @@ $toggle-indicator-right: translate(110%,-50%);
 
 .toggle-btn {
     position: relative;
-    top: -0.05em;
+    top: -.05em;
     display: inline-block;
     height: 1.5em;
     width: 2.8em;
@@ -13,16 +13,24 @@ $toggle-indicator-right: translate(110%,-50%);
     margin-right: .75em;
     padding: 0;
     background: 0;
-    border: .15em solid;
+    border: .15em solid var(--color-base);
     border-radius: 1.5rem;
+
+    @include media-query('sm') {
+        border-color: currentColor;
+    }
 
     &__indicator {
         position: absolute;
         top: 50%;
         height: 1.25em;
         width: 1.2em;
-        background-color: var(--color-primary);
+        background-color: var(--color-primary-alt);
         border-radius: 50%;
+
+        @include media-query('sm') {
+            background-color: var(--color-primary);
+        }
     }
 }
 

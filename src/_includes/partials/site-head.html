@@ -24,7 +24,7 @@
             {# Loop though site.languages #}
             {% for lang in site.languages %}
             {% if loop.first %}
-                <ul class="lang-nav box-flex stack-700">
+                <ul class="lang-nav box-flex">
             {% endif %}
 
                 {# Set translatedUrl to the homepage of that language by default #}
@@ -50,7 +50,7 @@
 
                 <li class="lang-nav__item box-flex">
 
-                    <a class="lang-nav__link box-flex font-title color-text{% if activeClass %} {{ activeClass }}{% endif %}" href="{{ translatedUrl }}" lang="{{ lang.code }}" hreflang="{{ lang.code }}"{% if activeClass %} aria-current="true"{% endif %}>
+                    <a class="lang-nav__link box-flex font-title{% if activeClass %} {{ activeClass }}{% endif %}" href="{{ translatedUrl }}" lang="{{ lang.code }}" hreflang="{{ lang.code }}"{% if activeClass %} aria-current="true"{% endif %}>
                         {% if loop.last and not currentLang %}
                             {% include "components/toggle-button-lang.html" %}
                         {% endif %}
