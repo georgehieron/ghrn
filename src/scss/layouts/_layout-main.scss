@@ -95,9 +95,9 @@ $header-top-height: clamp(get-size('1100'), 16vw, 12.5rem);
         width: min-content;
         background: transparent;
         z-index: 90;
-        padding: .8rem 1rem .6rem;
-        @supports (padding-bottom: calc(env(safe-area-inset-bottom) + .6rem)) {
-            padding-bottom: calc(env(safe-area-inset-bottom) + 0.6rem);
+        padding: .75rem 1rem .5rem;
+        @supports (padding-bottom: calc(env(safe-area-inset-bottom) + .5rem)) {
+            padding-bottom: calc(env(safe-area-inset-bottom) + .5rem);
         }
 
         &__link {
@@ -128,7 +128,7 @@ $header-top-height: clamp(get-size('1100'), 16vw, 12.5rem);
         width: 100%;
         background: var(--color-text);
         justify-content: flex-end;
-        padding: .75rem 1rem .5rem 1rem;
+        padding: .75rem 1rem .5rem;
         @supports (padding-bottom: calc(env(safe-area-inset-bottom) + .5rem)) {
             padding-bottom: calc(env(safe-area-inset-bottom) + .5rem);
         }
