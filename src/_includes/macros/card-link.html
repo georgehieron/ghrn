@@ -1,6 +1,6 @@
-{% macro link(url, classes, title, desc, img) %}
+{% macro link(url, classes, hoverText, title, desc, img) %}
 
-<a href="{{ url }}" class="card-link box-block color-base {{ classes }}">
+<a href="{{ url }}" class="card-link box-block color-base {{ classes }}" data-hover-text="{{ hoverText }}">
     <div class="card-link__inner box-flex">
         <span class="card-link__title h3 stack-500">
             {{ title }}

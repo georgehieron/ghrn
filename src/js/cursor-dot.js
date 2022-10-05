@@ -8,7 +8,7 @@ document.addEventListener(
             endX: window.innerWidth / 2,
             endY: window.innerHeight / 2,
             cursorVisible: true,
-            cursorEnlarged: false,
+            cursorScaled: false,
             $outline: document.querySelector(".cursor-dot"),
 
             init: function () {
@@ -23,24 +23,40 @@ document.addEventListener(
                 var self = this;
 
                 // Anchor hovering
-                document.querySelectorAll("a, button, summary").forEach(function (el) {
+                document.querySelectorAll("a[href]:not([disabled]), button:not([disabled]), summary").forEach(function (el) {
                     el.addEventListener("mouseover", function () {
-                        self.cursorEnlarged = true;
+                        self.cursorScaled = true;
                         self.toggleCursorSize();
                     });
                     el.addEventListener("mouseout", function () {
-                        self.cursorEnlarged = false;
+                        self.cursorScaled = false;
                         self.toggleCursorSize();
+                    });
+                });
+
+                document.querySelectorAll("a[data-hover-text]:not([disabled])").forEach(function (el) {
+                    el.addEventListener("mouseover", function () {
+                        self.cursorScaled = true;
+                        self.toggleCursorSizeHoverText();
+                        self.$outline.dataset.hovering = 'text';
+                        self.$outline.innerHTML = "<span>" + el.dataset.hoverText + "<span>";
+                        self.$outline.style.opacity = 1;
+                    });
+                    el.addEventListener("mouseout", function () {
+                        self.cursorScaled = false;
+                        self.toggleCursorSizeHoverText();
+                        self.$outline.dataset.hovering = '';
+                        self.$outline.innerHTML = "";
                     });
                 });
 
                 // Click events
                 document.addEventListener("mousedown", function () {
-                    self.cursorEnlarged = true;
+                    self.cursorScaled = true;
                     self.toggleCursorSize();
                 });
                 document.addEventListener("mouseup", function () {
-                    self.cursorEnlarged = false;
+                    self.cursorScaled = false;
                     self.toggleCursorSize();
                 });
 
@@ -58,13 +74,11 @@ document.addEventListener(
                 document.addEventListener("mouseenter", function (e) {
                     self.cursorVisible = true;
                     self.toggleCursorVisibility();
-                    self.$outline.style.opacity = 1;
                 });
 
                 document.addEventListener("mouseleave", function (e) {
                     self.cursorVisible = true;
                     self.toggleCursorVisibility();
-                    self.$outline.style.opacity = 0;
                 });
             },
 
@@ -73,8 +87,8 @@ document.addEventListener(
 
                 self._x += (self.endX - self._x) / self.delay;
                 self._y += (self.endY - self._y) / self.delay;
-                self.$outline.style.top = (self._y / 16) + "rem";
-                self.$outline.style.left = (self._x / 16) + "rem";
+                self.$outline.style.top = ((self._y / 16) + -1) + "rem";
+                self.$outline.style.left = ((self._x / 16) + 1) + "rem";
 
                 requestAnimationFrame(this.animateDotOutline.bind(self));
             },
@@ -82,9 +96,21 @@ document.addEventListener(
             toggleCursorSize: function () {
                 var self = this;
 
-                if (self.cursorEnlarged) {
+                if (self.cursorScaled) {
                     self.$outline.style.transform =
                         "translate(-50%, -50%) scale(.666)";
+                } else {
+                    self.$outline.style.transform =
+                        "translate(-50%, -50%) scale(1)";
+                }
+            },
+
+            toggleCursorSizeHoverText: function () {
+                var self = this;
+
+                if (self.cursorScaled) {
+                    self.$outline.style.transform =
+                        "translate(5em, -5em) scale(10)";
                 } else {
                     self.$outline.style.transform =
                         "translate(-50%, -50%) scale(1)";

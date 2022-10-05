@@ -3,14 +3,16 @@
 }
 
 @media (hover: hover) and (pointer: fine) {
-    $dot-size: 1.5rem;
+    $dot-size: min(1.5em, 5vw);
 
     .cursor-dot {
         pointer-events: none;
         position: fixed;
         top: 50%;
         left: 50%;
-        display: inline-block;
+        display: flex;
+        justify-content: center;
+        align-items: center;
         width: $dot-size;
         height: $dot-size;
         background-color: lighten($light-primary, 5%);
@@ -18,12 +20,28 @@
         opacity: 0;
         z-index: 100001;
         transform: translate(-50%, -50%);
-        transition: opacity .3s ease-in-out,
-                    transform .3s ease-in-out;
+        transition: opacity .3s ease-in-out, background-color .3s ease-in-out, transform .3s ease-in-out;
+        overflow: hidden;
+
+        &[data-hovering="text"] {
+            background-color: var(--color-text);
+            opacity: .92 !important;
+
+            span {
+                @include apply-utility('box', 'block');
+                @include apply-utility('font', 'title-l');
+                color: var(--color-base);
+                font-size: 225%;
+                transform: scale(.1);
+                line-height: 1;
+                text-decoration: underline;
+                text-align: center;
+            }
+        }
     }
 
     @include dark-theme() {
-        .cursor-dot {
+        .cursor-dot:not([data-hovering="text"]) {
             background: darken($dark-primary, 11%);
         }
     }
