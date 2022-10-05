@@ -104,6 +104,11 @@ $header-top-height: clamp(get-size('1100'), 16vw, 12.5rem);
             text-transform: uppercase;
             text-decoration: none;
             color: var(--color-base);
+            outline-color: var(--color-primary-alt);
+
+            @include media-query('sm') {
+                outline-color: var(--color-primary);
+            }
         }
 
         &__item {
@@ -235,14 +240,6 @@ html[data-menu-open="true"] {
         padding-bottom: get-size('1100');
         background: var(--color-base);
         overflow-y: auto;
-    }
-
-    .lang-nav {
-        visibility: hidden;
-    }
-
-    .theme-toggle-wrap {
-        @include apply-utility('box', 'hide');
     }
 }
 
