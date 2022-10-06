@@ -3,7 +3,7 @@
 }
 
 @media (hover: hover) and (pointer: fine) {
-    $dot-size: min(1.5em, 5vw);
+    $dot-size: 15rem;
 
     .cursor-dot {
         pointer-events: none;
@@ -16,12 +16,18 @@
         width: $dot-size;
         height: $dot-size;
         background-color: lighten($light-primary, 5%);
+        border: 0;
         border-radius: 50%;
         opacity: 0;
         z-index: 100001;
-        transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%) scale(.1);
+        transform-origin: bottom left;
         transition: opacity .3s ease-in-out, background-color .3s ease-in-out, transform .3s ease-in-out;
         overflow: hidden;
+
+        span {
+            color: transparent;
+        }
 
         &[data-hovering="text"] {
             background-color: var(--color-text);
@@ -31,11 +37,13 @@
                 @include apply-utility('box', 'block');
                 @include apply-utility('font', 'title-l');
                 color: var(--color-base);
-                font-size: 225%;
-                transform: scale(.1);
+                font-size: 200%;
+                max-width: 75%;
                 line-height: 1;
                 text-align: center;
                 text-decoration: underline;
+                text-underline-offset: .25rem;
+                text-decoration-thickness: .1rem;
             }
         }
     }

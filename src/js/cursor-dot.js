@@ -39,9 +39,7 @@ document.addEventListener(
                         self.cursorScaled = true;
                         self.toggleCursorSizeHoverText();
                         self.$outline.dataset.hovering = 'text';
-                        setTimeout(function () {
-                            self.$outline.innerHTML = "<span>" + el.dataset.hoverText + "</span>";
-                        }, 320);
+                        self.$outline.innerHTML = "<span>" + el.dataset.hoverText + "</span>";
                     });
                     el.addEventListener("mouseout", function () {
                         self.cursorScaled = false;
@@ -88,8 +86,8 @@ document.addEventListener(
 
                 self._x += (self.endX - self._x) / self.delay;
                 self._y += (self.endY - self._y) / self.delay;
-                self.$outline.style.top = ((self._y / 16) + -1) + "rem";
-                self.$outline.style.left = ((self._x / 16) + 1) + "rem";
+                self.$outline.style.top = ((self._y / 16) + -7.5) + "rem";
+                self.$outline.style.left = ((self._x / 16) + 7.5) + "rem";
 
                 requestAnimationFrame(this.animateDotOutline.bind(self));
             },
@@ -99,10 +97,10 @@ document.addEventListener(
 
                 if (self.cursorScaled) {
                     self.$outline.style.transform =
-                        "translate(-50%, -50%) scale(.666)";
+                        "translate(-50%, -50%) scale(.0666)";
                 } else {
                     self.$outline.style.transform =
-                        "translate(-50%, -50%) scale(1)";
+                        "translate(-50%, -50%) scale(.1)";
                 }
             },
 
@@ -110,12 +108,11 @@ document.addEventListener(
                 var self = this;
 
                 if (self.cursorScaled) {
-                    self.$outline.style.transformOrigin = 'bottom left';
-                    self.$outline.style.transform =
-                        "translate(-50%, -50%) scale(10)";
-                } else {
                     self.$outline.style.transform =
                         "translate(-50%, -50%) scale(1)";
+                } else {
+                    self.$outline.style.transform =
+                        "translate(-50%, -50%) scale(.1)";
                 }
             },
 

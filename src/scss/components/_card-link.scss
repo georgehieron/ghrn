@@ -48,7 +48,6 @@
 
     picture {
         filter: grayscale(1) contrast(.7) brightness(.7);
-        transition: .3s ease-in-out filter;
     }
 
     &:hover,
@@ -57,11 +56,6 @@
             text-decoration: underline;
             text-decoration-thickness: 2px;
             text-underline-offset: .15em;
-        }
-
-        picture {
-            filter: grayscale(0) contrast(1) brightness(1);
-            transition: .3s ease-in-out filter;
         }
     }
 }
