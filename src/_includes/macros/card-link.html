@@ -1,6 +1,8 @@
 {% macro link(url, classes, hoverText, title, desc, img) %}
 
-<a href="{{ url }}" class="card-link box-block color-base{% if classes %} {{ classes }}{% endif %}" {% if hoverText %} data-hover-text="{{ hoverText }}{% endif %}">
+<a href="{{ url }}"
+    class="card-link box-block color-base {{ classes }}"
+    {% if hoverText %} data-hover-text="{{ hoverText }}{% endif %}">
     <div class="card-link__inner box-flex">
         <span class="card-link__title h3 stack-500">
             {{ title }}
