@@ -39,8 +39,9 @@ document.addEventListener(
                         self.cursorScaled = true;
                         self.toggleCursorSizeHoverText();
                         self.$outline.dataset.hovering = 'text';
-                        self.$outline.innerHTML = "<span>" + el.dataset.hoverText + "<span>";
-                        self.$outline.style.opacity = 1;
+                        setTimeout(function () {
+                            self.$outline.innerHTML = "<span>" + el.dataset.hoverText + "</span>";
+                        }, 320);
                     });
                     el.addEventListener("mouseout", function () {
                         self.cursorScaled = false;
@@ -109,8 +110,9 @@ document.addEventListener(
                 var self = this;
 
                 if (self.cursorScaled) {
+                    self.$outline.style.transformOrigin = 'bottom left';
                     self.$outline.style.transform =
-                        "translate(5em, -5em) scale(10)";
+                        "translate(-50%, -50%) scale(10)";
                 } else {
                     self.$outline.style.transform =
                         "translate(-50%, -50%) scale(1)";

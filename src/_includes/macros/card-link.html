@@ -4,7 +4,7 @@
     class="card-link box-block color-base{% if classes %} {{ classes }}{% endif %}"
     {% if hoverText %} data-hover-text="{{ hoverText }}"{% endif %}>
     <div class="card-link__inner box-flex">
-        <span class="card-link__title h3 stack-500">
+        <span class="card-link__title h3">
             {{ title }}
             {% if desc %}
                 <span class="box-block h6">{{ desc }}</span>
@@ -13,7 +13,7 @@
         {% if img %}
             {% import "macros/picture.html" as pic %}
 
-            {{ pic.image( 'card-link__image stack-400', img, '', '', '' ) }}
+            {{ pic.image( 'card-link__image', img, '', '', '' ) }}
         {% endif %}
     </div>
 </a>

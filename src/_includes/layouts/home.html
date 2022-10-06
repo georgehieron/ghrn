@@ -28,7 +28,7 @@
             {% elif locale === 'fi' %}
                 {% for item in collections.work_fi %}
                     {% if loop.index == 1 %}
-                        {{ cardLink.link(item.url, '', '', item.data.title, '', item.data.hero.image) }}
+                        {{ cardLink.link(item.url, '', 'Katso projekti', item.data.title, '', item.data.hero.image) }}
                     {% endif %}
                 {% endfor %}
             {% endif %}

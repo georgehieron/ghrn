@@ -25,7 +25,7 @@
 
         &[data-hovering="text"] {
             background-color: var(--color-text);
-            opacity: .92 !important;
+            opacity: .95 !important;
 
             span {
                 @include apply-utility('box', 'block');
@@ -34,8 +34,8 @@
                 font-size: 225%;
                 transform: scale(.1);
                 line-height: 1;
-                text-decoration: underline;
                 text-align: center;
+                text-decoration: underline;
             }
         }
     }
