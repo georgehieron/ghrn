@@ -5,7 +5,7 @@ eleventyNavigation:
   key: Etusivu
   order: 1
 translationKey: "homePage"
-metaDesc: 'Suomen asuva brittiläinen web-kehittäjä'
+metaDesc: 'Suomessa asuva brittiläinen front-end -keskittynyt web-kehittäjä'
 layout: "layouts/home.html"
 intro:
     main: "Moi, olen George"
