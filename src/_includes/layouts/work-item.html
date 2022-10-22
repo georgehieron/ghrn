@@ -6,7 +6,7 @@
 <section>
     <article>
         <header class="work-item-header">
-            <h1>{{ title }}</h1>
+            <h1 class="xl">{{ title }}</h1>
             {% if summary %}
                 <p class="lede">{{ summary }}</p>
             {% endif %}
@@ -29,6 +29,12 @@
         {% endif %}
 
         {{content|safe}}
+
+        {% if visitLink %}
+            <div class="box-flex">
+                <a href="{{ visitLink|safe }}" class="btn btn--work-visit" aria-describedby="{{ title }}">{{ visitText }}</a>
+            </div>
+        {% endif %}
 
         <footer class="align-center">
             {% include "components/back-to-top.html" %}

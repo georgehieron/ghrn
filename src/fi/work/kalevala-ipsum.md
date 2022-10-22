@@ -14,6 +14,8 @@ techStack:
   - "<abbr>HTML5</abbr>"
   - "Tavallinen Sass"
   - "Tavallinen <abbr>JS</abbr>"
+visitLink: 'https://www.kalevalaipsum.com/'
+visitText: Siirry sivustolle
 ---
 
 Noin vuosi [Beowulf Ipsumin](/en/work/beowulf-ipsum) julkaisun jälkeen, olin äskettäin muuttanut Suomeen, ja tein töitä sivustolle jossa suomi oli pääkieli. Saan idean tehdä toinen Ipsum-tyylinen generaattori, jonka lähde olisi [Kalevala](https://fi.wikipedia.org/wiki/Kalevala), Beowulf Ipsumin sisarussivustona, että saisin käyttää erityisesti suomea mallisisältönä, kuten on usein tehty myös Aleksis Kiven romaanilla _Seitsemän veljestä_.

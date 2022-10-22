@@ -14,6 +14,8 @@ techStack:
   - "<abbr>HTML5</abbr>"
   - "Tavallinen Sass"
   - "Tavallinen <abbr>JS</abbr>"
+visitLink: 'https://www.beowulfipsum.com/'
+visitText: Siirry sivustolle
 ---
 
 Eräänä päivänä, kun olin tekemässä jonkun uuden sivun fronttia, tarvitsin esimerkkisisältöä, että helpottaisin kyseessä olevan komponentin rakentamisen. Tietysti käytin klassinen ratkaisu eli Lorem Ipsum, joka on pitkään ja maailman ympäri ollut tietty mallitekstiä oikean sisällön tilalla leiskojen konteksteissa. Mutta, keskiaikashistoria-nörttinä, luulin että miksi ei viedä konseptin kauempaa ja tee vastaava generaattori historiaalisilla kirjoituksilla? Joka tapauksessa, Lorem Ipsumin lisäksi on nykyään olemassa monta muuta ja usein todella hauskaa mallitekstigeneraattoria, kuten [Pirate Ipsum](https://pirateipsum.me/), [Coffee Ipsum](http://coffeeipsum.com/),ja [Cat Ipsum](http://www.catipsum.com/).

@@ -54,7 +54,7 @@
     &:focus {
         .card-link__title {
             text-decoration: underline;
-            text-decoration-thickness: 2px;
+            text-decoration-thickness: .125rem;
             text-underline-offset: .15em;
         }
     }

@@ -1,13 +1,28 @@
-.button {
-    @include apply-utility("font", "strong");
+.btn {
+    @include apply-utility("font", "title");
     -webkit-appearance: none;
-    color: var(--color-base);
-    background: var(--color-primary);
+    display: inline-block;
+    color: var(--color-primary);
+    background-color: transparent;
     text-decoration: none;
-    padding: get-size("100") get-size("700");
-    border: 0;
+    text-transform: uppercase;
+    letter-spacing: .125ch;
+    padding: get-size("400") get-size("900") get-size("200");
+    border: .125rem solid var(--color-primary);
+    border-radius: get-size("700");
 
-    &:hover {
+    &:hover,
+    &:focus,
+    &:active {
         cursor: pointer;
+        color: var(--color-base);
+        background: var(--color-primary);
+        text-decoration: underline;
+        text-underline-offset: .25rem;
+        text-decoration-thickness: .1rem;
+    }
+
+    &--work-visit {
+        margin: get-size("1100") auto get-size("900");
     }
 }

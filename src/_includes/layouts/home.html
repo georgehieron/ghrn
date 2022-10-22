@@ -1,15 +1,18 @@
 {% extends "layouts/base.html" %}
 
+{% set pageHeaderTitle = intro.main %}
+{% set pageHeaderSummary = content|safe %}
+
 {% set pageCriticalStyles = ['css/home.css'] %}
 
+{% import "macros/page-head.html" as pageHead %}
 {% import "macros/translation.html" as trans %}
 {% import "macros/card-link.html" as cardLink %}
 
 {% block content %}
 <div class="home-content wrapper align-center">
     <article>
-        <h1 class="xxl">{{ intro.main }}</h1>
-        <div class="lede">{{ content | safe }}</div>
+        {{ pageHead.header('xxl', pageHeaderTitle, 'lede', pageHeaderSummary ) }}
 
         <section>
             <div class="section-header">

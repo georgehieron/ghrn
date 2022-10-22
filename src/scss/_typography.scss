@@ -182,25 +182,14 @@ cite,
     }
 
     + .lede {
-        &:first-of-type {
-            margin-bottom: 5em;
+        + section {
+            margin-top: 5em;
 
-            @supports (margin-bottom: clamp(4em, 6.7vw, 5em)) {
-                margin-bottom: clamp(4em, 6.7vw, 5em);
+            @supports (margin-top: clamp(4em, 6.7vw, 5em)) {
+                margin-top: clamp(4em, 6.7vw, 5em);
             }
         }
     }
-
-    // @supports (-webkit-text-stroke: 1px) {
-    //     -webkit-text-stroke: 1px var(--color-text);
-    //     -webkit-text-fill-color: transparent;
-    //     animation: text-fill 2s ease-in-out 1s 1 forwards;
-
-    //     &:hover {
-    //         animation: text-empty .5s ease-in-out 0s 1 forwards;
-    //         cursor: crosshair;
-    //     }
-    // }
 }
 
 .xl {

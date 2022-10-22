@@ -19,6 +19,8 @@ techStack:
   - "Gorko Sass token generator"
   - "Vanilla <abbr>JS</abbr>"
   - "<abbr>GSAP</abbr> animation"
+visitLink: 'https://www.ben-hamilton.co.uk/'
+visitText: Visit site
 ---
 
 Having worked closely with Ben during my time at [Atomic Smash](https://www.atomicsmash.co.uk/) in Bristol, I was very pleased when he approached me about building a portfolio site for him. I had been exploring Jamstack methods of developement and had recently completed [Andy Bell](https://piccalil.li/)'s course _'Learn Eleventy from Scratch'_, so I felt that this was the ideal opportunity to take what I had learned and put it into practice.

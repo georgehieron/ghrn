@@ -14,6 +14,8 @@ techStack:
   - "<abbr>HTML5</abbr>"
   - "Vanilla Sass"
   - "Vanilla <abbr>JS</abbr>"
+visitLink: 'https://www.kalevalaipsum.com/'
+visitText: Visit site
 ---
 
 About a year after making [Beowulf Ipsum](/en/work/beowulf-ipsum), I had recently moved to Finland, and was working on sites where Finnish was the primary language in use. This gave me the idea for another Ipsum-style text generator, based on the Finnish national epic, [Kalevala](https://en.wikipedia.org/wiki/Kalevala), as a sister-site to Beowulf Ipsum, to allow me to use dummy content that looked like Finnish specifically.

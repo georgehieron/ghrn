@@ -1,12 +1,10 @@
 {% macro header(title_classes, title, summary_classes, summary) %}
-<div>
-    <h1 class="page-head__title{% if title_classes %} {{ title_classes }}{% endif %}">
-        {{ title }}
-    </h1>
-    {% if summary %}
-        <div class="page-head__summary{% if summary_classes %} {{ summary_classes }}{% endif %}">
-            {{ summary | safe }}
-        </div>
-    {% endif %}
-</div>
+<h1 class="page-head__title{% if title_classes %} {{ title_classes }}{% endif %}">
+    {{ title }}
+</h1>
+{% if summary %}
+    <div class="page-head__summary{% if summary_classes %} {{ summary_classes }}{% endif %}">
+        {{ summary | safe }}
+    </div>
+{% endif %}
 {% endmacro %}

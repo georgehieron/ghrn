@@ -1,7 +1,7 @@
 {% extends "layouts/base.html" %}
 
 {% set pageHeaderTitle = title %}
-{% set pageHeaderSummary = content %}
+{% set pageHeaderSummary = content|safe %}
 
 {% set pageCriticalStyles = ['css/work-landing.css'] %}
 
@@ -12,11 +12,13 @@
 <article>
     {{ pageHead.header('xxl align-center', pageHeaderTitle, 'lede align-center', pageHeaderSummary) }}
 
-    <ul class="list--unstyled">
-        {% for item in collections["work_" + locale] %}
-            {{ workItem.link(item.url, '', item.data.year, item.data.title) }}
-        {% endfor %}
-    </ul>
+    <section>
+        <ul class="list--unstyled">
+            {% for item in collections["work_" + locale] %}
+                {{ workItem.link(item.url, '', item.data.year, item.data.title) }}
+            {% endfor %}
+        </ul>
+    </section>
 
     <footer class="align-center">
         {% include "components/back-to-top.html" %}

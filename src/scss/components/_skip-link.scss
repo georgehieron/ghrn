@@ -2,7 +2,8 @@
     @include vis-h;
 
     &:focus {
-        @include apply-utility('weight', 'bold');
+        @include apply-utility("font", "strong");
+        -webkit-appearance: none;
         font-size: get-size('500');
         top: get-size('500');
         left: get-size('500');
@@ -16,6 +17,7 @@
         text-decoration: none;
         white-space: nowrap;
         background: var(--color-primary);
+        border: 0;
         clip: auto;
     }
 }
