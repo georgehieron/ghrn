@@ -1,7 +1,7 @@
 ---
 title: 'Kalevala Ipsum'
 summary: 'An Ipsum-style text generator based on the Finnish epic poem, Kalevala.'
-displayOrder: 2
+displayOrder: 1
 eleventyNavigation:
   key: Kalevala Ipsum
   parent: Work
@@ -11,9 +11,9 @@ hero:
   image: '/images/work/kalevala-ipsum-cover_960px.webp'
   imageAlt: 'Kalevala Ipsum cover image showing a sample of generated text.'
 techStack:
-  - "HTML5"
+  - "<abbr>HTML5</abbr>"
   - "Vanilla Sass"
-  - "Vanilla JS"
+  - "Vanilla <abbr>JS</abbr>"
 ---
 
 About a year after making [Beowulf Ipsum](/en/work/beowulf-ipsum), I had recently moved to Finland, and was working on sites where Finnish was the primary language in use. This gave me the idea for another Ipsum-style text generator, based on the Finnish national epic, [Kalevala](https://en.wikipedia.org/wiki/Kalevala), as a sister-site to Beowulf Ipsum, to allow me to use dummy content that looked like Finnish specifically.

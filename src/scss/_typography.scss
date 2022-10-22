@@ -88,7 +88,8 @@ h3,
 h5,
 .h5,
 cite,
-.cite {
+.cite,
+blockquote + figcaption {
     @include apply-utility('font', 'title');
     @include apply-utility('weight', 'regular');
 }
@@ -148,6 +149,7 @@ h5,
 .h5,
 h6,
 .h6,
+blockquote + figcaption,
 cite,
 .cite {
     font-size: get-size('400');
@@ -158,6 +160,7 @@ cite,
 
 h5,
 .h5,
+blockquote + figcaption,
 cite,
 .cite {
     text-transform: uppercase;
@@ -301,6 +304,7 @@ mark {
 }
 
 blockquote,
+blockquote + figcaption,
 cite,
 .cite {
     padding-left: calc(#{get-size('400')} + 5vw);
@@ -335,6 +339,7 @@ blockquote {
     }
 
     + cite,
+    + figcaption,
     + .cite {
         position: relative;
         font-style: normal;

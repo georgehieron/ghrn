@@ -11,9 +11,9 @@ hero:
   image: '/images/work/beowulf-ipsum-cover_960px.webp'
   imageAlt: 'Beowulf Ipsum kansikuva missä näytetään tekstiesimerkkia.'
 techStack:
-  - "HTML5"
+  - "<abbr>HTML5</abbr>"
   - "Tavallinen Sass"
-  - "Tavallinen JS"
+  - "Tavallinen <abbr>JS</abbr>"
 ---
 
 Eräänä päivänä, kun olin tekemässä jonkun uuden sivun fronttia, tarvitsin esimerkkisisältöä, että helpottaisin kyseessä olevan komponentin rakentamisen. Tietysti käytin klassinen ratkaisu eli Lorem Ipsum, joka on pitkään ja maailman ympäri ollut tietty mallitekstiä oikean sisällön tilalla leiskojen konteksteissa. Mutta, keskiaikashistoria-nörttinä, luulin että miksi ei viedä konseptin kauempaa ja tee vastaava generaattori historiaalisilla kirjoituksilla? Joka tapauksessa, Lorem Ipsumin lisäksi on nykyään olemassa monta muuta ja usein todella hauskaa mallitekstigeneraattoria, kuten [Pirate Ipsum](https://pirateipsum.me/), [Coffee Ipsum](http://coffeeipsum.com/),ja [Cat Ipsum](http://www.catipsum.com/).

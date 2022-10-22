@@ -11,9 +11,9 @@ hero:
   image: '/images/work/beowulf-ipsum-cover_960px.webp'
   imageAlt: 'Beowulf Ipsum cover image showing a sample of generated text.'
 techStack:
-  - "HTML5"
+  - "<abbr>HTML5</abbr>"
   - "Vanilla Sass"
-  - "Vanilla JS"
+  - "Vanilla <abbr>JS</abbr>"
 ---
 
 One day, while I was working on the front-end build of a new website, I needed to block in some example content in order to correctly begin laying out whatever section I was working on at that moment. Of course, I reached for the classic Lorem Ipsum, the long-established and globally recognised dummy text used to infer the presence of real content in the context of a layout or design. However, as a bit of a medieval history nerd I wondered, why not take the concept and apply it to historical texts? After all, in addition to Lorem Ipsum, these days there are plenty of other, often hilarious options for dummy text generators, such as [Pirate Ipsum](https://pirateipsum.me/), [Coffee Ipsum](http://coffeeipsum.com/), and [Cat Ipsum](http://www.catipsum.com/).
