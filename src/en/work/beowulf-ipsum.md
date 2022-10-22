@@ -1,7 +1,7 @@
 ---
 title: 'Beowulf Ipsum'
 summary: 'An Ipsum-style text generator based on the Old English epic poem, Beowulf.'
-displayOrder: 1
+displayOrder: 3
 eleventyNavigation:
   key: Beowulf Ipsum
   parent: Work
