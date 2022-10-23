@@ -49,3 +49,47 @@ img + p {
         @include ratio--9-16;
     }
 }
+
+.img-no-hover {
+    display: none;
+}
+
+.img-no-hover--ghrn {
+    margin-left: auto;
+    margin-right: auto;
+
+    @include media-query('sm') {
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: -2;
+        margin-top: 0;
+        transform: translateY(-60%);
+    }
+}
+
+@mixin img-no-hover {
+    display: inline-block;
+    width: 15rem;
+    height: 15rem;
+    max-width: 50vw;
+    max-height: 50vw;
+    border-radius: 50%;
+
+    @include media-query('sm') {
+        max-width: 25vw;
+        max-height: 25vw;
+    }
+}
+
+@media (hover: none) {
+    .img-no-hover {
+        @include img-no-hover;
+    }
+}
+
+@media (hover: hover) and (pointer: coarse) {
+    .img-no-hover {
+        @include img-no-hover;
+    }
+}
