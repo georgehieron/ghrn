@@ -5,14 +5,19 @@
 
 {% set pageCriticalStyles = ['css/home.css'] %}
 
-{% import "macros/page-head.html" as pageHead %}
 {% import "macros/translation.html" as trans %}
 {% import "macros/card-link.html" as cardLink %}
 
 {% block content %}
 <div class="home-content wrapper align-center">
     <article>
-        {{ pageHead.header('xxl', pageHeaderTitle, 'lede', pageHeaderSummary ) }}
+        <h1 class="page-head__title xxl">
+            {{ intro.main }} <span data-hover-img="/images/ghrn_sq_480px.webp">George</span>
+        </h1>
+
+        <div class="page-head__summary lede">
+            {{ content | safe }}
+        </div>
 
         <section>
             <div class="section-header">

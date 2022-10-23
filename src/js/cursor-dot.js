@@ -49,7 +49,7 @@ document.addEventListener(
                     });
                 });
 
-                document.querySelectorAll("a[data-hover-img]:not([disabled])").forEach(function (el) {
+                document.querySelectorAll("[data-hover-img]:not([disabled])").forEach(function (el) {
                     el.addEventListener("mouseover", function () {
                         self.cursorScaled = true;
                         self.toggleCursorSizeHoverText();
@@ -60,7 +60,6 @@ document.addEventListener(
                         self.cursorScaled = false;
                         self.toggleCursorSizeHoverText();
                         self.$outline.dataset.hovering = "";
-                        self.$outline.innerHTML = "";
                         self.$outline.style.backgroundImage = "";
                     });
                 });
@@ -115,6 +114,7 @@ document.addEventListener(
                     self.$outline.style.transform =
                         "translate(-50%, -50%) scale(.0666)";
                         self.$outline.dataset.hovering = '';
+                        self.$outline.style.backgroundImage = "";
                 } else {
                     self.$outline.style.transform =
                         "translate(-50%, -50%) scale(.1)";

@@ -15,6 +15,7 @@
         align-items: center;
         width: $dot-size;
         height: $dot-size;
+        background-image: none;
         background-color: lighten($light-primary, 5%);
         border: 0;
         border-radius: 50%;
