@@ -8,7 +8,7 @@ eleventyNavigation:
 translationKey: "benham"
 year: '2021'
 hero:
-  image: '/images/work/benham-cover_960px.webp'
+  image: '/images/work/benham-cover_960x640.webp'
   imageAlt: "Screenshot of Ben's website in the high-contrast colour theme."
 techStack:
   - "Eleventy static site generator"
@@ -43,3 +43,13 @@ Another notable feature of the site is the transition between work items; when y
 Of particular visual interest is the use of marquees, which were achieved by using an animated <code>text-shadow</code>, and hyperlinks that change font weight drastically on hover, without any possibility of flickering; this was achieved by invisible, inaccessible duplicate text inside the link, set at the original font weight to retain the link's size while the visible text transforms.
 
 Shortly after the site's launch in March of 2021, Ben submitted the site to [awwwards](https://www.awwwards.com/), and received an honourable mention, for which the banner sits fixed to the centre of the site's left edge. I certainly am proud of the end result; it was an absolute pleasure to work with Ben on it, and in return to work with him on the design for this very website.
+
+{% import "macros/picture.html" as pic %}
+
+{{ pic.image(
+    '',
+    '/images/work/benham-work-end_960x640.webp',
+    '',
+    'Screenshot of Beowulf Ipsum showing line count.',
+    'Beowulf Ipsum line count screenshot'
+) }}

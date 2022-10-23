@@ -8,7 +8,7 @@ eleventyNavigation:
 translationKey: "kIpsum"
 year: '2020'
 hero:
-  image: '/images/work/kalevala-ipsum-cover_960px.webp'
+  image: '/images/work/kalevala-ipsum-cover_960x640.webp'
   imageAlt: 'Kalevala Ipsum kansikuva missä näytetään tekstiesimerkkia.'
 techStack:
   - "<abbr>HTML5</abbr>"

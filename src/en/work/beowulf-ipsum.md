@@ -8,7 +8,7 @@ eleventyNavigation:
 translationKey: "bIpsum"
 year: '2019'
 hero:
-  image: '/images/work/beowulf-ipsum-cover_960px.webp'
+  image: '/images/work/beowulf-ipsum-cover_960x640.webp'
   imageAlt: 'Beowulf Ipsum cover image showing a sample of generated text.'
 techStack:
   - "<abbr>HTML5</abbr>"
@@ -36,7 +36,7 @@ So, to me the idea of using ancient or medieval literature for this was perfect;
 
 {{ pic.image(
     '',
-    '/images/work/beowufl-ipsum-text_960px.webp',
+    '/images/work/beowulf-ipsum-text_960x640.webp',
     '',
     'Screenshot of Beowulf Ipsum showing line count.',
     'Beowulf Ipsum line count screenshot'
