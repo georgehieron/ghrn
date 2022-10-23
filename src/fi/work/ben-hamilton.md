@@ -40,7 +40,7 @@ Suunnittelijana, joka oli tekemässä oman sivuston, Benillä oli totaalista vap
     img2Classes='',
     alt2='Kuvakaappaus Ben Hamilton sivustosta mobiilissa, jolla on käytössä sininen väriteema.',
     title2='Benin sivusto mobiilissa, jolla on käytössä sininen väriteema',
-    caption='Sivustolla on ominaisuus, jossa on 3 valittavaa väriteemaa, että voidaan käyttää vaihdoehdoista lempiteema sivuston läpi.'
+    caption='Sivustolla on ominaisuus, jossa on 3 valittavaa väriteemaa, että voidaan käyttää vaihtoehdoista lempiteema sivuston läpi.'
 ) }}
 
 Koska tiesin, että julkaisisin sivusto Netlify:llä, päätin käyttää sisällönhallintajärjestelmänä Netlify CMS. Tällä voi luoda Benille siisti ja yksinkertainen tapa hallita sivuston sisältöä. Käytin Netlify CMS:in 'vimpaimet' ominaisuutta rakentaa uudelleenkäytettäviä komponenttia töitä-sivuille, että Ben voi luoda vaihtelevia mutta johdonmukaisia sivuja. Vielä yksi asia tällä sivustolla oli Benin halu, että töitä-sivuja skrollataan vaakasuorasti isoilla näytönkoilla. Kulutin paljon aikaa tähän, että saisin toiminnan juuri oikein. Se oli toteutettu GreenSockin <abbr>GSAP</abbr>-animaatiolla. Varmistaa, että olisi mahdollisimman käytettävä, tein niin ettö vaakasuora skrollaus toimii normaalilla pystysuoralla hiiren-skrollauksella, mutta voi myös klikata ja vetää, kuten käsikursori indikoi. Varmistin myös, että näppäimistöllä vielä onnistui sivujen navigointi, esimerkiksi <kbd>Tab</kbd>-näppäimillä, skrollaussuunnan huolimatta.

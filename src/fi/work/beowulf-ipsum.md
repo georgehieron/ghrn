@@ -47,4 +47,4 @@ Heittää projekti maaliin, päätin että lisäisin valintaruutu jolla teksti v
 
 Sivusto on staattinen; vain HTML on käytetty sen ainoan sivun varten, tavallinen Sass tyyleillä ja tavallinen JS generoida sisältöä. Siivosin manuaalisesti noin 600 riviä Beowulfia tämän varten (ehkä myöhemmin lisään enemmän), ja tein lopuksi myös painike, jolla voi helposti kopioida generoitut sisällöt. Minulla oli kyllä hauska tekemään sivuston tyylejä, koska se on varmaan erilainen kuin mitä asiakkaita yleensä haluaa.
 
-Nautin herättää henkiin niin nörttinen konsepti; ole hyvä kokeilla sitä ja ehkä kerro vaan Twitterissä jos niin!
+Nautin herättää henkiin niin nörttinen konsepti; ole hyvä kokeilla sitä, miksi ei!

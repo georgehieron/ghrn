@@ -47,4 +47,4 @@ For some finishing touches, I decided to add a toggle to allow starting the outp
 
 The site is static, using just HTML for its single page with vanilla Sass for styling and vanilla JS for the content generation. I manually sanitized and added around 600 lines of Beowulf (but I might add more at a later date to increase the variety), and I also added a 'Copy Text' button to top it off. I certainly had fun with the styles as it definitely doesn't look like something you'd make for a typical client.
 
-I enjoyed bringing such a nerdy concept to life; feel free to give it a go, and maybe let me know on Twitter if you do!
+I enjoyed bringing such a nerdy concept to life; feel free to give it a go, why not!
