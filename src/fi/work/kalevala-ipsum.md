@@ -1,7 +1,7 @@
 ---
 title: 'Kalevala Ipsum'
 summary: 'Ipsum-tyylinen tekstigeneraattori jonka lähde on Kalevala.'
-displayOrder: 1
+displayOrder: 2
 eleventyNavigation:
   key: Kalevala Ipsum
   parent: Töitä

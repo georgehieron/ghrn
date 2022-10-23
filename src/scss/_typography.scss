@@ -29,26 +29,6 @@
     font-display: swap;
 }
 
-// @keyframes text-fill {
-//     from {
-//         -webkit-text-fill-color: transparent;
-//     }
-
-//     to {
-//         -webkit-text-fill-color: var(--color-text);
-//     }
-// }
-
-// @keyframes text-empty {
-//     from {
-//         -webkit-text-fill-color: var(--color-text);
-//     }
-
-//     to {
-//         -webkit-text-fill-color: transparent;
-//     }
-// }
-
 body {
     @include apply-utility('font', 'base');
     @include apply-utility('weight', 'regular');
@@ -268,6 +248,17 @@ a {
             background-position: 0 0;
         }
     }
+
+    &.back-to-top {
+        text-decoration: none;
+
+        &:hover,
+        &:focus {
+            text-decoration: underline;
+            text-decoration-thickness: .1em;
+            text-underline-offset: .15em;
+        }
+    }
 }
 
 strong,
@@ -298,10 +289,10 @@ blockquote,
 blockquote + figcaption,
 cite,
 .cite {
-    padding-left: calc(#{get-size('400')} + 5vw);
+    padding-left: min(calc(#{get-size('400')} + 5vw), #{get-size('1100')});
 
     @include media-query('md') {
-        padding-right: calc(#{get-size('300')} + 3vw);
+        padding-right: min(calc(#{get-size('300')} + 3vw), #{get-size('800')});
     }
 }
 
@@ -335,6 +326,7 @@ blockquote {
         position: relative;
         font-style: normal;
         color: var(--color-primary);
+        margin-top: 1em;
 
         &:before {
             content: "—";
