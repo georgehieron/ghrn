@@ -38,14 +38,30 @@ document.addEventListener(
                     el.addEventListener("mouseover", function () {
                         self.cursorScaled = true;
                         self.toggleCursorSizeHoverText();
-                        self.$outline.dataset.hovering = 'text';
+                        self.$outline.dataset.hovering = "text";
                         self.$outline.innerHTML = "<span>" + el.dataset.hoverText + "</span>";
                     });
                     el.addEventListener("mouseout", function () {
                         self.cursorScaled = false;
                         self.toggleCursorSizeHoverText();
-                        self.$outline.dataset.hovering = '';
+                        self.$outline.dataset.hovering = "";
                         self.$outline.innerHTML = "";
+                    });
+                });
+
+                document.querySelectorAll("a[data-hover-img]:not([disabled])").forEach(function (el) {
+                    el.addEventListener("mouseover", function () {
+                        self.cursorScaled = true;
+                        self.toggleCursorSizeHoverText();
+                        self.$outline.dataset.hovering = "img";
+                        self.$outline.style.backgroundImage = "url('" + el.dataset.hoverImg + "')";
+                    });
+                    el.addEventListener("mouseout", function () {
+                        self.cursorScaled = false;
+                        self.toggleCursorSizeHoverText();
+                        self.$outline.dataset.hovering = "";
+                        self.$outline.innerHTML = "";
+                        self.$outline.style.backgroundImage = "";
                     });
                 });
 

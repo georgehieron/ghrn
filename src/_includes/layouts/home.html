@@ -46,10 +46,11 @@
                 </div>
             </div>
             <div class="lede">
+                {% set visitLinkText = trans.lation('Visit link', 'Siirry sivustolle', locale) %}
                 <p class="box-block">&#169; George Hieron 2022</p>
                 <p class="box-block">{{ trans.lation('Build: Me', 'Rakenne: minä', locale) }}</p>
-                <p class="box-block">{{ trans.lation('Design:', 'Suunnittelu:', locale) }} <a href="https://www.ben-hamilton.co.uk/" rel="nofollow">Ben Hamilton</a></p>
-                <p class="box-block">{{ trans.lation('Type:', 'Typografia:', locale) }} <a href="https://pangrampangram.com/products/migra" rel="nofollow">Migra</a>, <a href="https://www.atipofoundry.com/fonts/archia" rel="nofollow">Archia</a>, <a href="https://pangrampangram.com/products/fraktion" rel="nofollow">Fraktion Mono</a></p>
+                <p class="box-block">{{ trans.lation('Design:', 'Suunnittelu:', locale) }} <a href="https://www.ben-hamilton.co.uk/" rel="nofollow" data-hover-text="{{ visitLinkText }}">Ben Hamilton</a></p>
+                <p class="box-block">{{ trans.lation('Type:', 'Typografia:', locale) }} <a href="https://pangrampangram.com/products/migra" rel="nofollow" data-hover-text="{{ visitLinkText }}">Migra</a>, <a href="https://www.atipofoundry.com/fonts/archia" rel="nofollow" data-hover-text="{{ visitLinkText }}">Archia</a>, <a href="https://pangrampangram.com/products/fraktion" rel="nofollow" data-hover-text="{{ visitLinkText }}">Fraktion Mono</a></p>
             </div>
             {% include "components/back-to-top.html" %}
         </footer>

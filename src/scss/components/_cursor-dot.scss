@@ -46,11 +46,19 @@
                 text-decoration-thickness: .1rem;
             }
         }
+
+        &[data-hovering="img"] {
+            background-position: center;
+            background-repeat: no-repeat;
+            background-color: var(--color-text) !important;
+            background-size: cover;
+            opacity: 1 !important;
+        }
     }
 
     @include dark-theme() {
         .cursor-dot:not([data-hovering="text"]) {
-            background: darken($dark-primary, 11%);
+            background-color: darken($dark-primary, 11%);
         }
     }
 
