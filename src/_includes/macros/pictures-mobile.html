@@ -1,0 +1,27 @@
+{% macro images(pic1Classes, src1, imgClasses1, alt1, title1, pic2Classes, src2, imgClasses2, alt2, title2, caption) %}
+<div class="mobile-pics">
+    <figure>
+        <picture class="{{ pic1Classes }}">
+            <img src="{{ src1 }}"
+                class="{{ img1Classes }}"
+                alt="{{ alt1 }}"
+                title="{{ title1 }}"
+                onerror="this.style.padding = '1rem'"
+            />
+        </picture>
+    </figure>
+    <figure>
+        <picture class="{{ pic2Classes }}">
+            <img src="{{ src2 }}"
+                class="{{ img2Classes }}"
+                alt="{{ alt2 }}"
+                title="{{ title2 }}"
+                onerror="this.style.padding = '1rem'"
+            />
+        </picture>
+        <!-- {% if caption %} -->
+            <figcaption>{{ caption }}</figcaption>
+        <!-- {% endif %} -->
+    </figure>
+</div>
+{% endmacro %}

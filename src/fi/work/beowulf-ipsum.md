@@ -35,11 +35,12 @@ Niin, minulle se idea käyttää muinaista tai keskiaikaista kirjoituksia tämä
 {% import "macros/picture.html" as pic %}
 
 {{ pic.image(
-    '',
-    '/images/work/beowulf-ipsum-text_960x640.webp',
-    '',
-    'Kuvakaappaus Beowulf Ipsumista, josa näytetään rivinumerot.',
-    'Beowulf Ipsum rivimäärä kuvakaappaus'
+    picClasses='',
+    src='/images/work/beowulf-ipsum-text_960x640.webp',
+    imgClasses='',
+    alt='Kuvakaappaus Beowulf Ipsumista, josa näytetään rivinumerot.',
+    title='Beowulf Ipsum rivimäärä kuvakaappaus',
+    caption=''
 ) }}
 
 Heittää projekti maaliin, päätin että lisäisin valintaruutu jolla teksti voi aloittaa sanalla <span lang="ang">_Hwæt!_</span>, Beowulfin tunnettu epäselvä aloitusdeklaraatio, niin kuin Lorem Ipsumin tunnettu aloituskohta <span lang="la">_Lorem Ipsum dolor sit amet_</span>. Huvin vuoksi kirjoitin sivuston ohjetekstit vähän muinaisenglannin tavalla.

@@ -1,6 +1,6 @@
-@mixin ratio--3-2() {
+@mixin ratio--9-16() {
     position: relative;
-    padding-top: 66.666%;
+    padding-top: 77.778%;
 
     img {
         position: absolute;
@@ -8,9 +8,9 @@
         left: 0;
     }
 
-    @supports (aspect-ratio: 3/2) {
+    @supports (aspect-ratio: 9/16) {
         padding-top: 0;
-        aspect-ratio: 3/2;
+        aspect-ratio: 9/16;
 
         img {
             position: relative;

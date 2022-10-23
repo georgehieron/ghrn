@@ -1,10 +1,15 @@
-{% macro image(picClasses, src, imgClasses, alt, title) %}
-<picture class="{{ picClasses }}">
-    <img src="{{ src }}"
-        class="{{ imgClasses }}"
-        alt="{{ alt }}"
-        title="{{ title }}"
-        onerror="this.style.padding = '1rem'"
-    />
-</picture>
+{% macro image(picClasses, src, imgClasses, alt, title, caption) %}
+<figure class="pic">
+    <picture class="{{ picClasses }}">
+        <img src="{{ src }}"
+            class="{{ imgClasses }}"
+            alt="{{ alt }}"
+            title="{{ title }}"
+            onerror="this.style.padding = '1rem'"
+        />
+    </picture>
+    <!-- {% if caption %} -->
+        <figcaption>{{ caption }}</figcaption>
+    <!-- {% endif %} -->
+</figure>
 {% endmacro %}

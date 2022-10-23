@@ -27,6 +27,22 @@ Having worked closely with Ben during my time at [Atomic Smash](https://www.atom
 
 As a designer working on his own site, Ben had total free reign to create something extravagant and quirky, unrestricted by typical client requests, and I also relished the chance to build such a site. For example, from the start Ben had the idea for a colour theme switcher on the site, not necessarily a light/dark theme but rather a kind of 'wardrobe change' centred around a button featuring an animated SVG recreation of his coathanger tattoo. Some of the colour combinations in Ben's chosen palettes were not compliant to Web Content Accessibility Guidelines (<abbr>WCAG</abbr>) AA-standard, but as we are both keenly aware of accessibility standards, we agreed to impliment a more compliant theme in black & white; this high-contrast theme is toggled separately to the original themee change, and also pauses all the moving elements of the site, so that users who prefer reduced motion can also use the site.
 
+{% import "macros/pictures-mobile.html" as mobpics %}
+
+{{ mobpics.images(
+    pic1Classes='',
+    src1='/images/work/benham-mobile-pink_432x768.webp',
+    img1Classes='',
+    alt1='Screenshot of Ben Hamilton website at mobile in pink theme.',
+    title1='Ben\'s site at mobile size in pink theme',
+    pic2Classes='',
+    src2='/images/work/benham-mobile-blue_432x768.webp',
+    img2Classes='',
+    alt2='Screenshot of Ben Hamilton website at mobile in blue theme',
+    title2='Ben\'s site at mobile size in blue theme.',
+    caption='The site features 3 selectable colour themes to suit the user\'s preference'
+) }}
+
 Since I knew I would be deploying the site through Netlify, I decided to choose Netlify CMS to afford Ben a clean and simple way to manage the site's content. I made use of the 'widgets' feature to build reusable components for the work pages, to allow Ben to create pages that are varied yet consistent in look and feel. Another challenging aspect of this site was Ben's desire to have work pages scroll horizontally at large screen resolutions, and I spent much time tweaking this to get the look and feel just right. It was achieved using GreenSock <abbr>GSAP</abbr> animation. To make it as usable as possible, the horizontal movement of the page responds to standard up & down scroll direction, but can also be dragged left & right, as indicated by the use of the grabbing hand cursor. I also made sure that navigation between elements, for example with <kbd>Tab</kbd>, succeeded despite the scroll direction.
 
 <figure class="blockquote">
@@ -47,9 +63,10 @@ Shortly after the site's launch in March of 2021, Ben submitted the site to [aww
 {% import "macros/picture.html" as pic %}
 
 {{ pic.image(
-    '',
-    '/images/work/benham-work-end_960x640.webp',
-    '',
-    'Screenshot of Beowulf Ipsum showing line count.',
-    'Beowulf Ipsum line count screenshot'
-) }}
+    picClasses='',
+    src='/images/work/benham-work-end_960x640.webp',
+    imgClasses='',
+    alt='Screenshot of Ben Hamilton work page end, showing countdown to next project.',
+    title='Ben Hamilton work page end',
+    caption=''
+)}}

@@ -13,7 +13,14 @@
         {% if img %}
             {% import "macros/picture.html" as pic %}
 
-            {{ pic.image( 'card-link__image', img, '', '', '' ) }}
+            {{ pic.image(
+                picClasses='card-link__image',
+                src=img,
+                imgClasses='',
+                alt='',
+                title='',
+                caption=''
+            )}}
         {% endif %}
     </div>
 </a>

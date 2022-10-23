@@ -9,6 +9,7 @@ $outputTokenCSS: false;
 
 @import "components/tech-stack";
 
+.lede + figure,
 .lede + picture {
     margin-top: 3em;
 }

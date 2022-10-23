@@ -349,6 +349,12 @@ p + .blockquote {
     margin-top: 3.5em;
 }
 
+picture + figcaption,
+img + figcaption {
+    @include apply-utility('font', 'title-l');
+    margin-top: 1em;
+}
+
 ul,
 ol {
     li {

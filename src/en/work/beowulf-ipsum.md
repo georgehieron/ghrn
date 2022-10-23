@@ -35,11 +35,12 @@ So, to me the idea of using ancient or medieval literature for this was perfect;
 {% import "macros/picture.html" as pic %}
 
 {{ pic.image(
-    '',
-    '/images/work/beowulf-ipsum-text_960x640.webp',
-    '',
-    'Screenshot of Beowulf Ipsum showing line count.',
-    'Beowulf Ipsum line count screenshot'
+    picClasses='',
+    src='/images/work/beowulf-ipsum-text_960x640.webp',
+    imgClasses='',
+    alt='Screenshot of Beowulf Ipsum showing line count.',
+    title='Beowulf Ipsum line count screenshot',
+    caption=''
 ) }}
 
 For some finishing touches, I decided to add a toggle to allow starting the output with Beowulf's (in)famously ambiguous opening declaration of <span lang="ang">_Hwæt!_</span>, to equate to beginning with <span lang="la">_Lorem Ipsum dolor sit amet_</span>, and for a bit of fun I thought to write copy for the site in some kind of mock Old English.

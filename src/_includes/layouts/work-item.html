@@ -13,7 +13,14 @@
             {% if hero.image %}
                 {% import "macros/picture.html" as pic %}
 
-                {{ pic.image( '', hero.image, '', hero.imageAlt, '' ) }}
+                {{ pic.image(
+                    picClasses='',
+                    src=hero.image,
+                    imgClasses='',
+                    alt=hero.imageAlt,
+                    title='',
+                    caption=''
+                )}}
             {% endif %}
         </header>
 
