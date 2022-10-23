@@ -98,6 +98,7 @@ document.addEventListener(
                 if (self.cursorScaled) {
                     self.$outline.style.transform =
                         "translate(-50%, -50%) scale(.0666)";
+                        self.$outline.dataset.hovering = '';
                 } else {
                     self.$outline.style.transform =
                         "translate(-50%, -50%) scale(.1)";
