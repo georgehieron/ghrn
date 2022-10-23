@@ -34,7 +34,7 @@ img + p {
     justify-content: space-between;
 
     figure {
-        max-width: calc(50% - min(4vw, #{$pic-spacing}));
+        max-width: calc(50% - min(5vw, #{$pic-spacing}));
 
         &:nth-of-type(1) {
             margin-bottom: $pic-spacing;
