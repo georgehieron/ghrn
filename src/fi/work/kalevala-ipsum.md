@@ -1,4 +1,5 @@
 ---
+socialImage: '/images/work/kalevala-ipsum-cover_960x640.webp'
 title: 'Kalevala Ipsum'
 summary: 'Ipsum-tyylinen tekstigeneraattori jonka lähde on Kalevala.'
 displayOrder: 2

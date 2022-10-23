@@ -1,4 +1,5 @@
 ---
+socialImage: '/images/work/beowulf-ipsum-cover_960x640.webp'
 title: 'Beowulf Ipsum'
 summary: 'An Ipsum-style text generator based on the Old English epic poem, Beowulf.'
 displayOrder: 3

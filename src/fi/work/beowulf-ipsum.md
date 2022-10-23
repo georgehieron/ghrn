@@ -1,4 +1,5 @@
 ---
+socialImage: '/images/work/beowulf-ipsum-cover_960x640.webp'
 title: 'Beowulf Ipsum'
 summary: 'Ipsum-tyylinen tekstigeneraattori jonka lähde on Beowulf.'
 displayOrder: 3

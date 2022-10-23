@@ -1,4 +1,5 @@
 ---
+socialImage: '/images/work/benham-cover_960x640.webp'
 title: 'Ben Hamilton personal site'
 summary: "A graphic designer's portfolio site, made with a focus on fun and visual flair without forgetting accessibility."
 displayOrder: 1

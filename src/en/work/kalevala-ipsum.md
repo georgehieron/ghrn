@@ -1,4 +1,5 @@
 ---
+socialImage: '/images/work/kalevala-ipsum-cover_960x640.webp'
 title: 'Kalevala Ipsum'
 summary: 'An Ipsum-style text generator based on the Finnish epic poem, Kalevala.'
 displayOrder: 2
