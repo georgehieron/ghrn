@@ -33,7 +33,7 @@ Koska Kalevala oli koottu 1800-luvulla, kieli on vielä lukevaa suomeaa. Tämän
     pic2Classes='',
     src2='/images/work/beowulf-ipsum-mobile_432x768.webp',
     img2Classes='',
-    alt2='Kuvakaappaus Beowulf Ipsumista mobiilissa, jossa näytetään alkuosa',
+    alt2='Kuvakaappaus Beowulf Ipsumista mobiilissa, jossa näytetään alkuosa.',
     title2='Beowulf Ipsumin alkuosan sisältö mobiilikoossa',
     caption='Vertailemassa kyseessä olevat sivut, ne ovat selvästi pari.'
 ) }}
