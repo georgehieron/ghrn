@@ -7,19 +7,23 @@
     text-decoration: none;
     text-transform: uppercase;
     letter-spacing: .125ch;
+    background: linear-gradient(0deg,var(--color-primary) 0,var(--color-primary) 100%);
+    background-repeat: no-repeat;
+    background-position: 0 calc(calc(1.5em + #{get-size("400")} + #{get-size("200")}) * -1);
     padding: get-size("400") get-size("900") get-size("200");
     border: .125rem solid var(--color-primary);
     border-radius: get-size("700");
+    transition: .3s ease-in-out background-position, .3s ease-in-out color;
 
     &:hover,
     &:focus,
     &:active {
         cursor: pointer;
         color: var(--color-base);
-        background: var(--color-primary);
         text-decoration: underline;
         text-underline-offset: .25rem;
         text-decoration-thickness: .1rem;
+        background-position: 0 0;
     }
 
     &--work-visit {
