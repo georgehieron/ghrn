@@ -1,6 +1,6 @@
 ---
 socialImage: '/images/work/benham-cover_960x640.webp'
-title: 'Ben Hamilton henkilökohtainen sivusto'
+title: 'Ben Hamilton portfolio'
 summary: "Graafinen suunnittelijan portfoliosivusto, keskitetty hauskuuteen ja visuaaliseen innostukseen ilman, että saavutettavuus jää unohtamatta."
 displayOrder: 1
 eleventyNavigation:
