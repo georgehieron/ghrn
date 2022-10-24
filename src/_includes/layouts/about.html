@@ -1,13 +1,15 @@
 {% extends "layouts/base.html" %}
 
 {% set pageHeaderTitle = title %}
-{% set pageHeaderSummary = '' %}
+{% set pageHeaderSummary = lede %}
 
 {% set pageCriticalStyles = ['css/about.css'] %}
 
+{% import "macros/page-head.html" as pageHead %}
+
 {% block content %}
 <article>
-    {% include "partials/page-header.html" %}
+    {{ pageHead.header('xxl align-center', pageHeaderTitle, 'lede align-center gap-bottom-800', pageHeaderSummary) }}
 
     {{ content | safe }}
 
