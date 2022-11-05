@@ -10,6 +10,13 @@
             {% if summary %}
                 <p class="lede">{{ summary }}</p>
             {% endif %}
+
+            {% if visitLink %}
+                <div class="box-flex">
+                    <a href="{{ visitLink|safe }}" class="btn btn--work-visit" aria-describedby="{{ title }}">{{ visitText }}</a>
+                </div>
+            {% endif %}
+
             {% if hero.image %}
                 {% import "macros/picture.html" as pic %}
 
@@ -36,12 +43,6 @@
         {% endif %}
 
         {{content|safe}}
-
-        {% if visitLink %}
-            <div class="box-flex">
-                <a href="{{ visitLink|safe }}" class="btn btn--work-visit" aria-describedby="{{ title }}">{{ visitText }}</a>
-            </div>
-        {% endif %}
 
         <footer class="align-center">
             {% include "components/back-to-top.html" %}
