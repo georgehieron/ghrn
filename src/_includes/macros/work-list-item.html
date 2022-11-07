@@ -1,14 +1,17 @@
-{% macro link(url, classes, year, title) %}
+{% macro link(url, classes, year, title, img) %}
 <li class="work-list-item">
-    <div class="h-sep">
-        <span class="bg-text" aria-hidden="true"></span>
-        <time datetime="{{ year }}" class="h4 color-text">{{ year }}</time>
-        <span class="bg-text" aria-hidden="true"></span>
-    </div>
     <a href="{{ url }}" class="card-link box-block align-center {{ classes }}">
         <span class="card-link__title h1">
             {{ title }}
         </span>
     </a>
+    <div class="h-sep">
+        <span class="bg-text" aria-hidden="true"></span>
+        <time datetime="{{ year }}" class="h4 color-text">{{ year }}</time>
+        <span class="bg-text" aria-hidden="true"></span>
+    </div>
+    <picture class="{{ picClasses }}">
+        <img src="{{ img }}" alt="">
+    </picture>
 </li>
 {% endmacro %}

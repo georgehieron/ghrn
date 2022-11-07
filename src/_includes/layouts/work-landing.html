@@ -15,7 +15,7 @@
     <section>
         <ul class="list--unstyled">
             {% for item in collections["work_" + locale] %}
-                {{ workItem.link(item.url, '', item.data.year, item.data.title) }}
+            {{ workItem.link(item.url, '', item.data.year, item.data.title, item.data.hero.image) }}
             {% endfor %}
         </ul>
     </section>
