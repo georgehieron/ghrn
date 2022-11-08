@@ -74,7 +74,6 @@ details summary:hover {
 @import 'components/buttons';
 @import 'components/images';
 @import 'components/social-links';
-@import 'components/code'; // TODO: Move this, not critical
 
 @include dark-theme() {
     body {
