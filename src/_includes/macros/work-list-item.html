@@ -1,4 +1,4 @@
-{% macro link(url, classes, year, title, img) %}
+{% macro link(url, classes, year, title, img, imgpos) %}
 <li class="work-list-item">
     <a href="{{ url }}" class="card-link box-block align-center {{ classes }}">
         <span class="card-link__title h1">
@@ -11,7 +11,7 @@
         <span class="bg-text" aria-hidden="true"></span>
     </div>
     <picture class="{{ picClasses }}">
-        <img src="{{ img }}" alt="">
+        <img src="{{ img }}" alt="" style="object-position: {{ imgpos }};">
     </picture>
 </li>
 {% endmacro %}

@@ -11,6 +11,7 @@ year: '2019'
 hero:
   image: '/images/work/beowulf-ipsum-cover_960x640.webp'
   imageAlt: 'Beowulf Ipsum kansikuva missä näytetään tekstiesimerkkia.'
+  workPos: 'top left'
 techStack:
   - "<abbr>HTML5</abbr>"
   - "Tavallinen Sass"

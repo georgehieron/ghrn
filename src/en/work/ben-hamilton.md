@@ -11,6 +11,7 @@ year: '2021'
 hero:
   image: '/images/work/benham-cover_960x640.webp'
   imageAlt: "Screenshot of Ben's website in the high-contrast colour theme."
+  workPos: "top right"
 techStack:
   - "Eleventy static site generator"
   - "Netlify CMS content management system"

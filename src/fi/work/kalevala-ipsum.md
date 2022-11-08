@@ -11,6 +11,7 @@ year: '2020'
 hero:
   image: '/images/work/kalevala-ipsum-cover_960x640.webp'
   imageAlt: 'Kalevala Ipsum kansikuva missä näytetään tekstiesimerkkia.'
+  workPos: 'top left'
 techStack:
   - "<abbr>HTML5</abbr>"
   - "Tavallinen Sass"

@@ -11,6 +11,7 @@ year: '2021'
 hero:
   image: '/images/work/benham-cover_960x640.webp'
   imageAlt: "Kuvakaappaus Benin sivustosta, jossa käytössä korkeakontrastinen väriteeema."
+  workPos: "top right"
 techStack:
   - "Eleventy staattinen sivustogeneraattori"
   - "Netlify CMS sisällönhallintajärjestelmä"

@@ -11,6 +11,7 @@ year: '2019'
 hero:
   image: '/images/work/beowulf-ipsum-cover_960x640.webp'
   imageAlt: 'Beowulf Ipsum cover image showing a sample of generated text.'
+  workPos: 'top left'
 techStack:
   - "<abbr>HTML5</abbr>"
   - "Vanilla Sass"

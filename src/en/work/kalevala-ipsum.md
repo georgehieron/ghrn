@@ -11,6 +11,7 @@ year: '2020'
 hero:
   image: '/images/work/kalevala-ipsum-cover_960x640.webp'
   imageAlt: 'Kalevala Ipsum cover image showing a sample of generated text.'
+  workPos: 'top left'
 techStack:
   - "<abbr>HTML5</abbr>"
   - "Vanilla Sass"
