@@ -1,0 +1,43 @@
+.social-links {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    @include media-query("sm") {
+        align-items: flex-start;
+    }
+
+    li + li > .social-link {
+        margin-top: get-size('600');
+
+        @include media-query("sm") {
+            margin-top: min(3vw, 2.125em);
+        }
+    }
+
+    .social-link {
+        display: block;
+        height: 2.5em;
+        width: 2.5em;
+        background-size: cover;
+        background-repeat: no-repeat;
+
+        svg {
+            display: block;
+            height: 100%;
+            width: 100%;
+
+            path {
+                fill: var(--color-text);
+            }
+        }
+
+        @include media-query("sm") {
+            margin-left: min(6vw, 4.25em);
+        }
+    }
+
+    .social-text {
+        @include vis-h;
+    }
+}

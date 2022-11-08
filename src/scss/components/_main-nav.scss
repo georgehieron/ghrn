@@ -3,6 +3,12 @@
 
     @include media-query('sm') {
         position: sticky;
+        max-width: 33%;
+        padding-right: 4.2vw;
+
+        @supports (padding-right: clamp(#{get-size('300')}, 4.2vw, #{get-size('1000')})) {
+            padding-right: clamp(#{get-size('300')}, 4.2vw, #{get-size('1000')});
+        }
     }
 }
 
@@ -38,13 +44,6 @@
     }
 
     @include media-query('sm') {
-        max-width: 33%;
-        padding-right: 4.2vw;
-
-        @supports (padding-right: clamp(#{get-size('300')}, 4.2vw, #{get-size('1000')})) {
-            padding-right: clamp(#{get-size('300')}, 4.2vw, #{get-size('1000')});
-        }
-
         .main-nav__list {
             padding-bottom: 4.2vw;
 
@@ -113,7 +112,6 @@
 
     @include media-query('md') {
         .main-nav__list {
-
             .nav__item {
                 padding-left: get-size('900');
 
