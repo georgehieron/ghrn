@@ -42,6 +42,10 @@
     }
 }
 
-.carbonbadge {
+#wcb.carbonbadge {
     filter: grayscale(1);
+
+    #wcb_2 {
+        color: var(--color-text);
+    }
 }
