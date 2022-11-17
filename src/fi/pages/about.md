@@ -5,7 +5,7 @@ eleventyNavigation:
   order: 2
 translationKey: "aboutPage"
 layout: 'layouts/about.html'
-lede: Olen full-stack -web-kehittäjä, jonka keskitys on enemmän fronttia päin.
+lede: Olen full-stack -web-kehittäjä, jonka painotus on enemmän fronttia päin.
 ---
 
 Teen töitä huomaamassa saavutettavuutta, esimerkiksi vahvistamassa että se on toteutettu oikein uusissa sivustoissa ja tekemässä saavutettavia parannuksia vanhoihin sivustoihin. Tykkään modernien CSS:n kirjoittamisesta ja olen innokas oppimaan, miten nettiä voi tehdä vihreämmäksi ja kestävämmäksi.
