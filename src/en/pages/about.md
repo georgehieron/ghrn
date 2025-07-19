@@ -20,6 +20,6 @@ Have a peek at some of [my stuff](/{{locale}}/work). 👀
 
 <h2 class="align-cente">About my hobbies</h2>
 
-When I'm not coding, I love playing the guitar and listening to metal music (although, actually, I listen to metal while I'm coding too). I also enjoy landscape photography, have a look at <a href="https://www.georgehieron.com/" data-hover-img="/images/george-hieron_emerald-skies-iii_sm-sq.webp">George Hieron Photography</a> if you'd like to see some of my images. 📷
+When I'm not coding, I love playing the guitar and listening to metal music (although, actually, I listen to metal while I'm coding too). I also enjoy landscape photography. 📷
 
 Apart from all that, I'm really interested in medieval history (particularly the Viking age), and learning languages. I can speak Norwegian, Finnish, a little Swedish and Danish, and even some Old Norse. 📜

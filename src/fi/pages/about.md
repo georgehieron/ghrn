@@ -20,6 +20,6 @@ Kurkkaa [minun tavaroihin](/{{locale}}/toita). 👀
 
 ## Minun harrastuksista
 
-Kun en ole koodaamassa, rakastan kitaran soittamista ja hevimusiikin kuuntelemista (vaikka kyllä kuuntelen heviä koodaamassakin). Nautin myös maisemavalokuvauksesta, tarkista <a href="https://www.georgehieron.com/" data-hover-img="/images/george-hieron_emerald-skies-iii_sm-sq.webp">George Hieron Photography</a> jos haluat katsoa muutama minun kuvia. 📷
+Kun en ole koodaamassa, rakastan kitaran soittamista ja hevimusiikin kuuntelemista (vaikka kyllä kuuntelen heviä koodaamassakin). Nautin myös maisemavalokuvauksesta. 📷
 
 Sitä paitsi, minua todella kiinnostaa keskiaikaishistoria (erityisesti Viikinkiaika), ja kielien oppiminen. Osaan norjaa, suomea, vähän ruotsia ja tanskaa ja jopa vähän muinaisnorjaa. 📜
