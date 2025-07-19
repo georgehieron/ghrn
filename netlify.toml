@@ -1,5 +1,5 @@
 [build]
-    command = "npm install && npx gulp && npx eleventy"
+    command = "npm run production"
     publish = "dist"
 
 [[redirects]]
