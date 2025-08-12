@@ -44,7 +44,7 @@ body {
     }
 }
 
-h1,
+:is(h1,
 .h1,
 h2,
 .h2,
@@ -55,11 +55,11 @@ h4,
 h5,
 .h5,
 h6,
-.h6 {
+.h6) {
     line-height: 1.36;
 }
 
-h1,
+:is(h1,
 .h1,
 h2,
 .h2,
@@ -69,23 +69,23 @@ h5,
 .h5,
 cite,
 .cite,
-blockquote + figcaption {
+blockquote + figcaption) {
     @include apply-utility('font', 'title');
     @include apply-utility('weight', 'regular');
 }
 
-h4,
+:is(h4,
 .h4,
 h6,
 .h6,
-blockquote {
+blockquote) {
     @include apply-utility('font', 'title-l');
     @include apply-utility('weight', 'light');
     letter-spacing: .033em;
 }
 
-h1,
-.h1 {
+:is(h1,
+.h1) {
     font-size: 5.3vw;
 
     @supports (font-size: clamp(#{get-size('800')}, 5.3vw, #{get-size('1100')})) {
@@ -97,8 +97,8 @@ h1,
     }
 }
 
-h2,
-.h2 {
+:is(h2,
+.h2) {
     font-size: 4.2vw;
 
     @supports (font-size: clamp(#{get-size('700')}, 4.2vw, #{get-size('1000')})) {
@@ -106,8 +106,8 @@ h2,
     }
 }
 
-h3,
-.h3 {
+:is(h3,
+.h3) {
     font-size: 3.3vw;
 
     @supports (font-size: clamp(#{get-size('600')}, 3.3vw, #{get-size('900')})) {
@@ -115,9 +115,9 @@ h3,
     }
 }
 
-h4,
+:is(h4,
 .h4,
-blockquote {
+blockquote) {
     font-size: 2.7vw;
 
     @supports (font-size: clamp(#{get-size('600')}, 2.7vw, #{get-size('800')})) {
@@ -125,30 +125,30 @@ blockquote {
     }
 }
 
-h5,
+:is(h5,
 .h5,
 h6,
 .h6,
 blockquote + figcaption,
 cite,
-.cite {
+.cite) {
     font-size: get-size('400');
     line-height: 1.375;
     margin-top: 0;
     margin-bottom: get-size('300');
 }
 
-h5,
+:is(h5,
 .h5,
 blockquote + figcaption,
 cite,
-.cite {
+.cite) {
     text-transform: uppercase;
     letter-spacing: 1px;
 }
 
-.xl,
-.xxl {
+:is(.xl,
+.xxl) {
     @include apply-utility('font', 'title-i');
     @include apply-utility('weight', 'regular');
     line-height: 1;
@@ -262,13 +262,13 @@ a {
     }
 }
 
-strong,
-.lede {
+:is(strong, .lede) {
     @include apply-utility('font', 'strong');
 }
 
 .lede {
     font-size: get-size('700');
+    text-wrap: balance;
 
     @supports (font-size: clamp(#{get-size('500')}, 2.2vw, #{get-size('700')})) {
         font-size: clamp(#{get-size('500')}, 2.2vw, #{get-size('700')});
@@ -286,10 +286,10 @@ mark {
     background-color: var(--color-primary);
 }
 
-blockquote,
+:is(blockquote,
 blockquote + figcaption,
 cite,
-.cite {
+.cite) {
     padding-left: min(calc(#{get-size('400')} + 5vw), #{get-size('1100')});
 
     @include media-query('md') {
@@ -344,14 +344,14 @@ p + .blockquote {
     margin-top: 3.5em;
 }
 
-picture + figcaption,
-img + figcaption {
+:is(picture + figcaption,
+img + figcaption) {
     @include apply-utility('font', 'title-l');
     margin-top: 1em;
 }
 
-ul,
-ol {
+:is(ul,
+ol) {
     li {
         &::marker {
             color: var(--color-primary);
@@ -371,9 +371,9 @@ ol {
     }
 }
 
-pre,
+:is(pre,
 code,
-kbd {
+kbd) {
     @include apply-utility('font', 'mono');
     @include apply-utility('weight', 'regular');
     line-height: 1.375 !important;
@@ -381,8 +381,8 @@ kbd {
     -webkit-text-size-adjust: 100%;
 }
 
-pre,
-code {
+:is(pre,
+code) {
     color: darken($light-primary, 5%);
     background: rgba($light-primary, .15);
     border-radius: 3px;
@@ -427,8 +427,8 @@ kbd {
         background-color: rgba(lighten($dark-primary, 5%), .9);
     }
 
-    pre,
-    code {
+    :is(pre,
+    code) {
         color: $dark-primary;
         background: rgba($dark-primary, .15);
     }
