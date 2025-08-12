@@ -5,10 +5,10 @@ eleventyNavigation:
   order: 2
 translationKey: "aboutPage"
 layout: 'layouts/about.html'
-lede: I'm a full-stack web developer whose focus leans towards front-end development.
+lede: I'm a full-stack web developer who specialises in accessibility and sustainability.
 ---
 
-I work with accessibility in mind, by ensuring that it's properly implemented in new sites, and by retrofitting improvements into existing sites. I enjoy writing modern CSS and am keen to learn more about how the web can be made cleaner & greener.
+I work with accessibility in mind, by ensuring that it's properly implemented in new sites, and by retrofitting improvements into existing sites, adhering to WCAG standards. I also work with environmentally-friendly principles at the core of my development approach, and am always keen to learn more techniques for how the web can be made cleaner & greener.
 
 I'm from the UK, but these days I live in Tampere, Finland. 🇫🇮
 

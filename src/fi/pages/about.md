@@ -5,10 +5,10 @@ eleventyNavigation:
   order: 2
 translationKey: "aboutPage"
 layout: 'layouts/about.html'
-lede: Olen full-stack -web-kehittäjä, jonka painotus on enemmän fronttia päin.
+lede: Olen full-stack -web-kehittäjä, joka on saavutettavuuteen ja ympäristöystävällisyyteen erikoistunut.
 ---
 
-Teen töitä huomaamassa saavutettavuutta, esimerkiksi vahvistamassa että se on toteutettu oikein uusissa sivustoissa ja tekemässä saavutettavia parannuksia vanhoihin sivustoihin. Tykkään modernien CSS:n kirjoittamisesta ja olen innokas oppimaan, miten nettiä voi tehdä vihreämmäksi ja kestävämmäksi.
+Teen töitä huomaamassa saavutettavuutta, esimerkiksi vahvistamassa että se on toteutettu oikein uusissa sivustoissa ja tekemässä saavutettavia parannuksia vanhoihin sivustoihin, noudattaessa WCAG:in standardeja. Ympäristöystävälliset periaatteet ovat myös oman kehitysprossessin ytimessä, ja olen aina innokas oppimaan, miten nettiä voi tehdä vielä vihreämmäksi ja kestävämmäksi.
 
 Olen kotoisin Iso-Britanniasta, mutta nykyään minä asun Tampereella. 🇫🇮
 
