@@ -1,10 +1,16 @@
-const { parallel, watch } = require("gulp");
+const { parallel, watch, src, dest } = require("gulp");
 
 // Pull in each task
 const images = require("./gulp-tasks/images.js");
 const sass = require("./gulp-tasks/sass.js");
 const criticalScripts = require("./gulp-tasks/critical-scripts.js");
 const inlineScripts = require("./gulp-tasks/inline-scripts.js");
+
+// Task to copy _redirects to dist
+function copyRedirects() {
+    return src("./_redirects")
+        .pipe(dest("dist"));
+}
 
 // Set each directory and contents that we want to watch and
 // assign the relevant task. `ignoreInitial` set to true will
@@ -17,8 +23,8 @@ const watcher = () => {
     watch("./src/js/*.js", { ignoreInitial: true }, inlineScripts);
 };
 
-// The default (if someone just runs `gulp`) is to run each task in parallel
-exports.default = parallel(images, sass, criticalScripts, inlineScripts);
+// The default (if someone just runs `gulp`) is to run each task in parallel, including copyRedirects
+exports.default = parallel(images, sass, criticalScripts, inlineScripts, copyRedirects);
 
 // This is our watcher task that instructs gulp to watch directories and
 // act accordingly
